@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+    font-feature-settings: 'ss01', 'cv03', 'cv04';
+  }
+  ::selection {
+    background-color: rgba(79, 70, 229, 0.14);
+  }
+  h1, h2, h3 {
+    @apply font-sans;
+    letter-spacing: -0.03em;
+  }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #4f46e5;
+    outline-offset: 3px;
+    border-radius: 10px;
+  }
+}
+
+@layer components {
+  /* Botón primario (índigo, único acento fuerte) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-5 py-3
+      text-[15px] font-semibold text-white transition-all duration-200
+      hover:bg-brand-700 hover:-translate-y-px active:translate-y-0;
+    box-shadow: 0 1px 2px rgba(10,10,11,0.10), 0 8px 24px -10px rgba(79,70,229,0.5);
+  }
+  /* Botón secundario (blanco, hairline) */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-line2 bg-surface
+      px-5 py-3 text-[15px] font-semibold text-ink transition-all duration-200
+      hover:border-ink/20 hover:bg-subtle;
+  }
+  /* Botón oscuro (tinta) */
+  .btn-ink {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3
+      text-[15px] font-semibold text-white transition-all duration-200 hover:bg-ink/90 hover:-translate-y-px;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[12.5px] font-semibold uppercase tracking-[0.12em] text-brand-600;
+  }
+  .card {
+    @apply rounded-3xl border border-line bg-surface shadow-sm;
+  }
+  /* Píldora hairline (chips, badges) */
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line2 bg-surface px-3 py-1
+      text-[13px] font-medium text-ink-soft;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Acento de degradado MUY sutil para títulos clave */
+  .text-accent {
+    background: linear-gradient(100deg, #4f46e5, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Fondo: blanco con un velo de degradado índigo arriba (estilo Stripe, contenido) */
+  .bg-aura {
+    background:
+      radial-gradient(60rem 32rem at 50% -12rem, rgba(99, 102, 241, 0.10), transparent 70%),
+      radial-gradient(40rem 24rem at 88% -6rem, rgba(124, 58, 237, 0.07), transparent 70%),
+      #ffffff;
+  }
+
+  /* Cuadrícula de puntos finísima */
+  .bg-grid {
+    background-image: radial-gradient(rgba(10, 10, 11, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+    -webkit-mask-image: radial-gradient(40rem 40rem at 50% 0%, #000, transparent 75%);
+    mask-image: radial-gradient(40rem 40rem at 50% 0%, #000, transparent 75%);
+  }
+
+  .hairline-t { @apply border-t border-line; }
+  .hairline-b { @apply border-b border-line; }
+
+  /* Máscara de desvanecido lateral (marquesinas) */
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  }
+
+  /* Revelado al hacer scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible { opacity: 1; transform: none; }
+
+  /* ───────── WhatsApp fiel ───────── */
+  /* Fondo de chat real (beige con patrón doodle muy tenue) */
+  .wa-wall {
+    background-color: #efeae2;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='0.03' stroke-width='1.4'%3E%3Cpath d='M12 16c3-4 8-4 11 0M61 12l3 6 6-1'/%3E%3Ccircle cx='68' cy='40' r='5'/%3E%3Cpath d='M16 56l4 4 7-8M44 64h12M40 30c2-3 6-3 8 0'/%3E%3Crect x='30' y='46' width='9' height='9' rx='2'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 290px 290px;
+  }
+  /* Burbuja saliente (verde) con cola */
+  .wa-out {
+    position: relative;
+    background: #d9fdd3;
+    border-radius: 8px 0 8px 8px;
+  }
+  .wa-out::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -7px;
+    width: 8px;
+    height: 12px;
+    background: #d9fdd3;
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+  }
+  /* Burbuja entrante (blanca) con cola */
+  .wa-in {
+    position: relative;
+    background: #ffffff;
+    border-radius: 0 8px 8px 8px;
+  }
+  .wa-in::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 8px;
+    height: 12px;
+    background: #ffffff;
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+
+  /* 'both' aplica el estado inicial (opacity 0) SOLO mientras corre la animación;
+     si el navegador no la ejecuta (fuera de pantalla), el mensaje queda visible. */
+  .msg-anim {
+    animation: msg-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+  .msg-anim { opacity: 1; animation: none; }
+}
