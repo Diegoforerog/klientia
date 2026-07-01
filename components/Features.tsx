@@ -13,7 +13,7 @@ export default function Features() {
               Un equipo de ventas completo, <span className="text-brand-600">dentro de tu WhatsApp</span>
             </>
           }
-          subtitle="No es un chatbot más. Es la IA que atiende, vende, cobra y organiza tu negocio mientras tú creces."
+          subtitle="No es un chatbot más. Es la IA que atiende, vende, cobra, hace campañas y organiza tu negocio — todo dentro de tu WhatsApp."
         />
 
         <Reveal delay={120}>

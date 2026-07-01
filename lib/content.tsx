@@ -2,11 +2,15 @@ import {
   Bot,
   TrendingUp,
   RotateCcw,
+  Repeat,
+  Megaphone,
+  MessageCircle,
   KanbanSquare,
   Workflow,
+  Headset,
+  Sparkles,
   CalendarCheck,
   Wallet,
-  BookOpen,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -35,28 +39,53 @@ export const FEATURES: Feature[] = [
   {
     icon: Bot,
     title: 'Vendedor con IA, no un bot de FAQ',
-    desc: 'Atiende al instante, entiende lo que el cliente quiere, ofrece el producto correcto, cierra la venta y pasa el link de pago. 24/7.',
+    desc: 'Atiende al instante, entiende qué quiere el cliente, ofrece, cierra la venta y pasa el link de pago. 24/7 y con TU información: nunca se inventa nada.',
     accent: true,
   },
   {
     icon: TrendingUp,
     title: 'Impulsores de venta',
-    desc: 'Sube el ticket solo: ofrece la versión mejor (upsell), un complemento (cross-sell) o rescata la venta con descuento (downsell). Con TU mensaje, no genérico.',
+    desc: 'Sube el ticket solo: la versión mejor (upsell), un complemento (cross-sell) o un descuento para no perder la venta (downsell). Con tu mensaje, no genérico.',
   },
   {
     icon: RotateCcw,
     title: 'Recupera carritos solo',
-    desc: 'Si el cliente no terminó, la IA le escribe a la 1h, 6h y 24h con un mensaje propio por producto. Ventas que dabas por perdidas, recuperadas.',
+    desc: 'Si el cliente no terminó, la IA le escribe a la 1h, 6h y 24h — con descuento opcional. Ventas que dabas por perdidas, recuperadas.',
+  },
+  {
+    icon: Repeat,
+    title: 'Recompra automática',
+    desc: 'Días después de la entrega, la IA le vuelve a escribir a tu cliente para que compre de nuevo. Clientes que regresan, sin que muevas un dedo.',
+  },
+  {
+    icon: Megaphone,
+    title: 'Campañas por WhatsApp',
+    desc: 'Envía promos y novedades a tus contactos con plantillas oficiales aprobadas. Difusión segura, sin arriesgar tu número.',
+  },
+  {
+    icon: MessageCircle,
+    title: 'Reimpacto “¿sigues ahí?”',
+    desc: 'Cuando una conversación se enfría, la IA la retoma sola con un mensaje amable y la reactiva. Menos chats perdidos a mitad de camino.',
   },
   {
     icon: KanbanSquare,
     title: 'CRM conversacional',
-    desc: 'Embudos tipo kanban, etiquetas, tareas y la ficha de cada cliente. Sabes en qué va cada conversación sin perder ninguna.',
+    desc: 'Embudos kanban, etiquetas, tareas, lead scoring y la ficha de cada cliente. Todo tu pipeline de ventas, organizado.',
   },
   {
     icon: Workflow,
     title: 'Automatizaciones',
-    desc: 'Reglas simples “cuando pasa X → haz Y”: etiqueta, mueve en el embudo, asigna o dispara un mensaje. Tú las defines, sin código.',
+    desc: 'Reglas “cuando pasa X → haz Y”: etiqueta, mueve en el embudo, asigna o dispara un mensaje. Tú las defines, sin código.',
+  },
+  {
+    icon: Headset,
+    title: 'Paso a humano',
+    desc: 'Cuando la IA no sabe, el cliente se molesta o pide una persona, pasa el chat a tu equipo y les avisa. Nunca dejas a nadie colgado.',
+  },
+  {
+    icon: Sparkles,
+    title: 'Asistencia IA a tu equipo',
+    desc: 'La IA también ayuda a tus asesores: resume el chat, sugiere respuestas, reescribe y detecta el ánimo del cliente.',
   },
   {
     icon: CalendarCheck,
@@ -66,13 +95,24 @@ export const FEATURES: Feature[] = [
   {
     icon: Wallet,
     title: 'Cobros y contra entrega',
-    desc: 'Pensado para COD. También cobra con MercadoPago y Stripe, confirma el pago y mueve la venta en tu embudo automáticamente.',
+    desc: 'Pensado para COD. Conecta MercadoPago en un clic (o Stripe), confirma el pago y mueve la venta en tu embudo automáticamente.',
   },
-  {
-    icon: BookOpen,
-    title: 'Responde con TU información',
-    desc: 'Cargas tu catálogo y tu base de conocimiento; la IA responde con tus datos, tus precios y tu tono. Nunca se inventa nada.',
-  },
+];
+
+/* ─────────────────────────  BOTS LISTOS  ───────────────────────── */
+
+export const BOT_TYPES = [
+  { icon: MessageCircle, name: 'Solo responde', desc: 'Atiende dudas y da información con tu conocimiento.' },
+  { icon: TrendingUp, name: 'Vendedor', desc: 'Ofrece, sube el ticket, cierra la venta y cobra.' },
+  { icon: CalendarCheck, name: 'Agenda', desc: 'Consulta tu horario y reserva citas en el chat.' },
+];
+
+export const INDUSTRIES = [
+  { emoji: '👗', name: 'Moda' },
+  { emoji: '📱', name: 'Tecnología' },
+  { emoji: '💄', name: 'Belleza' },
+  { emoji: '🍔', name: 'Restaurante' },
+  { emoji: '🛠️', name: 'Servicios' },
 ];
 
 /* ─────────────────────────  CÓMO FUNCIONA  ───────────────────────── */
@@ -85,8 +125,8 @@ export const STEPS = [
   },
   {
     n: '02',
-    title: 'Sube tu catálogo y tus reglas',
-    desc: 'Cargas productos, precios e impulsores, y le dices cómo querés que venda. Todo en español, sin tocar una línea de código.',
+    title: 'Elige un bot y sube tu catálogo',
+    desc: 'Activa un bot experto de tu industria en 1 clic (moda, tech, belleza…), sube productos e impulsores y ajusta cómo quieres que venda. Sin código.',
   },
   {
     n: '03',
@@ -114,11 +154,11 @@ export const PLANS: Plan[] = [
     price: '49.900',
     tagline: 'Para empezar a no perder ni un mensaje.',
     features: [
-      'Agente de IA de soporte (responde con tu información)',
-      'CRM conversacional tipo kanban',
+      'Agente de IA de soporte (responde con tu info)',
+      'Bots listos por industria, en 1 clic',
+      'CRM conversacional (etiquetas, tareas, lead scoring)',
       'Automatizaciones “cuando pasa X → haz Y”',
-      'Base de conocimiento de tu negocio',
-      'Bandeja unificada de WhatsApp',
+      'Paso a humano con aviso a tu equipo',
     ],
     cta: 'Empezar gratis',
   },
@@ -126,13 +166,13 @@ export const PLANS: Plan[] = [
     id: 'PLATA',
     name: 'Plata',
     price: '89.900',
-    tagline: 'Suma agenda para servicios y citas.',
+    tagline: 'Suma agenda y ayuda a tu equipo.',
     features: [
       'Todo lo de Bronce',
-      'Agendamiento de citas dentro del chat',
-      'Servicios con precio y duración',
+      'Agendamiento de citas y servicios',
+      'Asistencia IA a tu equipo (resúmenes, respuestas)',
       'Calendario semanal en tu panel',
-      'Horario de atención configurable',
+      'Panel de métricas de tu negocio',
     ],
     cta: 'Empezar gratis',
   },
@@ -140,14 +180,14 @@ export const PLANS: Plan[] = [
     id: 'ORO',
     name: 'Oro',
     price: '149.900',
-    tagline: 'La IA que vende, cobra y recupera. Completo.',
+    tagline: 'La IA que vende, cobra, recupera y hace campañas.',
     popular: true,
     features: [
       'Todo lo de Plata',
-      'Catálogo de productos para vender en el chat',
-      'Impulsores: upsell, cross-sell y downsell',
-      'Cobros con MercadoPago, Stripe y contra entrega',
-      'Recuperación de carritos automática',
+      'Catálogo + impulsores (upsell, cross-sell, downsell)',
+      'Cobros: MercadoPago, Stripe y contra entrega',
+      'Recuperación de carritos + recompra automática',
+      'Campañas por WhatsApp con plantillas oficiales',
     ],
     cta: 'Empezar gratis',
   },
@@ -161,16 +201,16 @@ export const DIFFERENTIATORS = [
     desc: 'No es un chatbot de preguntas frecuentes: ofrece, cierra la venta y pasa el link de pago. Resultados, no respuestas.',
   },
   {
-    title: 'Impulsores con tu mensaje',
-    desc: 'El upsell, cross-sell y downsell los escribes tú. El cliente siente que le habla tu marca, no un robot.',
+    title: 'Empieza en minutos, no en semanas',
+    desc: 'Bots expertos listos por industria en 1 clic. Ya saben vender en tu rubro; tú solo los ajustas a tu gusto.',
   },
   {
     title: 'Hecho para LATAM y contra entrega',
     desc: 'Pensado para vender COD, en español, a un precio accesible para tiendas y dropshippers de la región.',
   },
   {
-    title: 'Recupera carritos automático',
-    desc: 'Mensajes de seguimiento por producto a la 1h, 6h y 24h. Recupera ventas mientras tú haces otra cosa.',
+    title: 'Todo tu WhatsApp en un solo lugar',
+    desc: 'Vende, recupera, hace campañas, agenda y organiza tu CRM — sin saltar entre cinco herramientas distintas.',
   },
   {
     title: 'Cada negocio configura lo suyo',
@@ -219,7 +259,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      'Recuperó carritos que yo daba por perdidos. Llegan los mensajes de seguimiento solitos y la gente vuelve a comprar. Se paga solo el primer mes.',
+      'Recuperó carritos que yo daba por perdidos y ahora la recompra me trae clientes de vuelta solita. Se paga solo el primer mes.',
     name: 'Camila Fuentes',
     role: 'Moda y ropa femenina',
     location: 'Santiago',
@@ -238,12 +278,16 @@ export const FAQS = [
     a: 'No. Empiezas tu prueba de 7 días gratis sin tarjeta. Solo agregas un método de pago si decides continuar.',
   },
   {
-    q: '¿En qué países funciona?',
-    a: 'En toda LATAM: Colombia, México, Chile, Perú, Ecuador, Argentina y más. Está pensado para la forma de vender de la región, incluyendo contra entrega.',
+    q: '¿Necesito saber de tecnología o programar?',
+    a: 'Para nada. Todo está en español y es sin código. Conectas tu WhatsApp, eliges un bot listo de tu industria y subes tu catálogo: si sabes usar WhatsApp, sabes usar esto.',
   },
   {
-    q: '¿Necesito saber de tecnología o programar?',
-    a: 'Para nada. Todo está en español y es sin código. Conectas tu WhatsApp, subes tu catálogo y listo: si sabes usar WhatsApp, sabes usar esto.',
+    q: '¿Puedo enviar promociones o campañas a mis clientes?',
+    a: 'Sí. Envías campañas por WhatsApp con plantillas oficiales aprobadas (difusión segura, sin arriesgar tu número). Y la IA hace recompra automática: le vuelve a escribir a quien ya te compró para que regrese.',
+  },
+  {
+    q: '¿En qué países funciona?',
+    a: 'En toda LATAM: Colombia, México, Chile, Perú, Ecuador, Argentina y más. Está pensado para la forma de vender de la región, incluyendo contra entrega.',
   },
   {
     q: '¿Puedo cancelar cuando quiera?',
@@ -251,11 +295,11 @@ export const FAQS = [
   },
   {
     q: '¿Sirve para contra entrega (COD)?',
-    a: 'Sí, está diseñado para contra entrega. La IA toma el pedido y confirma los datos; y si prefieres pago anticipado, también cobra con MercadoPago y Stripe.',
+    a: 'Sí, está diseñado para contra entrega. La IA toma el pedido y confirma los datos; y si prefieres pago anticipado, conecta MercadoPago en un clic o Stripe.',
   },
   {
     q: '¿La IA se inventa cosas o responde con mi información?',
-    a: 'Responde solo con tu catálogo y tu base de conocimiento. Tú defines los precios, los mensajes de venta y las reglas: la IA vende como tu marca, sin inventar.',
+    a: 'Responde solo con tu catálogo y tu base de conocimiento. Tú defines los precios, los mensajes de venta y las reglas: la IA vende como tu marca, sin inventar. Y si no sabe algo, pasa el chat a tu equipo.',
   },
 ];
 

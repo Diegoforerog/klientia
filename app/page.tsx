@@ -5,6 +5,7 @@ import ProblemSolution from '@/components/ProblemSolution';
 import Features from '@/components/Features';
 import ImpulsoresShowcase from '@/components/ImpulsoresShowcase';
 import HowItWorks from '@/components/HowItWorks';
+import QuickStartBots from '@/components/QuickStartBots';
 import ResultsBand from '@/components/ResultsBand';
 import Pricing from '@/components/Pricing';
 import Differentiators from '@/components/Differentiators';
@@ -26,6 +27,7 @@ export default function Page() {
         <Features />
         <ImpulsoresShowcase />
         <HowItWorks />
+        <QuickStartBots />
         <ResultsBand />
         <Pricing />
         <Differentiators />
