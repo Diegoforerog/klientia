@@ -1,8 +1,8 @@
 {
-  "name": "conversacommerce-landing",
+  "name": "klientia-landing",
   "version": "1.0.0",
   "private": true,
-  "description": "Landing de ventas de ConversaCommerce — vendedor con IA en WhatsApp para LATAM",
+  "description": "Landing de ventas de Klientia — vendedor con IA en WhatsApp para LATAM",
   "scripts": {
     "dev": "next dev -p 3030",
     "build": "next build",

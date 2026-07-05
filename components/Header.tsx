@@ -24,7 +24,7 @@ export default function Header() {
         }`}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
-          <a href="#top" aria-label="ConversaCommerce — inicio">
+          <a href="#top" aria-label="Klientia — inicio">
             <Logo />
           </a>
 

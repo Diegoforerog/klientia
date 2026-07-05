@@ -8,7 +8,7 @@ export default function Differentiators() {
     <section className="hairline-t bg-subtle py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Por qué ConversaCommerce"
+          eyebrow="Por qué Klientia"
           title={
             <>
               No es otro chatbot. Es el que <span className="text-brand-600">de verdad vende</span>

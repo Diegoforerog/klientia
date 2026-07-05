@@ -2,7 +2,7 @@
 
 // Para GitHub Pages: exportación estática + basePath del repo.
 // Solo se activa en el build de Pages (GITHUB_PAGES=true); en local sigue normal.
-const repo = 'conversacommerce-landing';
+const repo = 'klientia';
 const isPages = process.env.GITHUB_PAGES === 'true';
 
 const nextConfig = {

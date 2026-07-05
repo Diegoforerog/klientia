@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-line pt-7 sm:flex-row">
-          <p className="text-[13.5px] text-ink-faint">© 2026 ConversaCommerce. Todos los derechos reservados.</p>
+          <p className="text-[13.5px] text-ink-faint">© 2026 Klientia. Todos los derechos reservados.</p>
           <p className="text-[13.5px] text-ink-faint">Hecho para emprendedores de LATAM</p>
         </div>
       </div>

@@ -9,7 +9,7 @@ export default function StructuredData() {
       {
         '@type': 'Organization',
         '@id': `${SITE}#organization`,
-        name: 'ConversaCommerce',
+        name: 'Klientia',
         url: SITE,
         description:
           'SaaS de ventas por WhatsApp con inteligencia artificial para negocios de LATAM: la IA atiende, vende, cobra y recupera carritos.',
@@ -19,13 +19,13 @@ export default function StructuredData() {
         '@type': 'WebSite',
         '@id': `${SITE}#website`,
         url: SITE,
-        name: 'ConversaCommerce',
+        name: 'Klientia',
         inLanguage: 'es',
         publisher: { '@id': `${SITE}#organization` },
       },
       {
         '@type': 'SoftwareApplication',
-        name: 'ConversaCommerce',
+        name: 'Klientia',
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Web, WhatsApp',
         inLanguage: 'es',

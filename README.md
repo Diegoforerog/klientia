@@ -1,7 +1,7 @@
-# ConversaCommerce — Landing de ventas
+# Klientia — Landing de ventas
 
 Landing page de marketing (una sola página, secciones ancladas) para captar registros a la
-prueba gratis de **ConversaCommerce**: el vendedor con IA para WhatsApp.
+prueba gratis de **Klientia**: el vendedor con IA para WhatsApp.
 
 - **Stack:** Next.js 14 (App Router) + Tailwind CSS + lucide-react.
 - **Idioma:** español LATAM. **Objetivo:** conversión (botón "Prueba gratis").
@@ -27,7 +27,7 @@ npm start        # sirve la versión optimizada
 
 | Plataforma | Cómo |
 |---|---|
-| **Vercel** | Importa el repo y pon *Root Directory* = `Personal/ConversaCommerce/landing`. Detecta Next.js solo. |
+| **Vercel** | Importa el repo y pon *Root Directory* = `Personal/Klientia/landing`. Detecta Next.js solo. |
 | **Netlify** | Base directory = `landing`, build `npm run build`, usa el plugin oficial de Next.js. |
 | **Easypanel** | App tipo Node, build `npm run build`, start `npm start`, puerto `3000`. |
 

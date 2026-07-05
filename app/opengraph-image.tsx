@@ -1,6 +1,10 @@
 import { ImageResponse } from 'next/og';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
-export const alt = 'ConversaCommerce — Tu vendedor con IA en WhatsApp, 24/7';
+const ICON = `data:image/png;base64,${readFileSync(join(process.cwd(), 'public/brand/klientia-icon.png')).toString('base64')}`;
+
+export const alt = 'Klientia — Tu vendedor con IA en WhatsApp, 24/7';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -22,21 +26,9 @@ export default function OpengraphImage() {
       >
         {/* Marca */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <div
-            style={{
-              display: 'flex',
-              width: 52,
-              height: 52,
-              borderRadius: 14,
-              background: '#0a0a0b',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: 26,
-            }}
-          >
-            💬
-          </div>
-          <div style={{ fontSize: 28, fontWeight: 700, color: '#0a0a0b' }}>ConversaCommerce</div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={ICON} width={58} height={58} alt="" />
+          <div style={{ fontSize: 30, fontWeight: 700, color: '#0a0a0b' }}>Klientia</div>
         </div>
 
         {/* Titular */}

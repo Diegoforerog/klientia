@@ -49,7 +49,7 @@ export default function ProblemSolution() {
 
           <Reveal delay={100} className="h-full">
             <div className="relative flex h-full flex-col rounded-3xl border border-brand-200 bg-surface p-8 shadow-md ring-1 ring-brand-100/50">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-brand-600">Con ConversaCommerce</p>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-brand-600">Con Klientia</p>
               <ul className="mt-6 space-y-4">
                 {SOLUTIONS.map((s) => (
                   <li key={s} className="flex items-start gap-3">
