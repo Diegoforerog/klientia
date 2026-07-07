@@ -102,9 +102,9 @@ export const FEATURES: Feature[] = [
 /* ─────────────────────────  BOTS LISTOS  ───────────────────────── */
 
 export const BOT_TYPES = [
-  { icon: MessageCircle, name: 'Solo responde', desc: 'Atiende dudas y da información con tu conocimiento.' },
-  { icon: TrendingUp, name: 'Vendedor', desc: 'Ofrece, sube el ticket, cierra la venta y cobra.' },
-  { icon: CalendarCheck, name: 'Agenda', desc: 'Consulta tu horario y reserva citas en el chat.' },
+  { icon: MessageCircle, name: 'Responde', desc: 'Atiende dudas y responde con tu información, 24/7.' },
+  { icon: CalendarCheck, name: 'Agenda', desc: 'Consulta tu horario y reserva citas dentro del chat.' },
+  { icon: TrendingUp, name: 'Vende', desc: 'Ofrece, sube el ticket, cierra la venta y cobra.' },
 ];
 
 export const INDUSTRIES = [
