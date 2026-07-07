@@ -150,7 +150,7 @@ export type Plan = {
 export const PLANS: Plan[] = [
   {
     id: 'BRONCE',
-    name: 'Soporte',
+    name: 'Responde',
     price: '49.900',
     tagline: 'El bot que atiende y responde por ti, 24/7.',
     features: [
@@ -168,7 +168,7 @@ export const PLANS: Plan[] = [
     price: '89.900',
     tagline: 'Suma citas: el bot que agenda por ti.',
     features: [
-      'Todo lo de Soporte',
+      'Todo lo de Responde',
       'Agendamiento de citas dentro del chat',
       'Servicios con precio y duración',
       'Calendario semanal en tu panel',
@@ -178,7 +178,7 @@ export const PLANS: Plan[] = [
   },
   {
     id: 'ORO',
-    name: 'Vendedor',
+    name: 'Vende',
     price: '149.900',
     tagline: 'El completo: el bot que vende, cobra y recupera.',
     popular: true,
