@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: '%s · Klientia',
   },
   description:
-    'Conecta tu WhatsApp, sube tu catálogo y deja que la IA atienda, venda, cobre y recupere carritos por ti. Sin código, en español, hecho para LATAM y contra entrega. Prueba gratis 7 días.',
+    'Tu vendedor con IA en WhatsApp: atiende, vende, cobra y recupera carritos 24/7. Sin código, para LATAM y contra entrega. Prueba gratis 7 días.',
   applicationName: 'Klientia',
   keywords: [
     'ventas por WhatsApp con IA',

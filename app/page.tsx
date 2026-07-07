@@ -14,6 +14,7 @@ import FAQ from '@/components/FAQ';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
 import StructuredData from '@/components/StructuredData';
+import StickyCTA from '@/components/StickyCTA';
 
 export default function Page() {
   return (
@@ -36,6 +37,8 @@ export default function Page() {
         <FinalCTA />
       </main>
       <Footer />
+      <div aria-hidden className="h-20 lg:hidden" />
+      <StickyCTA />
     </>
   );
 }
