@@ -38,6 +38,12 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
+            <a
+              href="docs/"
+              className="text-[15px] font-medium text-ink-mute transition-colors hover:text-ink"
+            >
+              Documentación
+            </a>
           </div>
 
           <div className="hidden items-center gap-3 lg:flex">
@@ -72,6 +78,13 @@ export default function Header() {
                   {link.label}
                 </a>
               ))}
+              <a
+                href="docs/"
+                onClick={() => setOpen(false)}
+                className="rounded-xl px-3 py-2.5 text-[15px] font-medium text-ink-soft hover:bg-subtle"
+              >
+                Documentación
+              </a>
               <a href={REGISTER_URL} className="btn-primary mt-2 w-full" onClick={() => setOpen(false)}>
                 Prueba gratis 7 días <ArrowRight className="h-4 w-4" />
               </a>

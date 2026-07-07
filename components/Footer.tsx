@@ -6,6 +6,7 @@ const COLS = [
   {
     title: 'Recursos',
     links: [
+      { label: 'Documentación', href: 'docs/' },
       { label: 'Empezar gratis', href: REGISTER_URL },
       { label: 'Iniciar sesión', href: REGISTER_URL },
       { label: 'Soporte', href: REGISTER_URL },
