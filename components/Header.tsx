@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import Logo from './Logo';
-import { NAV_LINKS, REGISTER_URL } from '@/lib/content';
+import { NAV_LINKS, REGISTER_URL, LOGIN_URL } from '@/lib/content';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -47,7 +47,7 @@ export default function Header() {
           </div>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <a href={REGISTER_URL} className="text-[15px] font-semibold text-ink transition-colors hover:text-brand-600">
+            <a href={LOGIN_URL} className="text-[15px] font-semibold text-ink transition-colors hover:text-brand-600">
               Ingresar
             </a>
             <a href={REGISTER_URL} className="btn-primary">

@@ -5,34 +5,34 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Tinta (texto) — escala neutra fría, casi negra
+        // Tinta (texto) — escala slate (neutros fríos que armonizan con el azul)
         ink: {
-          DEFAULT: '#0a0a0b',
-          soft: '#3f3f46',
-          mute: '#71717a',
-          faint: '#a1a1aa',
+          DEFAULT: '#0f172a',
+          soft: '#334155',
+          mute: '#64748b',
+          faint: '#94a3b8',
         },
-        // Superficies y líneas
+        // Superficies y líneas (tinte frío muy sutil)
         surface: '#ffffff',
-        subtle: '#fafafa',
-        panel: '#f5f5f6',
-        line: '#ededf0',
-        line2: '#e3e3e7',
-        // Acento de marca (índigo) — único color, usado con moderación
+        subtle: '#f8fafc',
+        panel: '#f1f5f9',
+        line: '#e7edf4',
+        line2: '#dbe3ec',
+        // Acento de marca (azul confianza) — único color, usado con moderación
         brand: {
-          50: '#eef1ff',
-          100: '#e0e4ff',
-          200: '#c6ccff',
-          300: '#a3a8ff',
-          400: '#8184fb',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#2e2a7d',
-          950: '#1b1840',
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
         },
-        violetx: '#7c3aed',
+        skyx: '#0ea5e9',
         // Verde WhatsApp (solo dentro de los chats)
         wa: {
           green: '#25d366',
@@ -48,18 +48,26 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-heading)', 'var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
-        tighter: '-0.03em',
-        tightest: '-0.045em',
+        // Rubik es geométrica: menos tracking negativo que Manrope
+        tighter: '-0.02em',
+        tightest: '-0.03em',
+      },
+      transitionTimingFunction: {
+        // Curvas con carácter (Emil Kowalski): las nativas de CSS son débiles
+        out: 'cubic-bezier(0.23, 1, 0.32, 1)',
+        'in-out': 'cubic-bezier(0.77, 0, 0.175, 1)',
+        drawer: 'cubic-bezier(0.32, 0.72, 0, 1)',
       },
       boxShadow: {
-        xs: '0 1px 2px rgba(10,10,11,0.05)',
-        sm: '0 1px 3px rgba(10,10,11,0.06), 0 1px 2px rgba(10,10,11,0.04)',
-        md: '0 10px 30px -14px rgba(10,10,11,0.14), 0 2px 6px -2px rgba(10,10,11,0.06)',
-        lift: '0 24px 60px -28px rgba(10,10,11,0.22)',
-        phone: '0 50px 90px -36px rgba(10,10,11,0.40), 0 8px 24px -12px rgba(10,10,11,0.18)',
-        ring: '0 0 0 1px rgba(10,10,11,0.06)',
+        xs: '0 1px 2px rgba(15,23,42,0.05)',
+        sm: '0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04)',
+        md: '0 10px 30px -14px rgba(15,23,42,0.14), 0 2px 6px -2px rgba(15,23,42,0.06)',
+        lift: '0 24px 60px -28px rgba(15,23,42,0.22)',
+        phone: '0 50px 90px -36px rgba(15,23,42,0.40), 0 8px 24px -12px rgba(15,23,42,0.18)',
+        ring: '0 0 0 1px rgba(15,23,42,0.06)',
       },
       borderRadius: {
         '4xl': '2rem',

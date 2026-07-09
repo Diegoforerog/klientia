@@ -1,6 +1,6 @@
 import { PLANS, FAQS, REGISTER_URL } from '@/lib/content';
 
-const SITE = 'https://conversa.nextgencol.com';
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.klientia.app';
 
 export default function StructuredData() {
   const data = {
@@ -35,8 +35,6 @@ export default function StructuredData() {
         offers: PLANS.map((p) => ({
           '@type': 'Offer',
           name: `Plan ${p.name}`,
-          price: p.price.replace(/\./g, ''),
-          priceCurrency: 'COP',
           url: `${REGISTER_URL}?plan=${p.id}`,
           category: 'subscription',
         })),

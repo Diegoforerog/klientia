@@ -1,5 +1,5 @@
 import Logo from './Logo';
-import { NAV_LINKS, REGISTER_URL, COUNTRIES } from '@/lib/content';
+import { NAV_LINKS, REGISTER_URL, LOGIN_URL, COUNTRIES } from '@/lib/content';
 
 const COLS = [
   { title: 'Producto', links: NAV_LINKS },
@@ -8,7 +8,7 @@ const COLS = [
     links: [
       { label: 'Documentación', href: 'doc/es/' },
       { label: 'Empezar gratis', href: REGISTER_URL },
-      { label: 'Iniciar sesión', href: REGISTER_URL },
+      { label: 'Iniciar sesión', href: LOGIN_URL },
       { label: 'Soporte', href: REGISTER_URL },
     ],
   },

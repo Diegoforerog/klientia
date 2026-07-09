@@ -1,14 +1,14 @@
 :root {
-  --md-primary-fg-color:        #5b50e6;
-  --md-primary-fg-color--light: #7a71ee;
-  --md-primary-fg-color--dark:  #4a40cf;
-  --md-accent-fg-color:         #4a40cf;
-  --md-typeset-a-color:         #4a40cf;
+  --md-primary-fg-color:        #2563eb;
+  --md-primary-fg-color--light: #3b82f6;
+  --md-primary-fg-color--dark:  #1d4ed8;
+  --md-accent-fg-color:         #2563eb;
+  --md-typeset-a-color:         #2563eb;
 }
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #7a71ee;
-  --md-accent-fg-color:  #9a92f5;
-  --md-typeset-a-color:  #a79ff7;
+  --md-primary-fg-color: #3b82f6;
+  --md-accent-fg-color:  #60a5fa;
+  --md-typeset-a-color:  #60a5fa;
 }
 
 /* marco tipo captura de pantalla */

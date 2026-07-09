@@ -15,14 +15,15 @@ import {
 } from 'lucide-react';
 
 /** URL de registro / inicio de prueba. Cambia esto si tu dominio cambia. */
-export const REGISTER_URL = 'https://conversa.nextgencol.com/register';
+export const REGISTER_URL = 'https://app.klientia.app/register';
+export const LOGIN_URL = 'https://app.klientia.app/login';
 export const registerWithPlan = (plan: 'BRONCE' | 'PLATA' | 'ORO') =>
   `${REGISTER_URL}?plan=${plan}`;
 
 export const NAV_LINKS = [
   { label: 'Características', href: '#caracteristicas' },
   { label: 'Cómo funciona', href: '#como-funciona' },
-  { label: 'Precios', href: '#precios' },
+  { label: 'Planes', href: '#precios' },
   { label: 'Preguntas', href: '#faq' },
 ];
 

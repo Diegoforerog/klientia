@@ -8,13 +8,13 @@ export default function Pricing() {
     <section id="precios" className="scroll-mt-24 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Planes y precios"
+          eyebrow="Planes"
           title={
             <>
               Elige tu plan y <span className="text-brand-600">empieza gratis 7 días</span>
             </>
           }
-          subtitle="Sin tarjeta para empezar. Sin contratos. Cancela cuando quieras. Precios en pesos colombianos (COP)."
+          subtitle="Entra, pruébalo 7 días gratis y decide. El cobro llega solo al terminar la prueba. Sin tarjeta para empezar · cancela cuando quieras."
         />
 
         <div className="mx-auto mt-14 grid max-w-5xl items-start gap-6 lg:grid-cols-3">
@@ -33,20 +33,16 @@ export default function Pricing() {
                     </span>
                   )}
 
-                  <div className="flex items-baseline justify-between">
-                    <h3 className={`text-[20px] font-bold tracking-tight ${pop ? 'text-white' : 'text-ink'}`}>{plan.name}</h3>
-                    <span className={`text-[12px] font-semibold uppercase tracking-wide ${pop ? 'text-brand-300' : 'text-emerald-600'}`}>
-                      7 días gratis
-                    </span>
-                  </div>
+                  <h3 className={`text-[20px] font-bold tracking-tight ${pop ? 'text-white' : 'text-ink'}`}>{plan.name}</h3>
                   <p className={`mt-1.5 text-[14px] ${pop ? 'text-white/60' : 'text-ink-mute'}`}>{plan.tagline}</p>
 
-                  <div className="mt-6 flex items-end gap-1">
-                    <span className={`text-[15px] font-semibold ${pop ? 'text-white/60' : 'text-ink-faint'}`}>$</span>
-                    <span className={`text-[2.75rem] font-bold leading-none tracking-tight ${pop ? 'text-white' : 'text-ink'}`}>
-                      {plan.price}
+                  <div className="mt-6">
+                    <span className={`block text-[2rem] font-bold leading-none tracking-tight ${pop ? 'text-white' : 'text-ink'}`}>
+                      Gratis 7 días
                     </span>
-                    <span className={`mb-1 text-[14px] ${pop ? 'text-white/60' : 'text-ink-mute'}`}>/mes</span>
+                    <p className={`mt-2 text-[13px] leading-snug ${pop ? 'text-white/55' : 'text-ink-faint'}`}>
+                      Entra hoy sin costo. Al terminar la prueba se cobra tu plan; cancela antes y no pagas nada.
+                    </p>
                   </div>
 
                   <a

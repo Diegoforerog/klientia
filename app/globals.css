@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Curvas de animación con carácter (las nativas de CSS son débiles) */
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+    /* Permite animar block-size:auto (acordeón FAQ) en navegadores que lo soportan */
+    interpolate-size: allow-keywords;
+  }
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -10,40 +18,53 @@
   }
   body {
     @apply bg-surface text-ink font-sans antialiased;
-    font-feature-settings: 'ss01', 'cv03', 'cv04';
   }
   ::selection {
-    background-color: rgba(79, 70, 229, 0.14);
+    background-color: rgba(37, 99, 235, 0.14);
   }
   h1, h2, h3 {
-    @apply font-sans;
-    letter-spacing: -0.03em;
+    @apply font-heading;
+    letter-spacing: -0.02em;
   }
   a:focus-visible, button:focus-visible {
-    outline: 2px solid #4f46e5;
+    outline: 2px solid #2563eb;
     outline-offset: 3px;
     border-radius: 10px;
   }
 }
 
 @layer components {
-  /* Botón primario (índigo, único acento fuerte) */
+  /* Botón primario (azul, único acento fuerte) */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-5 py-3
-      text-[15px] font-semibold text-white transition-all duration-200
-      hover:bg-brand-700 hover:-translate-y-px active:translate-y-0;
-    box-shadow: 0 1px 2px rgba(10,10,11,0.10), 0 8px 24px -10px rgba(79,70,229,0.5);
+      text-[15px] font-semibold text-white hover:bg-brand-700;
+    box-shadow: 0 1px 2px rgba(15,23,42,0.10), 0 8px 24px -10px rgba(37,99,235,0.5);
   }
   /* Botón secundario (blanco, hairline) */
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 rounded-full border border-line2 bg-surface
-      px-5 py-3 text-[15px] font-semibold text-ink transition-all duration-200
-      hover:border-ink/20 hover:bg-subtle;
+      px-5 py-3 text-[15px] font-semibold text-ink hover:border-ink/20 hover:bg-subtle;
   }
   /* Botón oscuro (tinta) */
   .btn-ink {
     @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3
-      text-[15px] font-semibold text-white transition-all duration-200 hover:bg-ink/90 hover:-translate-y-px;
+      text-[15px] font-semibold text-white hover:bg-ink/90;
+  }
+  /* Transiciones explícitas (nunca `all`) + feedback al presionar: el botón "escucha" */
+  .btn-primary, .btn-secondary, .btn-ink {
+    transition:
+      transform 160ms var(--ease-out),
+      background-color 200ms ease,
+      border-color 200ms ease,
+      box-shadow 200ms ease;
+  }
+  .btn-primary:active, .btn-secondary:active, .btn-ink:active {
+    transform: scale(0.97);
+  }
+  /* Hover-lift solo con puntero real (evita falsos hover en pantallas táctiles) */
+  @media (hover: hover) and (pointer: fine) {
+    .btn-primary:hover, .btn-ink:hover { transform: translateY(-1px); }
+    .btn-primary:active, .btn-ink:active { transform: translateY(0) scale(0.97); }
   }
   .eyebrow {
     @apply inline-flex items-center gap-2 text-[12.5px] font-semibold uppercase tracking-[0.12em] text-brand-600;
@@ -64,23 +85,23 @@
 
   /* Acento de degradado MUY sutil para títulos clave */
   .text-accent {
-    background: linear-gradient(100deg, #4f46e5, #7c3aed);
+    background: linear-gradient(100deg, #2563eb, #0ea5e9);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  /* Fondo: blanco con un velo de degradado índigo arriba (estilo Stripe, contenido) */
+  /* Fondo: blanco con un velo de degradado azul→cian arriba (estilo Stripe, contenido) */
   .bg-aura {
     background:
-      radial-gradient(60rem 32rem at 50% -12rem, rgba(99, 102, 241, 0.10), transparent 70%),
-      radial-gradient(40rem 24rem at 88% -6rem, rgba(124, 58, 237, 0.07), transparent 70%),
+      radial-gradient(60rem 32rem at 50% -12rem, rgba(59, 130, 246, 0.10), transparent 70%),
+      radial-gradient(40rem 24rem at 88% -6rem, rgba(14, 165, 233, 0.07), transparent 70%),
       #ffffff;
   }
 
   /* Cuadrícula de puntos finísima */
   .bg-grid {
-    background-image: radial-gradient(rgba(10, 10, 11, 0.05) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px);
     background-size: 28px 28px;
     -webkit-mask-image: radial-gradient(40rem 40rem at 50% 0%, #000, transparent 75%);
     mask-image: radial-gradient(40rem 40rem at 50% 0%, #000, transparent 75%);
@@ -95,11 +116,11 @@
     mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
   }
 
-  /* Revelado al hacer scroll */
+  /* Revelado al hacer scroll — ease-out fuerte: arranca rápido, aterriza suave */
   .reveal {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateY(16px);
+    transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
     will-change: opacity, transform;
   }
   .reveal.is-visible { opacity: 1; transform: none; }
@@ -147,7 +168,25 @@
   /* 'both' aplica el estado inicial (opacity 0) SOLO mientras corre la animación;
      si el navegador no la ejecuta (fuera de pantalla), el mensaje queda visible. */
   .msg-anim {
-    animation: msg-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: msg-in 0.45s var(--ease-out) both;
+  }
+  /* Origin-aware: cada burbuja crece desde su cola, como en WhatsApp real */
+  .wa-out.msg-anim { transform-origin: bottom right; }
+  .wa-in.msg-anim { transform-origin: bottom left; }
+
+  /* Acordeón FAQ: apertura animada (progresivo; instantáneo donde no hay soporte) */
+  details.faq-item::details-content {
+    opacity: 0;
+    block-size: 0;
+    overflow: hidden;
+    transition:
+      content-visibility 260ms allow-discrete,
+      opacity 260ms var(--ease-out),
+      block-size 260ms var(--ease-out);
+  }
+  details.faq-item[open]::details-content {
+    opacity: 1;
+    block-size: auto;
   }
 
   .no-scrollbar::-webkit-scrollbar { display: none; }

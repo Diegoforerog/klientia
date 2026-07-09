@@ -19,7 +19,7 @@ export default function FAQ() {
         <Reveal delay={120}>
           <div className="mt-12 divide-y divide-line border-y border-line">
             {FAQS.map((item) => (
-              <details key={item.q} className="group [&[open]_.faqi]:rotate-45">
+              <details key={item.q} className="faq-item group [&[open]_.faqi]:rotate-45">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-[16.5px] font-medium text-ink [&::-webkit-details-marker]:hidden">
                   {item.q}
                   <Plus className="faqi h-5 w-5 shrink-0 text-ink-faint transition-transform duration-300" strokeWidth={2} />

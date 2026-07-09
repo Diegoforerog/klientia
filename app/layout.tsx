@@ -1,11 +1,18 @@
 import type { Metadata, Viewport } from 'next';
-import { Manrope } from 'next/font/google';
+import { Nunito_Sans, Rubik } from 'next/font/google';
 import './globals.css';
 
-const sans = Manrope({
+const sans = Nunito_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
   variable: '--font-sans',
+  display: 'swap',
+});
+
+const heading = Rubik({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-heading',
   display: 'swap',
 });
 
@@ -62,7 +69,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={sans.variable}>
+    <html lang="es" className={`${sans.variable} ${heading.variable}`}>
       <body>{children}</body>
     </html>
   );
