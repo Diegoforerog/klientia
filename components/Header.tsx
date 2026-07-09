@@ -25,7 +25,7 @@ export default function Header() {
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
           <a href="#top" aria-label="Klientia — inicio">
-            <Logo className="h-10 sm:h-11" />
+            <Logo className="h-11 sm:h-12" />
           </a>
 
           <div className="hidden items-center gap-7 lg:flex">
@@ -39,7 +39,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="docs/"
+              href="doc/es/"
               className="text-[15px] font-medium text-ink-mute transition-colors hover:text-ink"
             >
               Documentación
@@ -79,7 +79,7 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="docs/"
+                href="doc/es/"
                 onClick={() => setOpen(false)}
                 className="rounded-xl px-3 py-2.5 text-[15px] font-medium text-ink-soft hover:bg-subtle"
               >

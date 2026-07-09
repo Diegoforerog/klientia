@@ -9,7 +9,7 @@ const sans = Manrope({
   display: 'swap',
 });
 
-const SITE = 'https://conversa.nextgencol.com';
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://conversa.nextgencol.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),

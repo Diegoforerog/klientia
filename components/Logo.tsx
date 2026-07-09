@@ -5,8 +5,8 @@ export default function Logo({ className = 'h-9' }: { className?: string }) {
     <Image
       src="/brand/klientia-lockup.png"
       alt="Klientia"
-      width={520}
-      height={213}
+      width={418}
+      height={98}
       priority
       className={`w-auto ${className}`}
     />

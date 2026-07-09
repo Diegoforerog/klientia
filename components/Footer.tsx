@@ -6,7 +6,7 @@ const COLS = [
   {
     title: 'Recursos',
     links: [
-      { label: 'Documentación', href: 'docs/' },
+      { label: 'Documentación', href: 'doc/es/' },
       { label: 'Empezar gratis', href: REGISTER_URL },
       { label: 'Iniciar sesión', href: REGISTER_URL },
       { label: 'Soporte', href: REGISTER_URL },
@@ -28,7 +28,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="max-w-xs">
-            <Logo className="h-10" />
+            <Logo className="h-11" />
             <p className="mt-4 text-[14.5px] leading-relaxed text-ink-mute">
               El vendedor con IA para tu WhatsApp. Atiende, vende, cobra y recupera carritos por ti. Hecho para LATAM.
             </p>
