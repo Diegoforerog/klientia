@@ -10,7 +10,6 @@ const META = process.env.NEXT_PUBLIC_META_PIXEL_ID || '';
 const TIKTOK = process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID || '';
 const GA4 = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || '';
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 type AnyWin = Record<string, any>;
 
 let pixelsLoaded = false;
@@ -51,7 +50,8 @@ function injectMeta(id: string) {
   const w = window as unknown as AnyWin;
   if (w.fbq) return;
   const n: any = function (...args: unknown[]) {
-    n.callMethod ? n.callMethod.apply(n, args) : n.queue.push(args);
+    if (n.callMethod) n.callMethod.apply(n, args);
+    else n.queue.push(args);
   };
   w.fbq = n;
   if (!w._fbq) w._fbq = n;
