@@ -91,7 +91,7 @@ export const FEATURES: Feature[] = [
   {
     icon: CalendarCheck,
     title: 'Agenda de citas',
-    desc: 'Define tu horario y tus servicios; la IA consulta disponibilidad y reserva la cita dentro del chat, sin choques de horario.',
+    desc: 'Tus servicios y tu equipo de asesores, cada uno con su horario. La IA reserva en el chat sin choques, asigna sola (o deja que el cliente elija asesor) y sincroniza con Google Calendar o Calendly.',
   },
   {
     icon: Wallet,
@@ -104,7 +104,7 @@ export const FEATURES: Feature[] = [
 
 export const BOT_TYPES = [
   { icon: MessageCircle, name: 'Responde', desc: 'Atiende dudas y responde con tu información, 24/7.' },
-  { icon: CalendarCheck, name: 'Agenda', desc: 'Consulta tu horario y reserva citas dentro del chat.' },
+  { icon: CalendarCheck, name: 'Agenda', desc: 'Reserva citas en el chat: servicios, asesores y sincronía con tu calendario.' },
   { icon: TrendingUp, name: 'Vende', desc: 'Ofrece, sube el ticket, cierra la venta y cobra.' },
 ];
 
@@ -185,10 +185,10 @@ export const PLANS: Plan[] = [
     tagline: 'Suma citas: el bot que agenda por ti.',
     features: [
       'Todo lo de Responde',
-      'Agendamiento de citas dentro del chat',
-      'Servicios con precio y duración',
-      'Calendario semanal en tu panel',
-      'Horario de atención configurable',
+      'Agenda citas en el chat: servicios con precio y duración',
+      'Equipo de asesores con horario propio · asignación automática o el cliente elige',
+      'Sincroniza con Google Calendar o Calendly',
+      'Bloqueos de agenda y reprogramación: la IA nunca agenda encima',
     ],
     cta: 'Empezar gratis',
   },
