@@ -11,6 +11,8 @@ import {
   Sparkles,
   CalendarCheck,
   Wallet,
+  SearchCheck,
+  ShoppingBag,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -97,6 +99,16 @@ export const FEATURES: Feature[] = [
     icon: Wallet,
     title: 'Cobros y contra entrega',
     desc: 'Pensado para COD. Conecta MercadoPago en un clic (o Stripe), confirma el pago y mueve la venta en tu embudo automáticamente.',
+  },
+  {
+    icon: ShoppingBag,
+    title: 'Integración con Shopify',
+    desc: 'Conecta tu tienda Shopify: importa tu catálogo con variantes reales (la IA pregunta la talla), se sincroniza solo por webhooks y empuja los pedidos. Un solo inventario.',
+  },
+  {
+    icon: SearchCheck,
+    title: 'Auditor de ventas perdidas',
+    desc: 'Cada noche la IA revisa los chats con interés real que no compraron y te dice por qué (precio, dudas, se enfrió…). Sabes exactamente qué arreglar para vender más.',
   },
 ];
 

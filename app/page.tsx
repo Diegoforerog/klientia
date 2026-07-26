@@ -4,6 +4,7 @@ import TrustStrip from '@/components/TrustStrip';
 import ProblemSolution from '@/components/ProblemSolution';
 import Features from '@/components/Features';
 import ImpulsoresShowcase from '@/components/ImpulsoresShowcase';
+import AgendaShowcase from '@/components/AgendaShowcase';
 import HowItWorks from '@/components/HowItWorks';
 import QuickStartBots from '@/components/QuickStartBots';
 import ResultsBand from '@/components/ResultsBand';
@@ -27,6 +28,7 @@ export default function Page() {
         <ProblemSolution />
         <Features />
         <ImpulsoresShowcase />
+        <AgendaShowcase />
         <HowItWorks />
         <QuickStartBots />
         <ResultsBand />
