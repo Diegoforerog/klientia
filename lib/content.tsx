@@ -189,7 +189,7 @@ export const PLANS: Plan[] = [
       'Automatizaciones “cuando pasa X → haz Y”',
       'Paso a humano con aviso a tu equipo',
     ],
-    cta: 'Empezar gratis',
+    cta: 'Empezar a responder',
   },
   {
     id: 'PLATA',
@@ -206,7 +206,7 @@ export const PLANS: Plan[] = [
       'Sincroniza con Google Calendar o Calendly',
       'Bloqueos de agenda y reprogramación: la IA nunca agenda encima',
     ],
-    cta: 'Empezar gratis',
+    cta: 'Empezar a agendar',
   },
   {
     id: 'ORO',
@@ -224,7 +224,7 @@ export const PLANS: Plan[] = [
       'Recuperación de carritos + recompra automática',
       'Campañas por WhatsApp con plantillas oficiales',
     ],
-    cta: 'Empezar gratis',
+    cta: 'Empezar a vender',
   },
 ];
 

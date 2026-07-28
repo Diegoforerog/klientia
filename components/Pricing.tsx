@@ -1,6 +1,7 @@
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight, CornerDownRight } from 'lucide-react';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
+import PlanFinder from './PlanFinder';
 import { PLANS, registerWithPlan, EXTRA_CONVERSATION_USD } from '@/lib/content';
 
 export default function Pricing() {
@@ -17,7 +18,11 @@ export default function Pricing() {
           subtitle="Precio de lanzamiento por tiempo limitado. Empiezas con 7 días gratis, sin tarjeta; el cobro llega solo al terminar la prueba. Precios en dólares (USD)."
         />
 
-        <div className="mx-auto mt-14 grid max-w-5xl items-start gap-6 lg:grid-cols-3">
+        <Reveal className="mt-12">
+          <PlanFinder />
+        </Reveal>
+
+        <div className="mx-auto mt-10 grid max-w-5xl items-start gap-6 lg:grid-cols-3">
           {PLANS.map((plan, i) => {
             const pop = plan.popular;
             return (
@@ -78,15 +83,40 @@ export default function Pricing() {
 
                   <div className={`mt-7 border-t pt-6 ${pop ? 'border-white/15' : 'border-line'}`}>
                     <ul className="space-y-3.5">
-                      {plan.features.map((f) => (
-                        <li key={f} className="flex items-start gap-2.5">
-                          <Check
-                            className={`mt-0.5 h-[18px] w-[18px] shrink-0 ${pop ? 'text-brand-300' : 'text-emerald-600'}`}
-                            strokeWidth={2.5}
-                          />
-                          <span className={`text-[14.5px] leading-snug ${pop ? 'text-white/80' : 'text-ink-mute'}`}>{f}</span>
-                        </li>
-                      ))}
+                      {plan.features.map((f) => {
+                        /* Diseñador visual: distinguir "Todo lo de X" (jerarquía menor,
+                         * flecha) de las features NUEVAS del plan (tick con acento).
+                         * Así el usuario ve DE UN VISTAZO qué gana al subir de plan. */
+                        const inherited = /^Todo lo de /.test(f);
+                        return (
+                          <li key={f} className="flex items-start gap-2.5">
+                            {inherited ? (
+                              <CornerDownRight
+                                className={`mt-0.5 h-[18px] w-[18px] shrink-0 ${pop ? 'text-white/40' : 'text-ink-faint'}`}
+                                strokeWidth={2}
+                              />
+                            ) : (
+                              <Check
+                                className={`mt-0.5 h-[18px] w-[18px] shrink-0 ${pop ? 'text-brand-300' : 'text-emerald-600'}`}
+                                strokeWidth={2.5}
+                              />
+                            )}
+                            <span
+                              className={`text-[14.5px] leading-snug ${
+                                inherited
+                                  ? pop
+                                    ? 'font-medium text-white/60'
+                                    : 'font-medium text-ink-faint'
+                                  : pop
+                                  ? 'text-white/80'
+                                  : 'text-ink-mute'
+                              }`}
+                            >
+                              {f}
+                            </span>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>
