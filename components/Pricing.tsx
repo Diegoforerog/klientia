@@ -28,7 +28,7 @@ export default function Pricing() {
                   }`}
                 >
                   {pop && (
-                    <span className="absolute -top-3 left-8 inline-flex items-center rounded-full bg-brand-600 px-3 py-1 text-[11.5px] font-bold uppercase tracking-wide text-white">
+                    <span className="absolute -top-3 left-8 inline-flex items-center rounded-full bg-brand-600 px-3 py-1 text-[11.5px] font-bold uppercase tracking-wide text-white motion-safe:animate-pulse-badge">
                       Más popular
                     </span>
                   )}

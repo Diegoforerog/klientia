@@ -33,14 +33,14 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[15px] font-medium text-ink-mute transition-colors hover:text-ink"
+                className="group/nav relative text-[15px] font-medium text-ink-mute transition-colors hover:text-ink [&::after]:pointer-events-none [&::after]:absolute [&::after]:-bottom-1 [&::after]:left-1/2 [&::after]:h-[1.5px] [&::after]:w-0 [&::after]:-translate-x-1/2 [&::after]:rounded-full [&::after]:bg-brand-600 [&::after]:transition-[width] [&::after]:duration-300 [&::after]:ease-out [&::after]:content-[''] hover:[&::after]:w-full"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="doc/es/"
-              className="text-[15px] font-medium text-ink-mute transition-colors hover:text-ink"
+              className="group/nav relative text-[15px] font-medium text-ink-mute transition-colors hover:text-ink [&::after]:pointer-events-none [&::after]:absolute [&::after]:-bottom-1 [&::after]:left-1/2 [&::after]:h-[1.5px] [&::after]:w-0 [&::after]:-translate-x-1/2 [&::after]:rounded-full [&::after]:bg-brand-600 [&::after]:transition-[width] [&::after]:duration-300 [&::after]:ease-out [&::after]:content-[''] hover:[&::after]:w-full"
             >
               Documentación
             </a>

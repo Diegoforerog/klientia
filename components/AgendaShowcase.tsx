@@ -3,10 +3,14 @@ import { WaPhone, type WaMsg } from './WhatsAppChat';
 import Reveal from './Reveal';
 import { REGISTER_URL } from '@/lib/content';
 
-/* Demo del agente agendador reservando una cita dentro del chat. */
+/* Demo del agente agendador reservando una cita dentro del chat.
+ * Motion-design: los "escribiendo…" antes de los mensajes largos dan tempo
+ * humano — el bot NO escupe párrafos de golpe, "piensa" un instante. Los
+ * mensajes cortos (de una línea) van directos para no aburrir. */
 const CHAT: WaMsg[] = [
   { kind: 'date', label: 'Hoy' },
   { from: 'in', text: 'Hola 👋 quiero agendar una cita', time: '10:01' },
+  { kind: 'typing' },
   {
     from: 'out',
     text: '¡Hola! 😊 ¿Qué servicio te gustaría? Tengo Corte (30 min) y Corte + barba (45 min).',
@@ -14,6 +18,7 @@ const CHAT: WaMsg[] = [
     read: true,
   },
   { from: 'in', text: 'Corte + barba', time: '10:02' },
+  { kind: 'typing' },
   {
     from: 'out',
     text: 'Perfecto. Para mañana tengo libre a las 10:00, 11:30 o 3:00 p. m. ¿Cuál te queda mejor?',
@@ -23,6 +28,7 @@ const CHAT: WaMsg[] = [
   { from: 'in', text: '11:30 🙌', time: '10:03' },
   { from: 'out', text: '¿Con Laura o Andrés, o te asigno al primero disponible?', time: '10:03', read: true },
   { from: 'in', text: 'El primero disponible', time: '10:03' },
+  { kind: 'typing' },
   {
     from: 'out',
     text: '¡Listo! ✅ Cita confirmada: Corte + barba, mañana 11:30 a. m. con Laura. Ya quedó en tu calendario 📅',

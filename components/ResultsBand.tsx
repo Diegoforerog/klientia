@@ -1,10 +1,36 @@
 import Image from 'next/image';
 import Reveal from './Reveal';
+import CountUp from './CountUp';
+import type { ReactNode } from 'react';
 
-const STATS = [
-  { v: '< 1 s', k: 'en responder' },
-  { v: '+23%', k: 'ticket promedio' },
-  { v: '1 de 4', k: 'carritos recuperados' },
+/**
+ * Motion-design intent: los números "crecen" al entrar en vista. El primero
+ * ("< 1 s") no anima porque es un umbral, no una cantidad — leerlo instantáneo
+ * lo hace más contundente. Los otros dos (+23%, 1 de 4) SÍ cuentan hacia arriba
+ * porque el mensaje es de crecimiento.
+ */
+const STATS: { v: ReactNode; k: string }[] = [
+  {
+    v: (
+      <>
+        &lt; 1<span className="ml-0.5 text-[1.1rem] font-semibold text-ink-mute">s</span>
+      </>
+    ),
+    k: 'en responder',
+  },
+  {
+    v: <CountUp to={23} prefix="+" suffix="%" duration={1400} />,
+    k: 'ticket promedio',
+  },
+  {
+    v: (
+      <>
+        <CountUp to={1} duration={900} />
+        <span className="ml-1.5 text-[1rem] font-medium text-ink-mute">de 4</span>
+      </>
+    ),
+    k: 'carritos recuperados',
+  },
 ];
 
 export default function ResultsBand() {
@@ -33,7 +59,7 @@ export default function ResultsBand() {
               <div className="mt-8 grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-line bg-line">
                 {STATS.map((s) => (
                   <div key={s.k} className="bg-surface px-3 py-5 text-center">
-                    <p className="text-[1.5rem] font-bold tracking-tight text-ink">{s.v}</p>
+                    <p className="text-[1.5rem] font-bold tracking-tight text-ink tabular-nums">{s.v}</p>
                     <p className="mt-1 text-[12.5px] leading-tight text-ink-mute">{s.k}</p>
                   </div>
                 ))}
