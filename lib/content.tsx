@@ -24,7 +24,8 @@ export const registerWithPlan = (plan: 'BRONCE' | 'PLATA' | 'ORO') =>
 
 export const NAV_LINKS = [
   { label: 'Características', href: '#caracteristicas' },
-  { label: 'Cómo funciona', href: '#como-funciona' },
+  { label: 'Ver la IA vendiendo', href: '#impulsores' },
+  { label: 'Agenda de citas', href: '#agenda' },
   { label: 'Precios', href: '#precios' },
   { label: 'Preguntas', href: '#faq' },
 ];
@@ -48,7 +49,7 @@ export const FEATURES: Feature[] = [
   {
     icon: TrendingUp,
     title: 'Impulsores de venta',
-    desc: 'Sube el ticket solo: la versión mejor (upsell), un complemento (cross-sell) o un descuento para no perder la venta (downsell). Con tu mensaje, no genérico.',
+    desc: 'La IA sube el ticket sola: ofrece la versión mejor, suma un complemento o un descuento cuando el cliente duda. Nunca se pierde una venta por precio.',
   },
   {
     icon: RotateCcw,
@@ -72,8 +73,8 @@ export const FEATURES: Feature[] = [
   },
   {
     icon: KanbanSquare,
-    title: 'CRM conversacional',
-    desc: 'Embudos kanban, etiquetas, tareas, lead scoring y la ficha de cada cliente. Todo tu pipeline de ventas, organizado.',
+    title: 'CRM que se llena solo',
+    desc: 'Cada chat crea la ficha del cliente con sus datos, etiquetas y tareas. Tus ventas se ordenan en un tablero visual — sin que muevas un dedo.',
   },
   {
     icon: Workflow,
@@ -134,17 +135,20 @@ export const STEPS = [
   {
     n: '01',
     title: 'Conecta tu WhatsApp',
-    desc: 'Enlazas tu número en minutos. No cambias de chip ni de app: la IA vive dentro de tu mismo WhatsApp.',
+    time: '2 min',
+    desc: 'Enlazas tu número desde el panel. No cambias de chip ni de app: la IA vive dentro de tu mismo WhatsApp.',
   },
   {
     n: '02',
     title: 'Elige un bot y sube tu catálogo',
+    time: '10 min',
     desc: 'Activa un bot experto de tu industria en 1 clic (moda, tech, belleza…), sube productos e impulsores y ajusta cómo quieres que venda. Sin código.',
   },
   {
     n: '03',
     title: 'La IA atiende, vende y cobra',
-    desc: 'Desde ese momento responde sola 24/7, cierra ventas, manda el link de pago y recupera carritos. Tú solo ves entrar los pedidos.',
+    time: '24/7',
+    desc: 'Desde ese momento responde sola, cierra ventas, manda el link de pago y recupera carritos. Tú solo ves entrar los pedidos.',
   },
 ];
 
@@ -181,7 +185,7 @@ export const PLANS: Plan[] = [
     features: [
       'Agente de IA que responde con tu información, 24/7',
       'Bots listos por industria, en 1 clic',
-      'CRM conversacional (etiquetas, tareas, lead scoring)',
+      'CRM que se llena solo: fichas, etiquetas y tareas de cada cliente',
       'Automatizaciones “cuando pasa X → haz Y”',
       'Paso a humano con aviso a tu equipo',
     ],
@@ -215,7 +219,7 @@ export const PLANS: Plan[] = [
     popular: true,
     features: [
       'Todo lo de Agenda',
-      'Catálogo + impulsores (upsell, cross-sell, downsell)',
+      'Catálogo + impulsores: la IA sugiere la versión mejor, complementos y descuentos',
       'Cobros: MercadoPago, Stripe y contra entrega',
       'Recuperación de carritos + recompra automática',
       'Campañas por WhatsApp con plantillas oficiales',
@@ -311,6 +315,14 @@ export const FAQS = [
   {
     q: '¿Necesito saber de tecnología o programar?',
     a: 'Para nada. Todo está en español y es sin código. Conectas tu WhatsApp, eliges un bot listo de tu industria y subes tu catálogo: si sabes usar WhatsApp, sabes usar esto.',
+  },
+  {
+    q: '¿Cuánto me toma dejarlo funcionando?',
+    a: 'Entre 10 y 15 minutos: 2 min para conectar tu WhatsApp, unos minutos para subir tu catálogo y ajustar el bot, y ya está vendiendo por ti. La documentación tiene el paso a paso con capturas si te pierdes en algo.',
+  },
+  {
+    q: '¿Y si tengo un problema o dudas por el camino?',
+    a: 'Tienes documentación completa dentro del panel y en klientia.app/doc/es (con capturas de cada pantalla). Y desde el panel puedes escribirnos directo cuando algo no cuadra. No estás solo.',
   },
   {
     q: '¿Puedo enviar promociones o campañas a mis clientes?',

@@ -32,7 +32,13 @@ export default function HowItWorks() {
                     <span className="text-[15px] font-semibold tabular-nums text-ink-faint">{step.n}</span>
                   </div>
                   <h3 className="mt-6 text-[19px] font-semibold tracking-tight text-ink">{step.title}</h3>
-                  <p className="mt-2 text-[15px] leading-relaxed text-ink-mute">{step.desc}</p>
+                  {step.time && (
+                    <span className="mt-2.5 inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-2.5 py-1 text-[12px] font-semibold text-brand-700">
+                      <span className="h-1.5 w-1.5 rounded-full bg-brand-500" aria-hidden />
+                      {step.time}
+                    </span>
+                  )}
+                  <p className="mt-3 text-[15px] leading-relaxed text-ink-mute">{step.desc}</p>
                 </div>
               </Reveal>
             );
