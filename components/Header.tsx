@@ -18,23 +18,13 @@ export default function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      {/* Hero es dark, resto light → nav se ADAPTA al fondo con scroll.
-        Antes de scroll: texto blanco/traslúcido sobre el hero dark.
-        Con scroll: fondo claro con blur + texto oscuro (light mode). */}
       <div
-        data-scrolled={scrolled}
-        className={`transition-colors duration-300 [&_[data-nav-link]]:transition-colors ${
-          scrolled
-            ? 'border-b border-line bg-surface/85 backdrop-blur-xl [&_[data-nav-link]]:text-ink-mute hover:[&_[data-nav-link]]:text-ink [&_[data-login]]:text-ink hover:[&_[data-login]]:text-brand-600'
-            : 'border-b border-transparent [&_[data-nav-link]]:text-white/70 hover:[&_[data-nav-link]]:text-white [&_[data-login]]:text-white hover:[&_[data-login]]:text-neon-cyan'
+        className={`transition-colors duration-300 ${
+          scrolled ? 'border-b border-line bg-surface/80 backdrop-blur-xl' : 'border-b border-transparent'
         }`}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3.5 sm:px-8">
-          <a
-            href="#top"
-            aria-label="Klientia — inicio"
-            className={scrolled ? '' : '[&_img]:brightness-0 [&_img]:invert'}
-          >
+          <a href="#top" aria-label="Klientia — inicio">
             <Logo className="h-11 sm:h-12" />
           </a>
 
@@ -43,23 +33,21 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                data-nav-link
-                className="group/nav relative text-[15px] font-medium [&::after]:pointer-events-none [&::after]:absolute [&::after]:-bottom-1 [&::after]:left-1/2 [&::after]:h-[1.5px] [&::after]:w-0 [&::after]:-translate-x-1/2 [&::after]:rounded-full [&::after]:bg-brand-600 [&::after]:transition-[width] [&::after]:duration-300 [&::after]:ease-out [&::after]:content-[''] hover:[&::after]:w-full"
+                className="group/nav relative text-[15px] font-medium text-ink-mute transition-colors hover:text-ink [&::after]:pointer-events-none [&::after]:absolute [&::after]:-bottom-1 [&::after]:left-1/2 [&::after]:h-[1.5px] [&::after]:w-0 [&::after]:-translate-x-1/2 [&::after]:rounded-full [&::after]:bg-brand-600 [&::after]:transition-[width] [&::after]:duration-300 [&::after]:ease-out [&::after]:content-[''] hover:[&::after]:w-full"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="doc/es/"
-              data-nav-link
-                className="group/nav relative text-[15px] font-medium [&::after]:pointer-events-none [&::after]:absolute [&::after]:-bottom-1 [&::after]:left-1/2 [&::after]:h-[1.5px] [&::after]:w-0 [&::after]:-translate-x-1/2 [&::after]:rounded-full [&::after]:bg-brand-600 [&::after]:transition-[width] [&::after]:duration-300 [&::after]:ease-out [&::after]:content-[''] hover:[&::after]:w-full"
+              className="group/nav relative text-[15px] font-medium text-ink-mute transition-colors hover:text-ink [&::after]:pointer-events-none [&::after]:absolute [&::after]:-bottom-1 [&::after]:left-1/2 [&::after]:h-[1.5px] [&::after]:w-0 [&::after]:-translate-x-1/2 [&::after]:rounded-full [&::after]:bg-brand-600 [&::after]:transition-[width] [&::after]:duration-300 [&::after]:ease-out [&::after]:content-[''] hover:[&::after]:w-full"
             >
               Documentación
             </a>
           </div>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <a href={LOGIN_URL} data-login className="text-[15px] font-semibold transition-colors">
+            <a href={LOGIN_URL} className="text-[15px] font-semibold text-ink transition-colors hover:text-brand-600">
               Ingresar
             </a>
             <a href={REGISTER_URL} className="btn-primary">

@@ -33,21 +33,6 @@ const config: Config = {
           950: '#172554',
         },
         skyx: '#0ea5e9',
-        // Modo noche — hero dark neón (contraste narrativo vs resto light)
-        night: {
-          DEFAULT: '#050914', // casi negro, con tinte azul
-          soft: '#0b1220',    // slate 950 con más profundidad
-          card: '#0f172a',    // slate 900
-          line: '#1e293b',    // slate 800 — hairlines en oscuro
-          text: '#e2e8f0',    // texto principal sobre oscuro
-          mute: '#94a3b8',    // texto secundario
-        },
-        // Neón — para acentos y glows sobre dark
-        neon: {
-          blue: '#3b82f6',    // acento principal
-          cyan: '#22d3ee',    // secundario, para glows y detalles
-          glow: '#60a5fa',    // brillo del gradiente
-        },
         // Verde WhatsApp (solo dentro de los chats)
         wa: {
           green: '#25d366',
@@ -116,35 +101,12 @@ const config: Config = {
           '70%': { boxShadow: '0 0 0 10px rgba(255,255,255,0)' },
           '100%': { boxShadow: '0 0 0 0 rgba(255,255,255,0)' },
         },
-        /* Glow que respira detrás del titular del hero — narrativa dark neón */
-        'glow-pulse': {
-          '0%, 100%': { opacity: '0.35', transform: 'scale(1)' },
-          '50%': { opacity: '0.55', transform: 'scale(1.06)' },
-        },
-        /* Marquee lento de logos — grid infinito, sin corte */
-        'slide-logos': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-50%)' },
-        },
-        /* Cursor parpadeante para el hero tipo "typing" */
-        blink: {
-          '0%, 49%': { opacity: '1' },
-          '50%, 100%': { opacity: '0' },
-        },
       },
       animation: {
         marquee: 'marquee 34s linear infinite',
         'typing-dot': 'typing-dot 1.2s ease-in-out infinite',
         float: 'float 6s ease-in-out infinite',
         'pulse-badge': 'pulse-badge 2.4s cubic-bezier(0.23, 1, 0.32, 1) infinite',
-        'glow-pulse': 'glow-pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'slide-logos': 'slide-logos 40s linear infinite',
-        blink: 'blink 1.1s step-end infinite',
-      },
-      /* Sombras con glow neón para el hero */
-      dropShadow: {
-        neon: '0 0 24px rgba(59, 130, 246, 0.55)',
-        'neon-cyan': '0 0 20px rgba(34, 211, 238, 0.5)',
       },
     },
   },
