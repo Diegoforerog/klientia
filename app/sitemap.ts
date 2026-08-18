@@ -58,6 +58,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      // Hub de la guía de cliente (el detalle de sus 24 páginas va en /doc/es/sitemap.xml).
+      url: `${SITE}/doc/es/`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
       url: `${SITE}/blog/`,
       lastModified,
       changeFrequency: 'weekly' as const,
