@@ -1,8 +1,12 @@
-name: Deploy a GitHub Pages
+# ⚠️ OBSOLETO — ESTE NO ES EL DEPLOY DE PRODUCCIÓN.
+# Producción de la landing (www.klientia.app) = build LOCAL + subida por rsync/scp
+# al VPS (nginx sirviendo estáticos desde /opt/klientia-landing/site). Ver runbook de DevOps.
+# Este workflow publicaba a GitHub Pages, un destino MUERTO con basePath /klientia.
+# Se le quitó el disparo automático en `push` para que no se ejecute ni confunda;
+# queda solo como manual (workflow_dispatch) por si alguna vez se retoma GitHub Pages.
+name: Deploy a GitHub Pages (OBSOLETO — no es prod)
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
