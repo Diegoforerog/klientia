@@ -15,9 +15,10 @@ const COLS = [
   {
     title: 'Legal',
     links: [
-      { label: 'Términos', href: '#' },
-      { label: 'Privacidad', href: '#' },
-      { label: 'Tratamiento de datos', href: '#' },
+      { label: 'Aviso de Privacidad', href: '/legal/aviso-de-privacidad/' },
+      { label: 'Términos de Servicio', href: '/legal/terminos-de-servicio/' },
+      { label: 'Política de Reembolsos', href: '/legal/politica-de-reembolsos/' },
+      { label: 'Eliminación de datos', href: '/legal/eliminacion-de-datos/' },
     ],
   },
 ];
