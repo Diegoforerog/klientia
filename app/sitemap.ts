@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { SOLUCIONES } from '@/lib/soluciones';
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.klientia.app';
 
@@ -18,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1,
     },
+    ...SOLUCIONES.map((s) => ({
+      url: `${SITE}/soluciones/${s.slug}/`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     ...LEGAL_PATHS.map((path) => ({
       url: `${SITE}${path}`,
       lastModified,
