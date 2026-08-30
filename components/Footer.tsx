@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Logo from './Logo';
 import { NAV_LINKS, REGISTER_URL, LOGIN_URL, COUNTRIES } from '@/lib/content';
 
@@ -48,9 +49,18 @@ export default function Footer() {
               <ul className="mt-4 space-y-2.5">
                 {col.links.map((l) => (
                   <li key={l.label}>
-                    <a href={l.href} className="text-[14.5px] text-ink-mute transition-colors hover:text-ink">
-                      {l.label}
-                    </a>
+                    {/* Rutas internas de Next (empiezan con '/') → <Link>: hornea el basePath
+                        correcto en cada build (raíz en la VPS www.klientia.app, /klientia en
+                        GitHub Pages). Enlaces externos o relativos (doc/es/) siguen como <a>. */}
+                    {l.href.startsWith('/') ? (
+                      <Link href={l.href} className="text-[14.5px] text-ink-mute transition-colors hover:text-ink">
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <a href={l.href} className="text-[14.5px] text-ink-mute transition-colors hover:text-ink">
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
