@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://conversa.nextgencol.com';
+const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.klientia.app';
 
 const LEGAL_PATHS = [
   '/legal/aviso-de-privacidad/',
