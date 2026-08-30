@@ -12,7 +12,7 @@ export default function StructuredData() {
         name: 'Klientia',
         url: SITE,
         description:
-          'SaaS de ventas por WhatsApp con inteligencia artificial para negocios de LATAM: la IA atiende, vende, cobra y recupera carritos.',
+          'SaaS de ventas y atención con inteligencia artificial para negocios de LATAM: la IA atiende, vende, cobra y recupera carritos por WhatsApp, Instagram y Messenger; además publica posts en Instagram, Facebook y TikTok, responde comentarios de Instagram y Facebook y gestiona anuncios de Meta.',
         areaServed: ['CO', 'MX', 'CL', 'PE', 'EC', 'AR'],
       },
       {
@@ -27,11 +27,22 @@ export default function StructuredData() {
         '@type': 'SoftwareApplication',
         name: 'Klientia',
         applicationCategory: 'BusinessApplication',
-        operatingSystem: 'Web, WhatsApp',
+        operatingSystem: 'Web, WhatsApp, Instagram, Facebook, Messenger',
         inLanguage: 'es',
         description:
-          'Vendedor con IA para WhatsApp: atiende al instante, vende con impulsores (upsell, cross-sell, downsell), cobra (MercadoPago, Stripe, contra entrega) y recupera carritos automáticamente. Incluye CRM y automatizaciones.',
+          'Vendedor con IA para WhatsApp, Instagram y Messenger: atiende al instante, vende con impulsores (upsell, cross-sell, downsell), cobra (MercadoPago, Stripe, contra entrega) y recupera carritos automáticamente. Además publica y programa posts en Instagram, Facebook y TikTok, responde comentarios de Instagram y Facebook y crea anuncios de Meta. Incluye CRM y automatizaciones.',
         url: SITE,
+        featureList: [
+          'Vendedor con IA en WhatsApp, Instagram y Messenger',
+          'Bandeja unificada de mensajes directos multicanal',
+          'Impulsores de venta (upsell, cross-sell, downsell)',
+          'Recuperación de carritos y recompra automática',
+          'Publicar y programar posts en Instagram, Facebook y TikTok',
+          'Responder comentarios de Instagram y Facebook con reglas por palabra clave',
+          'Anuncios de Meta (Facebook e Instagram) desde el panel',
+          'CRM conversacional y automatizaciones',
+          'Cobros con MercadoPago, Stripe y contra entrega (COD)',
+        ],
         offers: PLANS.map((p) => ({
           '@type': 'Offer',
           name: `Plan ${p.name}`,

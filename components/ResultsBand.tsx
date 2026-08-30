@@ -1,36 +1,11 @@
 import Image from 'next/image';
 import Reveal from './Reveal';
-import CountUp from './CountUp';
-import type { ReactNode } from 'react';
 
-/**
- * Motion-design intent: los números "crecen" al entrar en vista. El primero
- * ("< 1 s") no anima porque es un umbral, no una cantidad — leerlo instantáneo
- * lo hace más contundente. Los otros dos (+23%, 1 de 4) SÍ cuentan hacia arriba
- * porque el mensaje es de crecimiento.
- */
-const STATS: { v: ReactNode; k: string }[] = [
-  {
-    v: (
-      <>
-        &lt; 1<span className="ml-0.5 text-[1.1rem] font-semibold text-ink-mute">s</span>
-      </>
-    ),
-    k: 'en responder',
-  },
-  {
-    v: <CountUp to={23} prefix="+" suffix="%" duration={1400} />,
-    k: 'ticket promedio',
-  },
-  {
-    v: (
-      <>
-        <CountUp to={1} duration={900} />
-        <span className="ml-1.5 text-[1rem] font-medium text-ink-mute">de 4</span>
-      </>
-    ),
-    k: 'carritos recuperados',
-  },
+// Hechos reales del producto (sin cifras de resultados inventadas).
+const STATS = [
+  { v: '24/7', k: 'atiende sin parar' },
+  { v: 'Al instante', k: 'responde a tus clientes' },
+  { v: 'Sin código', k: 'listo en minutos' },
 ];
 
 export default function ResultsBand() {

@@ -10,7 +10,9 @@ import QuickStartBots from '@/components/QuickStartBots';
 import ResultsBand from '@/components/ResultsBand';
 import Pricing from '@/components/Pricing';
 import Differentiators from '@/components/Differentiators';
-import Testimonials from '@/components/Testimonials';
+// Sección de testimonios oculta: los testimonios actuales eran de ejemplo (no reales).
+// Restaurar con <Testimonials /> cuando haya testimonios verificados de clientes.
+// import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
@@ -34,7 +36,7 @@ export default function Page() {
         <ResultsBand />
         <Pricing />
         <Differentiators />
-        <Testimonials />
+        {/* <Testimonials /> — oculto hasta tener testimonios reales (ver import) */}
         <FAQ />
         <FinalCTA />
       </main>

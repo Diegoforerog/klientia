@@ -27,12 +27,17 @@ export const metadata: Metadata = {
     template: '%s · Klientia',
   },
   description:
-    'Tu vendedor con IA en WhatsApp: atiende, vende, cobra y recupera carritos 24/7. Sin código, para LATAM y contra entrega. Prueba gratis 7 días.',
+    'Tu vendedor con IA en WhatsApp, Instagram y Messenger: atiende, vende, cobra y recupera carritos 24/7. Publica en redes, responde comentarios y crea anuncios de Meta desde un panel. Sin código, para LATAM y contra entrega. Prueba gratis 7 días.',
   applicationName: 'Klientia',
   keywords: [
     'ventas por WhatsApp con IA',
     'agente de ventas IA WhatsApp',
     'chatbot de ventas WhatsApp',
+    'gestionar redes sociales con IA',
+    'responder comentarios de Instagram automático',
+    'bandeja unificada WhatsApp Instagram Messenger',
+    'publicar posts Instagram Facebook TikTok',
+    'anuncios de Meta desde el panel',
     'recuperación de carritos',
     'CRM WhatsApp',
     'dropshipping LATAM',
@@ -47,14 +52,14 @@ export const metadata: Metadata = {
     locale: 'es_CO',
     url: SITE,
     siteName: 'Klientia',
-    title: 'Tu vendedor con IA en WhatsApp, trabajando 24/7',
+    title: 'Tu vendedor con IA en WhatsApp, Instagram y Messenger',
     description:
-      'La IA atiende, vende, cobra y recupera carritos en tu WhatsApp. Sin código, en español, para LATAM. Prueba gratis 7 días.',
+      'La IA atiende, vende, cobra y recupera carritos en tus chats. Publica en redes, responde comentarios y pauta en Meta desde un panel. Para LATAM. Prueba gratis 7 días.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Klientia — Tu vendedor con IA en WhatsApp',
-    description: 'La IA que atiende, vende, cobra y recupera carritos en tu WhatsApp. 7 días gratis, sin tarjeta.',
+    title: 'Klientia — Tu vendedor con IA para WhatsApp y redes',
+    description: 'La IA que atiende, vende y cobra en WhatsApp, Instagram y Messenger. Publica, responde comentarios y pauta desde un panel. 7 días gratis, sin tarjeta.',
   },
   robots: {
     index: true,

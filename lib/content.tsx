@@ -13,6 +13,10 @@ import {
   Wallet,
   SearchCheck,
   ShoppingBag,
+  Inbox,
+  Rss,
+  AtSign,
+  Target,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -65,6 +69,26 @@ export const FEATURES: Feature[] = [
     icon: Megaphone,
     title: 'Campañas por WhatsApp',
     desc: 'Envía promos y novedades a tus contactos con plantillas oficiales aprobadas. Difusión segura, sin arriesgar tu número.',
+  },
+  {
+    icon: Inbox,
+    title: 'WhatsApp, Instagram y Messenger juntos',
+    desc: 'Todos tus mensajes directos llegan a una sola bandeja, con la IA atendiendo en cada canal. Un cliente, un historial, sin importar por dónde escriba.',
+  },
+  {
+    icon: Rss,
+    title: 'Publica y programa en tus redes',
+    desc: 'Crea y agenda tus publicaciones de Instagram, Facebook y TikTok desde el mismo panel, con calendario y estados. Una herramienta, no diez.',
+  },
+  {
+    icon: AtSign,
+    title: 'Comentarios que se responden solos',
+    desc: 'Los comentarios de tus posts de Instagram y Facebook se contestan con reglas por palabra clave — en público y por mensaje directo — o a mano, sin salir de tu bandeja.',
+  },
+  {
+    icon: Target,
+    title: 'Anuncios de Meta con control',
+    desc: 'Crea campañas de Facebook e Instagram con tu presupuesto validado, pausa cuando quieras y sigue tus resultados. Sin sustos de cobros.',
   },
   {
     icon: MessageCircle,
@@ -244,8 +268,8 @@ export const DIFFERENTIATORS = [
     desc: 'Pensado para vender COD, en español, a un precio accesible para tiendas y dropshippers de la región.',
   },
   {
-    title: 'Todo tu WhatsApp en un solo lugar',
-    desc: 'Vende, recupera, hace campañas, agenda y organiza tu CRM — sin saltar entre cinco herramientas distintas.',
+    title: 'Todos tus chats en un solo lugar',
+    desc: 'WhatsApp, Instagram y Messenger en una sola bandeja: vende, recupera, hace campañas, agenda y organiza tu CRM — sin saltar entre cinco herramientas distintas.',
   },
   {
     title: 'Cada negocio configura lo suyo',
@@ -266,9 +290,14 @@ export type Testimonial = {
   metric: string;
 };
 
-/** Fotos lifestyle (IA) reutilizadas en el hero como prueba social. */
+/** Fotos lifestyle generadas por IA. Ya NO se usan en el hero (se quitaron por integridad: no son clientes reales). */
 export const AVATARS = ['/images/ph-maria.jpg', '/images/ph-andres.jpg', '/images/ph-camila.jpg'];
 
+/**
+ * ⚠️ DATOS DE EJEMPLO — NO SON TESTIMONIOS REALES.
+ * Nombres, citas y métricas son ilustrativos. La sección <Testimonials /> está OCULTA en app/page.tsx.
+ * NO republicar hasta reemplazar por testimonios verificados de clientes reales (con su permiso).
+ */
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
@@ -331,6 +360,10 @@ export const FAQS = [
   {
     q: '¿En qué países funciona?',
     a: 'En toda LATAM: Colombia, México, Chile, Perú, Ecuador, Argentina y más. Está pensado para la forma de vender de la región, incluyendo contra entrega.',
+  },
+  {
+    q: '¿Sirve para Instagram, Facebook y TikTok, o solo WhatsApp?',
+    a: 'Atiende tus mensajes directos de WhatsApp, Instagram y Messenger en una sola bandeja, con la IA respondiendo en cada canal. También publicas y programas posts en Instagram, Facebook y TikTok, respondes los comentarios de Instagram y Facebook con reglas automáticas, y creas anuncios de Meta — todo desde el panel.',
   },
   {
     q: '¿Puedo cancelar cuando quiera?',

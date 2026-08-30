@@ -1,8 +1,7 @@
-import Image from 'next/image';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import Reveal from './Reveal';
 import { WaPhone, type WaMsg } from './WhatsAppChat';
-import { REGISTER_URL, AVATARS } from '@/lib/content';
+import { REGISTER_URL } from '@/lib/content';
 
 const CHAT: WaMsg[] = [
   { kind: 'date', label: 'Hoy' },
@@ -39,8 +38,8 @@ export default function Hero() {
 
           <Reveal delay={140}>
             <p className="mt-6 max-w-lg text-pretty text-[18px] leading-relaxed text-ink-mute">
-              Conecta tu WhatsApp, sube tu catálogo y deja que la IA{' '}
-              <span className="font-medium text-ink-soft">atienda, venda, cobre y recupere carritos</span> por ti.
+              Conecta tu WhatsApp, Instagram y Messenger, sube tu catálogo y deja que la IA{' '}
+              <span className="font-medium text-ink-soft">atienda, venda, cobre y recupere carritos</span> por ti — en un solo lugar.
               Sin código, en español, listo en minutos.
             </p>
           </Reveal>
@@ -61,30 +60,17 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={320}>
-            <div className="mt-10 flex items-center gap-4 border-t border-line pt-6">
-              <div className="flex -space-x-2.5">
-                {AVATARS.map((src, i) => (
-                  <span
-                    key={src}
-                    className="relative h-9 w-9 overflow-hidden rounded-full ring-2 ring-surface"
-                    style={{ zIndex: 10 - i }}
-                  >
-                    <Image src={src} alt="" fill sizes="36px" className="object-cover" />
-                  </span>
-                ))}
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink text-[10px] font-bold text-white ring-2 ring-surface">
-                  +2k
-                </span>
-              </div>
-              <div>
-                <div className="flex items-center gap-0.5 text-amber-500">
-                  {[0, 1, 2, 3, 4].map((i) => (
-                    <Star key={i} className="h-4 w-4 fill-current" />
-                  ))}
-                </div>
-                <p className="mt-0.5 text-[13.5px] text-ink-mute">Tiendas de toda LATAM venden con su vendedor IA</p>
-              </div>
-            </div>
+            <ul className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-line pt-6 text-[13.5px] text-ink-mute">
+              <li className="flex items-center gap-1.5">
+                <Check className="h-4 w-4 text-brand-600" /> Prueba gratis 7 días, sin tarjeta
+              </li>
+              <li className="flex items-center gap-1.5">
+                <Check className="h-4 w-4 text-brand-600" /> Hecho para LATAM y contra entrega
+              </li>
+              <li className="flex items-center gap-1.5">
+                <Check className="h-4 w-4 text-brand-600" /> Listo en minutos, sin código
+              </li>
+            </ul>
           </Reveal>
         </div>
 
