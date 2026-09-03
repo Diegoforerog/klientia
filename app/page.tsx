@@ -9,6 +9,7 @@ import AgendaShowcase from '@/components/AgendaShowcase';
 import HowItWorks from '@/components/HowItWorks';
 import QuickStartBots from '@/components/QuickStartBots';
 import Features from '@/components/Features';
+import Integrations from '@/components/Integrations';
 import Pricing from '@/components/Pricing';
 // Sección de testimonios oculta: los testimonios actuales eran de ejemplo (no reales).
 // Restaurar con <Testimonials /> cuando haya testimonios verificados de clientes.
@@ -42,6 +43,7 @@ export default function Page() {
         <HowItWorks />
         <QuickStartBots />
         <Features />
+        <Integrations />
         <Pricing />
         {/* <Testimonials /> — oculto hasta tener testimonios reales (ver import) */}
         <FAQ />
