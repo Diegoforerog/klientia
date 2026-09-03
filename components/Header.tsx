@@ -28,29 +28,29 @@ export default function Header() {
             <Logo className="h-11 sm:h-12" />
           </a>
 
-          <div className="hidden items-center gap-7 lg:flex">
+          <div className="hidden items-center gap-6 lg:flex">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="group/nav relative text-[15px] font-medium text-ink-mute transition-colors hover:text-ink [&::after]:pointer-events-none [&::after]:absolute [&::after]:-bottom-1 [&::after]:left-1/2 [&::after]:h-[1.5px] [&::after]:w-0 [&::after]:-translate-x-1/2 [&::after]:rounded-full [&::after]:bg-brand-600 [&::after]:transition-[width] [&::after]:duration-300 [&::after]:ease-out [&::after]:content-[''] hover:[&::after]:w-full"
+                className="group/nav relative whitespace-nowrap text-[14px] font-medium text-ink-mute transition-colors hover:text-ink [&::after]:pointer-events-none [&::after]:absolute [&::after]:-bottom-1 [&::after]:left-1/2 [&::after]:h-[1.5px] [&::after]:w-0 [&::after]:-translate-x-1/2 [&::after]:rounded-full [&::after]:bg-brand-600 [&::after]:transition-[width] [&::after]:duration-300 [&::after]:ease-out [&::after]:content-[''] hover:[&::after]:w-full"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="doc/es/"
-              className="group/nav relative text-[15px] font-medium text-ink-mute transition-colors hover:text-ink [&::after]:pointer-events-none [&::after]:absolute [&::after]:-bottom-1 [&::after]:left-1/2 [&::after]:h-[1.5px] [&::after]:w-0 [&::after]:-translate-x-1/2 [&::after]:rounded-full [&::after]:bg-brand-600 [&::after]:transition-[width] [&::after]:duration-300 [&::after]:ease-out [&::after]:content-[''] hover:[&::after]:w-full"
+              className="group/nav relative whitespace-nowrap text-[14px] font-medium text-ink-mute transition-colors hover:text-ink [&::after]:pointer-events-none [&::after]:absolute [&::after]:-bottom-1 [&::after]:left-1/2 [&::after]:h-[1.5px] [&::after]:w-0 [&::after]:-translate-x-1/2 [&::after]:rounded-full [&::after]:bg-brand-600 [&::after]:transition-[width] [&::after]:duration-300 [&::after]:ease-out [&::after]:content-[''] hover:[&::after]:w-full"
             >
               Documentación
             </a>
           </div>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <a href={LOGIN_URL} className="text-[15px] font-semibold text-ink transition-colors hover:text-brand-600">
+            <a href={LOGIN_URL} className="whitespace-nowrap text-[14px] font-semibold text-ink transition-colors hover:text-brand-600">
               Ingresar
             </a>
-            <a href={REGISTER_URL} className="btn-primary">
+            <a href={REGISTER_URL} className="btn-primary whitespace-nowrap">
               Prueba gratis <ArrowRight className="h-4 w-4" />
             </a>
           </div>

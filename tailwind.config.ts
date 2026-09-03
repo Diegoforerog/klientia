@@ -7,7 +7,7 @@ const config: Config = {
       colors: {
         // Tinta (texto) — escala slate (neutros fríos que armonizan con el azul)
         ink: {
-          DEFAULT: '#0f172a',
+          DEFAULT: '#0b1220',
           soft: '#334155',
           mute: '#64748b',
           faint: '#94a3b8',
@@ -16,6 +16,8 @@ const config: Config = {
         surface: '#ffffff',
         subtle: '#f8fafc',
         panel: '#f1f5f9',
+        // Papel frío: fondo del hero y de secciones alternas (no blanco puro)
+        paper: '#f3f6fb',
         line: '#e7edf4',
         line2: '#dbe3ec',
         // Acento de marca (azul confianza) — único color, usado con moderación
@@ -25,9 +27,10 @@ const config: Config = {
           200: '#bfdbfe',
           300: '#93c5fd',
           400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
+          500: '#5b8bf0',
+          // Azul Klientia (mismo del logo y del panel)
+          600: '#4375e5',
+          700: '#3462c9',
           800: '#1e40af',
           900: '#1e3a8a',
           950: '#172554',
@@ -49,6 +52,8 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         heading: ['var(--font-heading)', 'var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        // Mono: recibos, precios y sellos de pago (encodifica "transacción")
+        mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       letterSpacing: {
         // Rubik es geométrica: menos tracking negativo que Manrope
@@ -94,6 +99,12 @@ const config: Config = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        /* Sello "Pago recibido": aterriza con un leve rebote, como un timbre en papel */
+        stamp: {
+          '0%': { opacity: '0', transform: 'translateY(10px) scale(0.94) rotate(-1.5deg)' },
+          '70%': { opacity: '1', transform: 'translateY(-2px) scale(1.02) rotate(-1.5deg)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1) rotate(-1.5deg)' },
+        },
         /* Latido sutil para el badge "Más popular". No es escala del texto
          * (eso pica el ojo): es un halo blanco expandiéndose y desvaneciéndose. */
         'pulse-badge': {
@@ -107,6 +118,7 @@ const config: Config = {
         'typing-dot': 'typing-dot 1.2s ease-in-out infinite',
         float: 'float 6s ease-in-out infinite',
         'pulse-badge': 'pulse-badge 2.4s cubic-bezier(0.23, 1, 0.32, 1) infinite',
+        stamp: 'stamp 0.55s cubic-bezier(0.23, 1, 0.32, 1) both',
       },
     },
   },

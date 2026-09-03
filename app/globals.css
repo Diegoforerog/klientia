@@ -20,14 +20,15 @@
     @apply bg-surface text-ink font-sans antialiased;
   }
   ::selection {
-    background-color: rgba(37, 99, 235, 0.14);
+    background-color: rgba(67, 117, 229, 0.16);
   }
+  /* Bricolage Grotesque es ancha y expresiva: tracking más cerrado en display */
   h1, h2, h3 {
     @apply font-heading;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
   }
   a:focus-visible, button:focus-visible {
-    outline: 2px solid #2563eb;
+    outline: 2px solid #4375e5;
     outline-offset: 3px;
     border-radius: 10px;
   }
@@ -85,18 +86,24 @@
 
   /* Acento de degradado MUY sutil para títulos clave */
   .text-accent {
-    background: linear-gradient(100deg, #2563eb, #0ea5e9);
+    background: linear-gradient(100deg, #4375e5, #0ea5e9);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  /* Fondo: blanco con un velo de degradado azul→cian arriba (estilo Stripe, contenido) */
+  /* Fondo del hero: papel frío con un velo azul arriba (no blanco puro) */
   .bg-aura {
     background:
-      radial-gradient(60rem 32rem at 50% -12rem, rgba(59, 130, 246, 0.10), transparent 70%),
+      radial-gradient(60rem 32rem at 50% -12rem, rgba(67, 117, 229, 0.12), transparent 70%),
       radial-gradient(40rem 24rem at 88% -6rem, rgba(14, 165, 233, 0.07), transparent 70%),
-      #ffffff;
+      #f3f6fb;
+  }
+
+  /* Marco de "navegador" para capturas reales del panel */
+  .shot-frame {
+    @apply overflow-hidden rounded-2xl border border-line bg-surface;
+    box-shadow: 0 24px 60px -28px rgba(11,18,32,0.28), 0 2px 6px -2px rgba(11,18,32,0.08);
   }
 
   /* Cuadrícula de puntos finísima */

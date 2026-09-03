@@ -164,9 +164,9 @@ export const STEPS = [
   },
   {
     n: '02',
-    title: 'Elige un bot y sube tu catálogo',
+    title: 'Elige tu vendedor con IA y sube tu catálogo',
     time: '10 min',
-    desc: 'Activa un bot experto de tu industria en 1 clic (moda, tech, belleza…), sube productos e impulsores y ajusta cómo quieres que venda. Sin código.',
+    desc: 'Activa un vendedor con IA experto en tu industria en 1 clic (moda, tech, belleza…), sube productos e impulsores y ajusta cómo quieres que venda. Sin código.',
   },
   {
     n: '03',
@@ -205,10 +205,10 @@ export const PLANS: Plan[] = [
     priceList: '29',
     priceYearly: '290',
     conversations: '1.000',
-    tagline: 'El bot que atiende y responde por ti, 24/7.',
+    tagline: 'El vendedor con IA que atiende y responde por ti, 24/7.',
     features: [
       'Agente de IA que responde con tu información, 24/7',
-      'Bots listos por industria, en 1 clic',
+      'Vendedores con IA listos por industria, en 1 clic',
       'CRM que se llena solo: fichas, etiquetas y tareas de cada cliente',
       'Automatizaciones “cuando pasa X → haz Y”',
       'Paso a humano con aviso a tu equipo',
@@ -222,7 +222,7 @@ export const PLANS: Plan[] = [
     priceList: '49',
     priceYearly: '490',
     conversations: '2.000',
-    tagline: 'Suma citas: el bot que agenda por ti.',
+    tagline: 'Suma citas: el vendedor con IA que agenda por ti.',
     features: [
       'Todo lo de Responde',
       'Agenda citas en el chat: servicios con precio y duración',
@@ -239,7 +239,7 @@ export const PLANS: Plan[] = [
     priceList: '89',
     priceYearly: '890',
     conversations: '3.000',
-    tagline: 'El completo: el bot que vende, cobra y recupera.',
+    tagline: 'El completo: el vendedor con IA que vende, cobra y recupera.',
     popular: true,
     features: [
       'Todo lo de Agenda',
@@ -261,7 +261,7 @@ export const DIFFERENTIATORS = [
   },
   {
     title: 'Empieza en minutos, no en semanas',
-    desc: 'Bots expertos listos por industria en 1 clic. Ya saben vender en tu rubro; tú solo los ajustas a tu gusto.',
+    desc: 'Vendedores con IA expertos listos por industria en 1 clic. Ya saben vender en tu rubro; tú solo los ajustas a tu gusto.',
   },
   {
     title: 'Hecho para LATAM y contra entrega',
@@ -343,11 +343,11 @@ export const FAQS = [
   },
   {
     q: '¿Necesito saber de tecnología o programar?',
-    a: 'Para nada. Todo está en español y es sin código. Conectas tu WhatsApp, eliges un bot listo de tu industria y subes tu catálogo: si sabes usar WhatsApp, sabes usar esto.',
+    a: 'Para nada. Todo está en español y es sin código. Conectas tu WhatsApp, eliges un vendedor con IA listo de tu industria y subes tu catálogo: si sabes usar WhatsApp, sabes usar esto.',
   },
   {
     q: '¿Cuánto me toma dejarlo funcionando?',
-    a: 'Entre 10 y 15 minutos: 2 min para conectar tu WhatsApp, unos minutos para subir tu catálogo y ajustar el bot, y ya está vendiendo por ti. La documentación tiene el paso a paso con capturas si te pierdes en algo.',
+    a: 'Entre 10 y 15 minutos: 2 min para conectar tu WhatsApp, unos minutos para subir tu catálogo y ajustar tu vendedor con IA, y ya está vendiendo por ti. La documentación tiene el paso a paso con capturas si te pierdes en algo.',
   },
   {
     q: '¿Y si tengo un problema o dudas por el camino?',
@@ -386,4 +386,78 @@ export const COUNTRIES = [
   { flag: '🇵🇪', name: 'Perú' },
   { flag: '🇪🇨', name: 'Ecuador' },
   { flag: '🇦🇷', name: 'Argentina' },
+];
+
+/* ─────────────────────────  DÓNDE SE VA EL DINERO  ───────────────────────── */
+
+/** Tres fugas de dinero concretas (causa) y qué hace Klientia con cada una (remedio). */
+export const MONEY_LEAKS = [
+  {
+    tag: 'Venta perdida',
+    title: 'El cliente escribe y nadie responde',
+    desc: 'A las 11 de la noche, un domingo o mientras despachas. Cuando por fin contestas, ya le compró a otro.',
+    fix: 'Responde en segundos, todos los días, a toda hora — y lleva la charla hasta el pago.',
+  },
+  {
+    tag: 'Ticket bajo',
+    title: 'Vendes lo mínimo que te piden',
+    desc: 'Nadie ofrece la versión grande, el complemento que combina o el combo. Cada pedido se queda corto.',
+    fix: 'Ofrece la versión mejor y el complemento justo en el momento justo. Sube el ticket sin sonar insistente.',
+  },
+  {
+    tag: 'Dinero en la mesa',
+    title: 'El carrito se enfría y ahí se queda',
+    desc: '“Lo pienso y te aviso” — y nunca avisa. Nadie tiene tiempo de volver a escribirle.',
+    fix: 'Le vuelve a escribir sola a la 1h, 6h y 24h, y días después invita a recomprar. Ventas que dabas por perdidas.',
+  },
+];
+
+/* ─────────────────────────  PILARES (con capturas reales)  ───────────────────────── */
+
+export const PILLARS = [
+  {
+    key: 'responde',
+    eyebrow: 'Responde y cierra',
+    title: 'Contesta en segundos, a cualquier hora, y lleva la charla hasta el pago',
+    desc: 'La IA responde con tu catálogo y tu información — nunca se inventa nada. Entiende qué quiere el cliente, resuelve dudas, arma el pedido y manda el link de pago o confirma la contra entrega.',
+    bullets: [
+      'Responde con TU información: precios, envíos, tallas, políticas',
+      'Toma el pedido y confirma datos de contra entrega',
+      'Si no sabe o el cliente pide una persona, pasa el chat a tu equipo y les avisa',
+    ],
+    cta: 'Quiero que responda por mí',
+    image: '/images/product/15-conversaciones.jpg',
+    alt: 'Bandeja de conversaciones de Klientia con la IA cerrando una venta contra entrega',
+    screen: 'Conversaciones',
+  },
+  {
+    key: 'vende-mas',
+    eyebrow: 'Vende más a cada cliente',
+    title: 'Sube el ticket de cada pedido sin sonar insistente',
+    desc: 'Tú defines reglas simples — “si pide X, ofrece Y” — y la IA las aplica con naturalidad: la versión grande cuando ya va a comprar, el complemento que combina, un descuento si duda por precio.',
+    bullets: [
+      'Versión mejor (upsell), complemento (cross-sell) y rescate por precio (downsell)',
+      'Reglas por producto, con tu propio mensaje si quieres',
+      'Funciona igual a las 3 de la tarde que a las 3 de la mañana',
+    ],
+    cta: 'Ver los impulsores en acción',
+    image: '/images/product/20-impulsores.jpg',
+    alt: 'Reglas de impulsores de venta en Klientia: versión mejor, complemento y rescate por precio',
+    screen: 'Impulsores de venta',
+  },
+  {
+    key: 'recupera',
+    eyebrow: 'Recupera lo que dabas por perdido',
+    title: 'Persigue carritos y trae clientes de vuelta, solo',
+    desc: 'Si el cliente se queda en visto, la IA le escribe más tarde con tu mensaje y rescata la venta. Y días después de una compra, lo invita a volver. Sin que muevas un dedo.',
+    bullets: [
+      'Recuperación de carritos a la 1h, 6h y 24h, con descuento opcional',
+      'Recompra automática con plantillas oficiales aprobadas',
+      'Cada noche, un auditor te dice por qué no compraron los que sí tenían interés',
+    ],
+    cta: 'Quiero recuperar ventas',
+    image: '/images/product/19-recuperacion.jpg',
+    alt: 'Recuperación de carritos automática en Klientia',
+    screen: 'Recuperación',
+  },
 ];

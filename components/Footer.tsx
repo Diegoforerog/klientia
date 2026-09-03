@@ -10,7 +10,7 @@ const COLS = [
       { label: 'Documentación', href: 'doc/es/' },
       { label: 'Empezar gratis', href: REGISTER_URL },
       { label: 'Iniciar sesión', href: LOGIN_URL },
-      { label: 'Soporte', href: REGISTER_URL },
+      { label: 'Soporte', href: 'mailto:info@klientia.app' },
     ],
   },
   {
@@ -69,7 +69,12 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-line pt-7 sm:flex-row">
-          <p className="text-[13.5px] text-ink-faint">© 2026 Klientia. Todos los derechos reservados.</p>
+          <p className="text-[13.5px] text-ink-faint">
+            © 2026 Klientia. Un producto de Nextgen SAS ·{' '}
+            <a href="mailto:info@klientia.app" className="transition-colors hover:text-ink">
+              info@klientia.app
+            </a>
+          </p>
           <p className="text-[13.5px] text-ink-faint">Hecho para emprendedores de LATAM</p>
         </div>
       </div>

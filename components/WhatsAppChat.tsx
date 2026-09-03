@@ -150,7 +150,7 @@ function Typing() {
   );
 }
 
-function renderMsg(m: WaMsg, i: number, animate: boolean) {
+function renderMsg(m: WaMsg, i: number, animate: boolean, baseDelay = 200, stagger = 300) {
   const inner =
     m.kind === 'date' ? (
       <DatePill label={m.label || ''} />
@@ -165,7 +165,7 @@ function renderMsg(m: WaMsg, i: number, animate: boolean) {
     <div
       key={i}
       className={animate ? 'msg-anim' : undefined}
-      style={animate ? { animationDelay: `${200 + i * 300}ms` } : undefined}
+      style={animate ? { animationDelay: `${baseDelay + i * stagger}ms` } : undefined}
     >
       {inner}
     </div>
@@ -182,6 +182,10 @@ export function WaPhone({
   withInput = true,
   chatClassName = '',
   className = '',
+  /** Retardo base y escalonado de la animación de entrada (ms). Con 0/0 cada
+   *  mensaje nuevo aparece al instante: útil cuando el padre controla el ritmo. */
+  baseDelay = 200,
+  stagger = 300,
 }: {
   contact?: string;
   initials?: string;
@@ -191,6 +195,8 @@ export function WaPhone({
   withInput?: boolean;
   chatClassName?: string;
   className?: string;
+  baseDelay?: number;
+  stagger?: number;
 }) {
   return (
     <div className={`relative mx-auto w-[300px] max-w-full ${className}`}>
@@ -202,7 +208,7 @@ export function WaPhone({
           <StatusBar time={statusTime} />
           <WaHeader contact={contact} initials={initials} />
           <div className={`wa-wall space-y-1.5 px-2.5 py-3 ${chatClassName}`}>
-            {messages.map((m, i) => renderMsg(m, i, animate))}
+            {messages.map((m, i) => renderMsg(m, i, animate, baseDelay, stagger))}
           </div>
           {withInput && <WaInput />}
           <div className="flex justify-center bg-[#f7f7f7] pb-2 pt-0.5">

@@ -4,16 +4,16 @@ import { FEATURES } from '@/lib/content';
 
 export default function Features() {
   return (
-    <section id="caracteristicas" className="hairline-t scroll-mt-24 bg-subtle py-24 sm:py-32">
+    <section id="todo-incluido" className="hairline-t scroll-mt-24 bg-subtle py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Todo en un solo lugar"
+          eyebrow="Y además, todo esto"
           title={
             <>
-              Un equipo de ventas completo, <span className="text-brand-600">dentro de tu WhatsApp</span>
+              Lo demás que necesitas para vender, <span className="text-brand-600">ya incluido</span>
             </>
           }
-          subtitle="No es un chatbot más. Es la IA que atiende, vende, cobra, hace campañas y organiza tu negocio — todo dentro de tu WhatsApp."
+          subtitle="No son extras: vienen en tu plan. Campañas, redes, CRM, automatizaciones, agenda, cobros e integraciones — sin pagar cinco herramientas distintas."
         />
 
         <Reveal delay={120}>
