@@ -17,7 +17,7 @@ type Integration = {
 
 const INTEGRATIONS: Integration[] = [
   { slug: 'whatsapp', name: 'WhatsApp', category: 'Canal principal', desc: 'Tu mismo número, sin cambiar de app', size: 'h-7' },
-  { slug: 'meta', name: 'Meta', category: 'Instagram · Messenger · Ads', desc: 'Atiende redes y crea anuncios', size: 'h-6' },
+  { slug: 'meta', name: 'Meta', category: 'Instagram · Messenger', desc: 'Atiende tus DMs de Instagram y Messenger', size: 'h-6' },
   { slug: 'shopify', name: 'Shopify', category: 'Catálogo', desc: 'Importa productos y sincroniza pedidos', size: 'h-7' },
   { slug: 'mercadopago', name: 'Mercado Pago', category: 'Pagos', desc: 'Cobra en línea con un clic', size: 'h-6' },
   { slug: 'stripe', name: 'Stripe', category: 'Pagos', desc: 'Cobra con tarjeta, también internacional', size: 'h-7' },
