@@ -177,6 +177,53 @@ export const SOLUCIONES: Solucion[] = [
     ],
     ctaText: 'Une tus canales en una sola bandeja, gratis por 7 días',
   },
+  {
+    slug: 'ventas-por-whatsapp-con-ia',
+    metaTitle: 'Ventas por WhatsApp con IA: vende y cobra 24/7 | Klientia',
+    metaDescription:
+      'Automatiza tus ventas por WhatsApp con un vendedor con IA que atiende, ofrece, cierra la venta, cobra y recupera carritos 24/7. Prueba gratis 7 días, sin tarjeta.',
+    h1: 'Ventas por WhatsApp con IA: un vendedor que atiende, vende y cobra 24/7',
+    subtitle:
+      'Convierte tu WhatsApp en un vendedor con inteligencia artificial que responde al instante, sube el ticket, cierra la venta y pasa el link de pago — de día, de noche y en fines de semana, incluso contra entrega.',
+    sections: [
+      {
+        h2: 'Qué son las ventas por WhatsApp con IA',
+        body: 'Vender por WhatsApp con IA es dejar que un asistente con inteligencia artificial atienda cada chat de tu negocio como lo haría tu mejor vendedor: entiende qué quiere el cliente, le muestra el producto, resuelve dudas de precio y envío, y lo lleva hasta el pago. Todo dentro de WhatsApp, con la información y el tono de tu marca, sin que tengas que estar pegado al celular.',
+      },
+      {
+        h2: 'Atiende al instante, 24/7 (aunque tú estés dormido)',
+        body: 'La mayoría de las ventas se pierden por responder tarde. El vendedor con IA de Klientia contesta en segundos a cualquier hora, así no pierdes las ventas de la madrugada, los festivos ni las horas pico en las que no alcanzas a responder.',
+      },
+      {
+        h2: 'No solo responde: ofrece, cierra y sube el ticket',
+        body: 'A diferencia de un chatbot de preguntas frecuentes, la IA vende de verdad: ofrece la versión mejor (upsell), suma un complemento (cross-sell) o un descuento para no perder la venta (downsell), confirma el pedido y pasa el link de pago. Vender por WhatsApp deja de depender de que un humano esté disponible.',
+      },
+      {
+        h2: 'Cobra y funciona con contra entrega (COD)',
+        body: 'Pensado para cómo se vende en LATAM: conecta MercadoPago en un clic para pago anticipado, o toma el pedido contra entrega y confirma los datos en el chat para reducir devoluciones. La IA cierra la venta con el método que uses.',
+      },
+      {
+        h2: 'Recupera las ventas que se enfrían',
+        body: 'Si el cliente no terminó, la IA le vuelve a escribir (a la 1h, 6h y 24h, con descuento opcional) y retoma las conversaciones que se enfriaron. Ventas por WhatsApp que dabas por perdidas, recuperadas solas.',
+      },
+      {
+        h2: 'Para quién es',
+        body: 'Para tiendas de e-commerce y dropshipping en LATAM que venden por WhatsApp (y también por Instagram y Messenger) y quieren vender más sin contratar más gente. Si vendes por chat con catálogo y contra entrega, es para ti.',
+      },
+    ],
+    steps: [
+      { title: 'Conecta tu WhatsApp', body: 'Enlazas tu número en minutos, sin cambiar de chip ni de app.' },
+      { title: 'Sube tu catálogo y ajusta tu vendedor', body: 'Eliges un vendedor con IA por industria y defines cómo ofrece y cierra.' },
+      { title: 'La IA vende y cobra por ti', body: 'Responde 24/7, sube el ticket, pasa el link de pago y recupera carritos. Tú ves entrar los pedidos.' },
+    ],
+    faqs: [
+      { q: '¿En qué se diferencia de un chatbot normal de WhatsApp?', a: 'Un chatbot responde preguntas; el vendedor con IA de Klientia ofrece, sube el ticket, cierra la venta y pasa el link de pago, con tu catálogo y tu tono. Vende, no solo contesta.' },
+      { q: '¿Sirve para vender contra entrega (COD)?', a: 'Sí. Toma el pedido, confirma los datos en el chat para reducir devoluciones, y si prefieres pago anticipado conecta MercadoPago o Stripe.' },
+      { q: '¿La IA se inventa precios o información?', a: 'No. Responde solo con tu catálogo y tu base de conocimiento; tú defines precios, mensajes y reglas. Si no sabe algo, pasa el chat a tu equipo.' },
+      { q: '¿Necesito saber de tecnología?', a: 'No. Todo es sin código y en español: conectas tu WhatsApp, subes tu catálogo y eliges un vendedor con IA listo para tu industria.' },
+    ],
+    ctaText: 'Empieza a vender por WhatsApp con IA, gratis 7 días',
+  },
 ];
 
 export const getSolucion = (slug: string) => SOLUCIONES.find((s) => s.slug === slug);
