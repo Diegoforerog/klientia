@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Pic from './Pic';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
 
@@ -51,10 +51,11 @@ export default function InsideProduct() {
               <figure>
                 <div className="shot-frame">
                   <div className={`relative ${s.wide ? 'aspect-[21/9]' : 'aspect-[16/10]'}`}>
-                    <Image
+                    <Pic
                       src={s.src}
                       alt={s.alt}
-                      fill
+                      width={1280}
+                      height={800}
                       sizes={s.wide ? '(max-width: 1280px) 100vw, 1200px' : '(max-width: 768px) 100vw, 400px'}
                       className="object-cover object-left-top"
                     />
