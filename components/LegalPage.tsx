@@ -45,7 +45,24 @@ export default function LegalPage({ title, updated, summary, toc, children }: Pr
         </nav>
       )}
 
-      <div className="legal-prose mt-10">{children}</div>
+      {/* Espaciado del contenido legal vía utilidades Tailwind en el wrapper (no depende de globals.css).
+          Arregla el "todo pegado": da ritmo vertical a h2/h3/p/listas/tablas y estiliza enlaces y tablas. */}
+      <div
+        className="legal-prose mt-10 text-[15.5px] leading-relaxed text-ink-mute
+          [&>*:first-child]:mt-0
+          [&_h2]:mt-12 [&_h2]:mb-4 [&_h2]:scroll-mt-28 [&_h2]:text-[1.4rem] [&_h2]:font-bold [&_h2]:tracking-tight [&_h2]:text-ink
+          [&_h3]:mt-7 [&_h3]:mb-2 [&_h3]:text-[1.05rem] [&_h3]:font-semibold [&_h3]:text-ink
+          [&_p]:mt-4
+          [&_ul]:mt-4 [&_ul]:mb-2 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-6
+          [&_li]:pl-1
+          [&_a]:font-medium [&_a]:text-brand-600 hover:[&_a]:underline
+          [&_.table-wrap]:mt-5 [&_.table-wrap]:overflow-x-auto [&_.table-wrap]:rounded-2xl [&_.table-wrap]:border [&_.table-wrap]:border-line
+          [&_table]:w-full [&_table]:border-collapse [&_table]:text-[14px]
+          [&_th]:bg-subtle [&_th]:p-3 [&_th]:text-left [&_th]:font-semibold [&_th]:text-ink
+          [&_td]:border-t [&_td]:border-line [&_td]:p-3 [&_td]:align-top"
+      >
+        {children}
+      </div>
     </article>
   );
 }

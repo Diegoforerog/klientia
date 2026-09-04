@@ -172,10 +172,16 @@ export default function AvisoDePrivacidadPage() {
             </tr>
             <tr>
               <td>
-                <strong>Kapso</strong>
+                <strong>Proveedor de mensajería y redes</strong>
               </td>
-              <td>Conexión con WhatsApp (envío y recepción de mensajes, plantillas)</td>
-              <td>Número de WhatsApp y contenido de la conversación con tus clientes finales</td>
+              <td>
+                Conectar tus canales de mensajería y redes sociales (WhatsApp, Instagram, Facebook, Messenger y
+                TikTok): enviar y recibir mensajes, publicar contenido y gestionar comentarios
+              </td>
+              <td>
+                Número o cuenta y contenido de las conversaciones, mensajes y comentarios con tus clientes finales en
+                esos canales
+              </td>
             </tr>
             <tr>
               <td>
@@ -200,10 +206,17 @@ export default function AvisoDePrivacidadPage() {
             </tr>
             <tr>
               <td>
-                <strong>ZeptoMail</strong>
+                <strong>Zoho ZeptoMail y Resend</strong>
               </td>
               <td>Enviar correos operativos (códigos de verificación, notificaciones)</td>
               <td>Correo electrónico y contenido del mensaje enviado</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Google</strong>
+              </td>
+              <td>Inicio de sesión con Google y sincronización con Google Calendar (si conectas tu agenda)</td>
+              <td>Correo y datos básicos de tu cuenta de Google; eventos de calendario que sincronices</td>
             </tr>
           </tbody>
         </table>

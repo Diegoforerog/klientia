@@ -8,7 +8,9 @@ import { forwardTrackingToAppLinks } from '@/lib/tracking';
 // del backend (KLIENTIA_*): así GA4 comparte la sesión del clic entre www. y app.
 const META = process.env.NEXT_PUBLIC_META_PIXEL_ID || '';
 const TIKTOK = process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID || '';
-const GA4 = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || '';
+// GA4: el env puede sobreescribirlo, pero por defecto usamos el ID real (público, aparece en el HTML
+// igual). Así el tag se dispara sí o sí en el build estático aunque el env no esté configurado.
+const GA4 = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || 'G-KHX7VGFMMV';
 
 type AnyWin = Record<string, any>;
 

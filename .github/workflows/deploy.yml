@@ -28,6 +28,9 @@ jobs:
         run: npm run build
         env:
           GITHUB_PAGES: 'true'
+          # Medición: los valores los pone Diego como secrets del repo (vacío = no renderiza, seguro).
+          NEXT_PUBLIC_GA4_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA4_MEASUREMENT_ID }}
+          NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ secrets.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out

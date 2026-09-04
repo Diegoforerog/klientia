@@ -76,8 +76,9 @@ export default function TerminosDeServicioPage() {
           integraciones que actives).
         </li>
         <li>
-          Conexión con tu catálogo (por ejemplo, Shopify), con pasarelas de cobro (por ejemplo, MercadoPago) y con tu
-          número de WhatsApp mediante nuestro proveedor de mensajería (Kapso).
+          Conexión con tu catálogo (por ejemplo, Shopify), con pasarelas de cobro (por ejemplo, MercadoPago) y con tus
+          canales de mensajería (tu número de WhatsApp y tus redes sociales) a través de nuestro proveedor de
+          mensajería.
         </li>
         <li>Envío de mensajes mediante plantillas de WhatsApp aprobadas.</li>
         <li>Un panel de administración para revisar conversaciones, pedidos, citas y métricas de tu negocio.</li>
@@ -88,9 +89,8 @@ export default function TerminosDeServicioPage() {
       </p>
       <p>
         <strong>Lo que Klientia no es:</strong> Klientia no crea ni administra las plantillas de mensajes de WhatsApp
-        — eso se hace en la plataforma de nuestro proveedor de mensajería (Kapso), sujeto a las políticas de
-        Meta/WhatsApp. Klientia tampoco es una entidad financiera ni procesa ni almacena los datos de tu tarjeta de
-        crédito o débito (ver sección 5).
+        — eso se gestiona en la plataforma de WhatsApp, sujeto a sus políticas de aprobación. Klientia tampoco es una
+        entidad financiera ni procesa ni almacena los datos de tu tarjeta de crédito o débito (ver sección 5).
       </p>
 
       <h2 id="cuenta-y-elegibilidad">3. Cuenta y elegibilidad</h2>
@@ -214,8 +214,7 @@ export default function TerminosDeServicioPage() {
       </ul>
       <p>
         Klientia no crea, redacta ni aprueba las plantillas de WhatsApp: esa gestión ocurre en la plataforma de
-        nuestro proveedor de mensajería (Kapso) y está sujeta a las políticas de aprobación de Meta/WhatsApp, ajenas
-        al control de Klientia.
+        WhatsApp y está sujeta a sus políticas de aprobación, ajenas al control de Klientia.
       </p>
 
       <h2 id="uso-aceptable">6. Uso aceptable</h2>
