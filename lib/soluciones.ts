@@ -224,6 +224,135 @@ export const SOLUCIONES: Solucion[] = [
     ],
     ctaText: 'Empieza a vender por WhatsApp con IA, gratis 7 días',
   },
+  {
+    slug: 'crm-para-whatsapp',
+    metaTitle: 'CRM para WhatsApp: organiza tus chats y vende más | Klientia',
+    metaDescription:
+      'Un CRM para WhatsApp que convierte cada conversación en una ficha de cliente, con embudos, etiquetas y tareas. Ordena tus ventas por chat. Prueba gratis 7 días.',
+    h1: 'CRM para WhatsApp: cada chat se vuelve una ficha y una venta',
+    subtitle:
+      'Deja de perder clientes en un mar de conversaciones. El CRM de Klientia crea solo la ficha de cada persona que te escribe, la ubica en tu embudo de ventas y te dice qué hacer después.',
+    sections: [
+      {
+        h2: 'Qué es un CRM para WhatsApp',
+        body: 'Un CRM (gestor de relaciones con clientes) para WhatsApp es donde vive todo lo que pasa con cada cliente: sus datos, su historial de chat, en qué punto de la compra está y las tareas pendientes. En vez de tener las ventas en tu cabeza o en una hoja de cálculo, quedan organizadas en un tablero.',
+      },
+      {
+        h2: 'Se llena solo desde el chat',
+        body: 'Cada conversación crea o actualiza la ficha del cliente automáticamente: nombre, teléfono, etiquetas y su etapa en el embudo. No tienes que copiar datos a mano; el CRM se alimenta de lo que ya pasa en WhatsApp, Instagram y Messenger.',
+      },
+      {
+        h2: 'Embudos, etiquetas, tareas y lead scoring',
+        body: 'Ves tus ventas en un tablero visual (kanban) por etapas, marcas clientes con etiquetas, creas tareas para no olvidar seguimientos y priorizas con puntaje quién está más listo para comprar. Todo tu pipeline de ventas, en un solo lugar.',
+      },
+      {
+        h2: 'No solo organiza: vende',
+        body: 'A diferencia de un CRM tradicional, aquí el vendedor con IA atiende, ofrece y cierra dentro del mismo chat, y el CRM se actualiza en tiempo real con cada venta. Organizar y vender dejan de ser dos herramientas distintas.',
+      },
+      {
+        h2: 'Para quién es',
+        body: 'Para comercios de e-commerce y dropshipping en LATAM que venden por WhatsApp y hoy pierden el hilo de sus conversaciones, sin saber a quién dar seguimiento ni en qué quedó cada cliente.',
+      },
+    ],
+    steps: [
+      { title: 'Conecta tus canales', body: 'WhatsApp, Instagram y Messenger; las conversaciones empiezan a crear fichas solas.' },
+      { title: 'Ordena tu embudo', body: 'Defines las etapas de tu venta, etiquetas y reglas de asignación.' },
+      { title: 'Da seguimiento sin olvidos', body: 'El CRM te muestra tareas, puntaje y en qué quedó cada cliente para que cierres más.' },
+    ],
+    faqs: [
+      { q: '¿En qué se diferencia de un CRM normal?', a: 'La mayoría de los CRM te obligan a registrar los datos a mano y no venden por ti. El de Klientia se llena solo desde el chat y el vendedor con IA cierra la venta dentro de la misma conversación.' },
+      { q: '¿Necesito instalar algo?', a: 'No. Es en la nube y en español; conectas tu WhatsApp y empiezas. Sin código.' },
+      { q: '¿Sirve si atiendo por varios canales?', a: 'Sí. WhatsApp, Instagram y Messenger llegan a una sola bandeja y a un solo CRM, con la ficha unificada del cliente.' },
+      { q: '¿Puedo tener un equipo con distintos roles?', a: 'Sí, puedes asignar conversaciones y tareas a distintas personas de tu equipo.' },
+    ],
+    ctaText: 'Ordena tus ventas por WhatsApp con un CRM que se llena solo',
+  },
+  {
+    slug: 'chatbot-para-whatsapp',
+    metaTitle: 'Chatbot para WhatsApp con IA que vende (no solo responde) | Klientia',
+    metaDescription:
+      'Un chatbot para WhatsApp con IA que no solo responde: ofrece, cierra la venta y cobra 24/7, con tu catálogo y tu tono. Prueba gratis 7 días, sin tarjeta.',
+    h1: 'Chatbot para WhatsApp con IA: no solo responde, vende y cobra',
+    subtitle:
+      'Un chatbot común contesta preguntas. El de Klientia es un vendedor con inteligencia artificial: entiende al cliente, le ofrece, cierra la venta y le pasa el link de pago — 24/7 y con la información de tu negocio.',
+    sections: [
+      {
+        h2: 'Más que un chatbot de preguntas frecuentes',
+        body: 'Los chatbots tradicionales siguen un guion rígido de botones y respuestas fijas. El chatbot con IA de Klientia entiende lo que el cliente escribe en sus palabras, responde con tu catálogo y lo lleva hasta la compra. Vender deja de depender de un menú de opciones.',
+      },
+      {
+        h2: 'Atiende al instante, 24/7',
+        body: 'Responde en segundos a cualquier hora, así no pierdes las ventas de la madrugada ni los fines de semana. Y cuando hace falta una persona, pasa el chat a tu equipo sin dejar a nadie esperando.',
+      },
+      {
+        h2: 'Vende y cobra dentro del chat',
+        body: 'Ofrece la versión mejor, suma un complemento, confirma el pedido y pasa el link de pago. Funciona con contra entrega y con MercadoPago. Un chatbot que no solo informa: cierra la venta.',
+      },
+      {
+        h2: 'Con tu información, sin inventar',
+        body: 'Responde solo con tu catálogo y tu base de conocimiento; tú defines precios, mensajes y reglas. La IA no se inventa datos, y si no sabe algo, escala a un humano.',
+      },
+      {
+        h2: 'Para quién es',
+        body: 'Para tiendas que reciben muchos mensajes por WhatsApp e Instagram y quieren automatizar la atención y la venta sin sonar como un robot y sin contratar más gente.',
+      },
+    ],
+    steps: [
+      { title: 'Conecta tu WhatsApp', body: 'En minutos, sin cambiar de número ni de app.' },
+      { title: 'Sube tu catálogo y configura al bot', body: 'Eliges un vendedor con IA por industria y ajustas cómo responde y vende.' },
+      { title: 'El chatbot atiende y vende', body: 'Responde 24/7, ofrece, cierra y pasa el link de pago. Tú ves entrar los pedidos.' },
+    ],
+    faqs: [
+      { q: '¿Es un chatbot de botones o entiende lenguaje natural?', a: 'Entiende lenguaje natural con IA: el cliente escribe como habla y el bot responde en contexto de tu catálogo, no con menús rígidos.' },
+      { q: '¿El chatbot puede cobrar?', a: 'Sí: confirma el pedido y pasa el link de pago (o toma el pedido contra entrega). No solo responde, cierra la venta.' },
+      { q: '¿Se puede pasar a un humano?', a: 'Sí. Cuando la IA no sabe algo o el cliente lo pide, la conversación pasa a tu equipo dentro de la misma bandeja.' },
+      { q: '¿Necesito programar el chatbot?', a: 'No. Es sin código y en español; eliges un bot listo para tu industria y lo ajustas a tu gusto.' },
+    ],
+    ctaText: 'Prueba un chatbot de WhatsApp con IA que vende, gratis 7 días',
+  },
+  {
+    slug: 'agendar-citas-por-whatsapp',
+    metaTitle: 'Agendar citas por WhatsApp: bot de agendamiento con IA | Klientia',
+    metaDescription:
+      'Un bot de agendamiento que deja a tus clientes reservar su cita por WhatsApp, con horario por asesor, recordatorios y sin choques. Prueba Klientia gratis 7 días.',
+    h1: 'Bot de agendamiento: agenda tus citas por WhatsApp con IA',
+    subtitle:
+      'Deja que tus clientes reserven su cita dentro del mismo chat de WhatsApp. El bot de agendamiento de Klientia muestra la disponibilidad real, agenda sin choques y envía recordatorios para reducir inasistencias.',
+    sections: [
+      {
+        h2: 'Agendar dentro del chat, sin formularios',
+        body: 'Cuando alguien pregunta por WhatsApp si hay cupo, el bot le muestra los horarios disponibles y confirma la cita en la misma conversación. Sin mandarlo a un formulario aparte ni pedirle que llame — cada paso extra es una reserva que se pierde.',
+      },
+      {
+        h2: 'Horario por día y por asesor',
+        body: 'Cada asesor o servicio con su propio horario. El bot asigna la cita al asesor correcto (por especialidad, carga o disponibilidad) o deja que el cliente elija, sin que dos citas choquen.',
+      },
+      {
+        h2: 'Bloqueos, cupos y "ocupado"',
+        body: 'Bloquea franjas cuando un asesor no está, define un cupo por horario para citas grupales o clases, y marca a alguien como ocupado para que no le sigan asignando citas.',
+      },
+      {
+        h2: 'Recordatorios que reducen inasistencias',
+        body: 'El bot envía un recordatorio antes de la cita por el mismo canal donde se agendó, para que el cliente no la olvide y tú no pierdas el cupo.',
+      },
+      {
+        h2: 'Para quién es',
+        body: 'Para negocios de servicios, salud y belleza —salones, spas, consultorios, talleres, estudios— que agendan por WhatsApp y hoy lo hacen a mano, con doble agendamiento e inasistencias.',
+      },
+    ],
+    steps: [
+      { title: 'Conecta tu WhatsApp', body: 'Y define tus servicios y tu equipo de asesores.' },
+      { title: 'Configura horarios y reglas', body: 'Horario por día y asesor, bloqueos, cupos y asignación.' },
+      { title: 'El bot agenda por ti', body: 'Tus clientes reservan en el chat y reciben recordatorios; tú ves tu agenda llena.' },
+    ],
+    faqs: [
+      { q: '¿El cliente agenda sin salir de WhatsApp?', a: 'Sí. Ve la disponibilidad y confirma la cita dentro del mismo chat, sin formularios ni llamadas.' },
+      { q: '¿Puedo tener varios asesores con horarios distintos?', a: 'Sí, el horario se configura por día y por asesor, y la asignación respeta esa configuración.' },
+      { q: '¿Sirve para citas grupales o clases?', a: 'Sí, puedes definir un cupo máximo por franja en vez de limitar cada horario a una sola persona.' },
+      { q: '¿Envía recordatorios?', a: 'Sí, por el mismo canal donde se agendó la cita, para reducir inasistencias.' },
+    ],
+    ctaText: 'Llena tu agenda: deja que agenden por WhatsApp, gratis 7 días',
+  },
 ];
 
 export const getSolucion = (slug: string) => SOLUCIONES.find((s) => s.slug === slug);

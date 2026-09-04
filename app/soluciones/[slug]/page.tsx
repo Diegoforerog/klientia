@@ -146,6 +146,28 @@ export default function SolucionPage({ params }: { params: { slug: string } }) {
             </div>
           </Reveal>
 
+          {/* Sigue explorando — enlaces internos entre soluciones */}
+          <Reveal>
+            <div className="mt-16">
+              <h2 className="text-[1.4rem] font-bold tracking-tight text-ink">Sigue explorando</h2>
+              <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                {SOLUCIONES.filter((o) => o.slug !== sol.slug)
+                  .slice(0, 4)
+                  .map((o) => (
+                    <li key={o.slug}>
+                      <Link
+                        href={`/soluciones/${o.slug}/`}
+                        className="group flex items-center justify-between gap-3 rounded-xl border border-line bg-white px-4 py-3 transition-colors hover:border-brand-300"
+                      >
+                        <span className="text-[14.5px] font-medium text-ink group-hover:text-brand-600">{o.h1}</span>
+                        <ArrowRight className="h-4 w-4 shrink-0 text-brand-600" />
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          </Reveal>
+
           {/* CTA final */}
           <Reveal>
             <div className="mt-16 rounded-3xl border border-line bg-aura p-8 text-center sm:p-10">
