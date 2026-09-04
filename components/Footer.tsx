@@ -8,6 +8,7 @@ const COLS = [
     title: 'Recursos',
     links: [
       { label: 'Soluciones', href: '/soluciones/' },
+      { label: 'Industrias', href: '/industrias/' },
       { label: 'Blog', href: '/blog/' },
       { label: 'Documentación', href: 'doc/es/' },
       { label: 'Empezar gratis', href: REGISTER_URL },

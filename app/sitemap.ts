@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { SOLUCIONES } from '@/lib/soluciones';
+import { INDUSTRIAS } from '@/lib/industrias';
 import { POSTS } from '@/lib/blog';
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.klientia.app';
@@ -31,6 +32,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    })),
+    {
+      url: `${SITE}/industrias/`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    ...INDUSTRIAS.map((i) => ({
+      url: `${SITE}/industrias/${i.slug}/`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
     })),
     {
       url: `${SITE}/klientia-vs-kommo/`,

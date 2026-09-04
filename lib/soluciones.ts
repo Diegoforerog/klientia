@@ -353,6 +353,49 @@ export const SOLUCIONES: Solucion[] = [
     ],
     ctaText: 'Llena tu agenda: deja que agenden por WhatsApp, gratis 7 días',
   },
+  {
+    slug: 'pago-contra-entrega-por-whatsapp',
+    metaTitle: 'Pago contra entrega por WhatsApp: confirma pedidos con IA | Klientia',
+    metaDescription:
+      'Vende con pago contra entrega por WhatsApp sin perder plata en devoluciones: la IA confirma cada pedido en el chat antes de despachar. Prueba Klientia gratis 7 días.',
+    h1: 'Pago contra entrega por WhatsApp: confirma cada pedido antes de despachar',
+    subtitle:
+      'El contra entrega baja la barrera de compra, pero te deja el riesgo: pedidos falsos, clientes que no contestan y devoluciones. Klientia confirma el pedido por WhatsApp con IA antes de que salga a reparto.',
+    sections: [
+      {
+        h2: 'Por qué el pago contra entrega duele',
+        body: 'Con el pago contra entrega (COD) el cliente no paga por adelantado, así que todo el riesgo lo asumes tú: pedidos hechos por curiosidad, personas que no responden la confirmación, datos incompletos y devoluciones en la puerta con el costo de envío ya gastado. Es el dolor #1 del dropshipping y el e-commerce con contra entrega en LATAM.',
+      },
+      {
+        h2: 'Confirma el pedido dentro del mismo chat',
+        body: 'En vez de una llamada aparte que nadie contesta, el vendedor con IA le escribe al cliente por WhatsApp, le resume el pedido (producto, precio, dirección) y le pide una confirmación explícita antes de despachar. Todo queda registrado, así que si hay una disputa sabes exactamente qué se acordó.',
+      },
+      {
+        h2: 'Detecta el riesgo antes de despachar',
+        body: 'Si el cliente duda, cambia de opinión o no responde en un tiempo razonable, ese pedido se marca para revisión en vez de salir a reparto "a ciegas". Menos paquetes que vuelven, menos plata perdida en logística.',
+      },
+      {
+        h2: 'Recupera datos y ordena tu operación',
+        body: 'La IA pide el dato que falta (referencia de la dirección, teléfono alterno) sin que tengas que perseguir al cliente. Y si vendes con Shopify, Klientia se conecta a tu catálogo y a tus pedidos, incluidos los borradores que dejan las apps de contra entrega.',
+      },
+      {
+        h2: 'Para quién es',
+        body: 'Para tiendas y dropshippers en LATAM que venden principalmente contra entrega y pierden margen en devoluciones y pedidos que nunca se concretan.',
+      },
+    ],
+    steps: [
+      { title: 'Conecta tu WhatsApp (y Shopify si usas)', body: 'La IA queda lista para atender y confirmar pedidos.' },
+      { title: 'Define tu mensaje de confirmación', body: 'Qué datos pedir y cuándo marcar un pedido como riesgoso.' },
+      { title: 'La IA confirma antes de despachar', body: 'Solo salen a reparto los pedidos confirmados; los dudosos quedan para tu revisión.' },
+    ],
+    faqs: [
+      { q: '¿Reemplaza la llamada de confirmación?', a: 'Para la mayoría de los casos sí: si el cliente ya te compró por WhatsApp, confirma por chat. Los casos que necesitan trato humano se pasan a tu equipo.' },
+      { q: '¿Sirve con Dropi u otra app de contra entrega?', a: 'Klientia gestiona la conversación y el registro del pedido; la integración con cada proveedor de logística depende de tu flujo, así que conviene revisarlo según tu operación.' },
+      { q: '¿Y si el cliente no responde a la confirmación?', a: 'El pedido queda como pendiente en tu bandeja en vez de despacharse solo; tu equipo decide el siguiente paso.' },
+      { q: '¿Puedo también cobrar por anticipado?', a: 'Sí, si prefieres pago adelantado conectas MercadoPago en un clic (o Stripe); la IA cierra la venta con el método que uses.' },
+    ],
+    ctaText: 'Deja de perder plata en devoluciones: confirma tus pedidos COD',
+  },
 ];
 
 export const getSolucion = (slug: string) => SOLUCIONES.find((s) => s.slug === slug);
