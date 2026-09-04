@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Pic from './Pic';
 import { ArrowRight, BadgeCheck, CreditCard, XCircle } from 'lucide-react';
 import Reveal from './Reveal';
 import { REGISTER_URL } from '@/lib/content';
@@ -8,10 +8,11 @@ export default function FinalCTA() {
     <section className="px-5 py-16 sm:px-8 sm:py-24">
       <Reveal>
         <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2.5rem]">
-          <Image
+          <Pic
             src="/images/lifestyle-shop.jpg"
             alt="Dueña de tienda preparando pedidos para envío"
-            fill
+            width={1536}
+            height={1024}
             sizes="(max-width: 768px) 100vw, 1100px"
             className="object-cover"
           />

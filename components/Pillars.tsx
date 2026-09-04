@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Pic from './Pic';
 import { Check, ArrowRight } from 'lucide-react';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
@@ -60,10 +60,11 @@ export default function Pillars() {
                       <span className="ml-3 truncate font-mono text-[11px] text-ink-faint">app.klientia.app · {p.screen}</span>
                     </div>
                     <div className="relative aspect-[16/10]">
-                      <Image
+                      <Pic
                         src={p.image}
                         alt={p.alt}
-                        fill
+                        width={1280}
+                        height={800}
                         sizes="(max-width: 1024px) 100vw, 620px"
                         className="object-cover object-left-top"
                       />
