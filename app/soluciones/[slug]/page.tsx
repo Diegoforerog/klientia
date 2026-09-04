@@ -76,7 +76,9 @@ export default function SolucionPage({ params }: { params: { slug: string } }) {
                   Inicio
                 </Link>
                 <span className="mx-1.5">›</span>
-                <span className="text-ink-mute">Soluciones</span>
+                <Link href="/soluciones/" className="hover:text-ink">
+                  Soluciones
+                </Link>
               </nav>
             </Reveal>
             <Reveal delay={70}>
