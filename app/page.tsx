@@ -6,6 +6,7 @@ import Pillars from '@/components/Pillars';
 import ImpulsoresShowcase from '@/components/ImpulsoresShowcase';
 import InsideProduct from '@/components/InsideProduct';
 import AgendaShowcase from '@/components/AgendaShowcase';
+import RedesSection from '@/components/RedesSection';
 import HowItWorks from '@/components/HowItWorks';
 import QuickStartBots from '@/components/QuickStartBots';
 import Features from '@/components/Features';
@@ -40,6 +41,7 @@ export default function Page() {
         <ImpulsoresShowcase />
         <InsideProduct />
         <AgendaShowcase />
+        <RedesSection />
         <HowItWorks />
         <QuickStartBots />
         <Features />

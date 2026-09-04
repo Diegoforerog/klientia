@@ -33,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     })),
     {
+      url: `${SITE}/klientia-vs-kommo/`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
       url: `${SITE}/blog/`,
       lastModified,
       changeFrequency: 'weekly' as const,
