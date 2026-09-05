@@ -26,14 +26,21 @@ const CARDS: Card[] = [
   },
 ];
 
+/** Intro de redes (texto tal cual); lo reutiliza AlsoIncluded en la home. */
+export const REDES_INTRO = {
+  eyebrow: 'Redes sociales con IA',
+  title: 'Vende y atiende también en tus redes sociales',
+  desc: 'No solo WhatsApp: Klientia publica tu contenido, responde tus comentarios y crea tus anuncios de Meta — todo desde el mismo panel donde vendes.',
+};
+
 export default function RedesSection() {
   return (
     <section id="redes" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Redes sociales con IA"
-          title="Vende y atiende también en tus redes sociales"
-          subtitle="No solo WhatsApp: Klientia publica tu contenido, responde tus comentarios y crea tus anuncios de Meta — todo desde el mismo panel donde vendes."
+          eyebrow={REDES_INTRO.eyebrow}
+          title={REDES_INTRO.title}
+          subtitle={REDES_INTRO.desc}
         />
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

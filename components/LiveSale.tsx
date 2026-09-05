@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { CheckCheck } from 'lucide-react';
-import { WaPhone, type WaMsg } from './WhatsAppChat';
+import { WaPhone } from './WhatsAppChat';
+import { LIVE_SALE_SCRIPT } from './demo-chats';
 
 /**
  * La venta en vivo — elemento firma del hero.
@@ -12,28 +13,7 @@ import { WaPhone, type WaMsg } from './WhatsAppChat';
  * sin inventar cifras: es una demo, y se etiqueta como tal.
  */
 
-type Beat = { msg: WaMsg; wait: number };
-
-// Cada paso = mensaje + lo que tarda en aparecer el SIGUIENTE (ms).
-// Los "typing" simulan a la IA redactando antes de responder.
-const SCRIPT: Beat[] = [
-  { msg: { kind: 'date', label: 'Hoy · 11:46 p. m.' }, wait: 500 },
-  { msg: { from: 'in', text: 'Hola, ¿aún tienen el serum de vitamina C? 🙏', time: '11:46' }, wait: 900 },
-  { msg: { kind: 'typing' }, wait: 1400 },
-  {
-    msg: {
-      from: 'out',
-      text: '¡Hola! 😊 Sí, $79.900 con envío gratis. Y por $20.000 más te llevas el XL, que rinde el doble. ¿Te lo dejo así?',
-      time: '11:46',
-      read: true,
-    },
-    wait: 1500,
-  },
-  { msg: { from: 'in', text: 'Dale, el XL 🙌', time: '11:47' }, wait: 800 },
-  { msg: { kind: 'typing' }, wait: 1100 },
-  { msg: { from: 'out', text: '¡Perfecto! Serum XL en $99.900. Aquí tu pago seguro 👇', time: '11:47', read: true }, wait: 700 },
-  { msg: { kind: 'pay', amount: '$99.900', time: '11:47' }, wait: 1300 },
-];
+const SCRIPT = LIVE_SALE_SCRIPT;
 
 const TOTAL = SCRIPT.length;
 

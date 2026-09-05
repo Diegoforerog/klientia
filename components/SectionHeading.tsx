@@ -6,9 +6,19 @@ type Props = {
   title: ReactNode;
   subtitle?: ReactNode;
   align?: 'center' | 'left';
+  /**
+   * Jerarquía: solo la demo y los precios llevan `lg`; el resto va en `md`.
+   * Así el ojo sabe dónde parar debajo del hero.
+   */
+  size?: 'md' | 'lg';
 };
 
-export default function SectionHeading({ eyebrow, title, subtitle, align = 'center' }: Props) {
+const TITLE: Record<NonNullable<Props['size']>, string> = {
+  md: 'text-[1.7rem] sm:text-[2.2rem]',
+  lg: 'text-[2.2rem] sm:text-[3rem]',
+};
+
+export default function SectionHeading({ eyebrow, title, subtitle, align = 'center', size = 'md' }: Props) {
   return (
     <div className={`max-w-2xl ${align === 'center' ? 'mx-auto text-center' : ''}`}>
       {eyebrow && (
@@ -17,13 +27,15 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'cent
         </Reveal>
       )}
       <Reveal delay={70}>
-        <h2 className="mt-3.5 text-balance text-[2rem] font-bold leading-[1.08] tracking-tighter text-ink sm:text-[2.7rem]">
-          {title}
-        </h2>
+        <h2 className={`mt-3.5 text-balance font-bold leading-[1.08] tracking-tighter text-ink ${TITLE[size]}`}>{title}</h2>
       </Reveal>
       {subtitle && (
         <Reveal delay={140}>
-          <p className={`mt-4 text-pretty text-[17px] leading-relaxed text-ink-mute ${align === 'center' ? 'mx-auto' : ''}`}>
+          <p
+            className={`mt-4 text-pretty leading-relaxed text-ink-mute ${size === 'lg' ? 'text-[17px]' : 'text-[16px]'} ${
+              align === 'center' ? 'mx-auto' : ''
+            }`}
+          >
             {subtitle}
           </p>
         </Reveal>

@@ -60,20 +60,24 @@ const POINTS: { icon: LucideIcon; title: string; desc: string }[] = [
   },
 ];
 
+/** Intro de la agenda (texto tal cual); lo reutiliza AlsoIncluded en la home. */
+export const AGENDA_INTRO = {
+  eyebrow: 'Agente agendador',
+  title: 'Llena tu agenda sin mover un dedo',
+  desc: 'El cliente pide una cita por WhatsApp y la IA la agenda sola: consulta tu disponibilidad, ofrece los horarios libres, elige o asigna asesor y confirma — todo dentro del chat.',
+};
+
 export default function AgendaShowcase() {
   return (
     <section id="agenda" className="hairline-t scroll-mt-24 bg-subtle py-24 sm:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
         <div className="order-2 lg:order-1">
           <Reveal>
-            <p className="eyebrow">Agente agendador</p>
+            <p className="eyebrow">{AGENDA_INTRO.eyebrow}</p>
             <h2 className="mt-3.5 text-balance text-[2.1rem] font-bold leading-[1.08] tracking-tighter text-ink sm:text-[2.6rem]">
               Llena tu agenda <span className="text-brand-600">sin mover un dedo</span>
             </h2>
-            <p className="mt-4 max-w-lg text-[16px] leading-relaxed text-ink-mute">
-              El cliente pide una cita por WhatsApp y la IA la agenda sola: consulta tu disponibilidad,
-              ofrece los horarios libres, elige o asigna asesor y confirma — todo dentro del chat.
-            </p>
+            <p className="mt-4 max-w-lg text-[16px] leading-relaxed text-ink-mute">{AGENDA_INTRO.desc}</p>
           </Reveal>
 
           <ul className="mt-8 space-y-5">

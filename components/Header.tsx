@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import CtaButton from './CtaButton';
 import Logo from './Logo';
-import { NAV_LINKS, REGISTER_URL, LOGIN_URL } from '@/lib/content';
+import { NAV_LINKS, LOGIN_URL } from '@/lib/content';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -50,9 +51,7 @@ export default function Header() {
             <a href={LOGIN_URL} className="whitespace-nowrap text-[14px] font-semibold text-ink transition-colors hover:text-brand-600">
               Ingresar
             </a>
-            <a href={REGISTER_URL} className="btn-primary whitespace-nowrap">
-              Prueba gratis <ArrowRight className="h-4 w-4" />
-            </a>
+            <CtaButton />
           </div>
 
           <button
@@ -85,9 +84,7 @@ export default function Header() {
               >
                 Documentación
               </a>
-              <a href={REGISTER_URL} className="btn-primary mt-2 w-full" onClick={() => setOpen(false)}>
-                Prueba gratis 7 días <ArrowRight className="h-4 w-4" />
-              </a>
+              <CtaButton className="mt-2 w-full" onClick={() => setOpen(false)} />
             </div>
           </div>
         )}

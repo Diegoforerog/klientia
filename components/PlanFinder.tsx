@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import { ArrowRight, MessageCircle, CalendarCheck, TrendingUp, Sparkles } from 'lucide-react';
 import { PLANS, registerWithPlan, type Plan } from '@/lib/content';
+import { CTA_LABEL } from '@/lib/cta';
 
 /**
  * Investigador de UX: usuarios indecisos frente a 3 planes se van sin comprar.
@@ -150,7 +151,7 @@ export default function PlanFinder() {
                   href={registerWithPlan(plan.id)}
                   className="btn-primary shrink-0 px-5 py-3 text-[15px]"
                 >
-                  Empezar con {plan.name} <ArrowRight className="h-4 w-4" />
+                  {CTA_LABEL} <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
             </div>

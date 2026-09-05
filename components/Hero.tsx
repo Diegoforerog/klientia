@@ -1,7 +1,6 @@
-import { ArrowRight } from 'lucide-react';
 import Reveal from './Reveal';
 import LiveSale from './LiveSale';
-import { REGISTER_URL } from '@/lib/content';
+import CtaButton from './CtaButton';
 
 export default function Hero() {
   return (
@@ -37,9 +36,7 @@ export default function Hero() {
 
           <Reveal delay={200}>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a href={REGISTER_URL} className="btn-primary px-7 py-4 text-[16px]">
-                Empieza gratis 7 días <ArrowRight className="h-4 w-4" />
-              </a>
+              <CtaButton size="lg" />
               <a href="#impulsores" className="btn-secondary px-7 py-4 text-[16px]">
                 Ver cómo vende
               </a>

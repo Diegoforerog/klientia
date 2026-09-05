@@ -2,16 +2,10 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import TrustStrip from '@/components/TrustStrip';
 import ProblemSolution from '@/components/ProblemSolution';
-import Pillars from '@/components/Pillars';
-import ImpulsoresShowcase from '@/components/ImpulsoresShowcase';
-import InsideProduct from '@/components/InsideProduct';
-import AgendaShowcase from '@/components/AgendaShowcase';
-import RedesSection from '@/components/RedesSection';
+import DemoTabs from '@/components/DemoTabs';
 import HowItWorks from '@/components/HowItWorks';
-import QuickStartBots from '@/components/QuickStartBots';
-import Features from '@/components/Features';
-import Integrations from '@/components/Integrations';
 import Pricing from '@/components/Pricing';
+import AlsoIncluded from '@/components/AlsoIncluded';
 // Sección de testimonios oculta: los testimonios actuales eran de ejemplo (no reales).
 // Restaurar con <Testimonials /> cuando haya testimonios verificados de clientes.
 // import Testimonials from '@/components/Testimonials';
@@ -22,11 +16,13 @@ import StructuredData from '@/components/StructuredData';
 import StickyCTA from '@/components/StickyCTA';
 
 /**
- * Orden de venta: promesa (Hero) → condiciones claras (TrustStrip) → la fuga de
- * dinero (Problem) → cómo la cierra, con pantallas reales (Pillars) → la IA
- * vendiendo en vivo (Impulsores) → prueba de producto (Inside) → agenda → cómo
- * empezar → arranque rápido → todo lo demás (Features, demotado) → precios → FAQ → CTA.
- * ResultsBand y Differentiators salen: repetían lo que ya dicen Pillars/Inside.
+ * Landing ligera (revisión UX 2026-09-04): la historia se cuenta UNA vez.
+ * Promesa (Hero) → condiciones claras (TrustStrip) → la fuga de dinero, solo
+ * el dolor (Problem) → UNA demo con los tres pilares en pestañas (DemoTabs) →
+ * cómo empezar (HowItWorks, absorbe "bot en 1 clic") → precios (quiz colapsado)
+ * → también incluido (Agenda · Redes · funciones destacadas · integraciones)
+ * → FAQ (6 visibles) → CTA final. Un solo texto de CTA en toda la página.
+ * El catálogo completo de funciones vive en /funciones.
  */
 export default function Page() {
   return (
@@ -37,22 +33,15 @@ export default function Page() {
         <Hero />
         <TrustStrip />
         <ProblemSolution />
-        <Pillars />
-        <ImpulsoresShowcase />
-        <InsideProduct />
-        <AgendaShowcase />
-        <RedesSection />
+        <DemoTabs />
         <HowItWorks />
-        <QuickStartBots />
-        <Features />
-        <Integrations />
         <Pricing />
+        <AlsoIncluded />
         {/* <Testimonials /> — oculto hasta tener testimonios reales (ver import) */}
         <FAQ />
         <FinalCTA />
       </main>
       <Footer />
-      <div aria-hidden className="h-20 lg:hidden" />
       <StickyCTA />
     </>
   );

@@ -1,4 +1,4 @@
-import Pic from './Pic';
+import ScreenShot from './ScreenShot';
 import { Check, ArrowRight } from 'lucide-react';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
@@ -52,24 +52,7 @@ export default function Pillars() {
                   </div>
 
                   {/* Captura real */}
-                  <div className="shot-frame">
-                    <div className="flex items-center gap-1.5 border-b border-line bg-subtle px-3 py-2">
-                      <span className="h-2.5 w-2.5 rounded-full bg-line2" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-line2" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-line2" />
-                      <span className="ml-3 truncate font-mono text-[11px] text-ink-faint">app.klientia.app · {p.screen}</span>
-                    </div>
-                    <div className="relative aspect-[16/10]">
-                      <Pic
-                        src={p.image}
-                        alt={p.alt}
-                        width={1280}
-                        height={800}
-                        sizes="(max-width: 1024px) 100vw, 620px"
-                        className="object-cover object-left-top"
-                      />
-                    </div>
-                  </div>
+                  <ScreenShot src={p.image} alt={p.alt} screen={p.screen} sizes="(max-width: 1024px) 100vw, 620px" />
                 </div>
               </Reveal>
             );

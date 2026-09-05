@@ -1,14 +1,16 @@
 import { Check, ArrowRight, CornerDownRight } from 'lucide-react';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
-import PlanFinder from './PlanFinder';
+import PlanFinderToggle from './PlanFinderToggle';
+import { CTA_LABEL } from '@/lib/cta';
 import { PLANS, registerWithPlan, EXTRA_CONVERSATION_USD } from '@/lib/content';
 
 export default function Pricing() {
   return (
-    <section id="precios" className="scroll-mt-24 py-24 sm:py-32">
+    <section id="precios" className="hairline-t scroll-mt-24 bg-paper py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
+          size="lg"
           eyebrow="Planes y precios"
           title={
             <>
@@ -18,8 +20,9 @@ export default function Pricing() {
           subtitle="Precio de lanzamiento por tiempo limitado. Empiezas con 7 días gratis, sin tarjeta; el cobro llega solo al terminar la prueba. Precios en dólares (USD)."
         />
 
-        <Reveal className="mt-12">
-          <PlanFinder />
+        {/* Quiz "¿No sabes cuál elegir?" colapsado: no empuja el precio hacia abajo */}
+        <Reveal>
+          <PlanFinderToggle />
         </Reveal>
 
         <div className="mx-auto mt-10 grid max-w-5xl items-start gap-6 lg:grid-cols-3">
@@ -78,7 +81,8 @@ export default function Pricing() {
                       pop ? 'bg-white text-ink hover:bg-white/90' : 'border border-ink bg-ink text-white hover:bg-ink/90'
                     }`}
                   >
-                    {plan.cta} <ArrowRight className="h-4 w-4" />
+                    {/* CTA único de la landing; `plan.cta` sigue disponible en content para otros usos */}
+                    {CTA_LABEL} <ArrowRight className="h-4 w-4" />
                   </a>
 
                   <div className={`mt-7 border-t pt-6 ${pop ? 'border-white/15' : 'border-line'}`}>
