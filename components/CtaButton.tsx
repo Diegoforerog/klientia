@@ -9,6 +9,8 @@ type Props = {
   size?: 'md' | 'lg';
   className?: string;
   onClick?: () => void;
+  /** -1 para sacar el botón del orden de tabulación cuando su contenedor está oculto. */
+  tabIndex?: number;
 };
 
 const VARIANT: Record<NonNullable<Props['variant']>, string> = {
@@ -24,9 +26,9 @@ const SIZE: Record<NonNullable<Props['size']>, string> = {
 };
 
 /** El único botón de acción de la landing: mismo texto en todas partes. */
-export default function CtaButton({ href = REGISTER_URL, variant = 'primary', size = 'md', className = '', onClick }: Props) {
+export default function CtaButton({ href = REGISTER_URL, variant = 'primary', size = 'md', className = '', onClick, tabIndex }: Props) {
   return (
-    <a href={href} onClick={onClick} className={`${VARIANT[variant]} ${SIZE[size]} whitespace-nowrap ${className}`}>
+    <a href={href} onClick={onClick} tabIndex={tabIndex} className={`${VARIANT[variant]} ${SIZE[size]} whitespace-nowrap ${className}`}>
       {CTA_LABEL} <ArrowRight className="h-4 w-4" />
     </a>
   );

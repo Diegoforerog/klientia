@@ -38,7 +38,7 @@ export default function FuncionesPage() {
 
           <div className="mt-12 flex flex-col items-center gap-3">
             <CtaButton size="lg" />
-            <p className="text-[13.5px] text-ink-faint">Sin tarjeta · Listo en 15 minutos · Cancela cuando quieras</p>
+            <p className="text-[13.5px] text-ink-mute">Sin tarjeta · Listo en 15 minutos · Cancela cuando quieras</p>
           </div>
         </section>
       </main>

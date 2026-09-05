@@ -1,9 +1,18 @@
 import Link from 'next/link';
 import Logo from './Logo';
 import { NAV_LINKS, REGISTER_URL, LOGIN_URL, COUNTRIES } from '@/lib/content';
+import { CTA_LABEL } from '@/lib/cta';
 
 const COLS = [
-  { title: 'Producto', links: NAV_LINKS },
+  {
+    title: 'Producto',
+    links: [
+      // Las anclas del menú (#precios, #faq…) se prefijan con '/' para que
+      // funcionen también desde subpáginas (/funciones/, /soluciones/…).
+      ...NAV_LINKS.map((l) => ({ label: l.label, href: l.href.startsWith('#') ? `/${l.href}` : l.href })),
+      { label: 'Funciones', href: '/funciones/' },
+    ],
+  },
   {
     title: 'Recursos',
     links: [
@@ -11,7 +20,7 @@ const COLS = [
       { label: 'Industrias', href: '/industrias/' },
       { label: 'Blog', href: '/blog/' },
       { label: 'Documentación', href: 'doc/es/' },
-      { label: 'Empezar gratis', href: REGISTER_URL },
+      { label: CTA_LABEL, href: REGISTER_URL },
       { label: 'Iniciar sesión', href: LOGIN_URL },
       { label: 'Soporte', href: 'mailto:info@klientia.app' },
     ],

@@ -21,7 +21,7 @@ import StickyCTA from '@/components/StickyCTA';
  * el dolor (Problem) → UNA demo con los tres pilares en pestañas (DemoTabs) →
  * cómo empezar (HowItWorks, absorbe "bot en 1 clic") → precios (quiz colapsado)
  * → también incluido (Agenda · Redes · funciones destacadas · integraciones)
- * → FAQ (6 visibles) → CTA final. Un solo texto de CTA en toda la página.
+ * → FAQ (7 preguntas) → CTA final. Un solo texto de CTA en toda la página.
  * El catálogo completo de funciones vive en /funciones.
  */
 export default function Page() {

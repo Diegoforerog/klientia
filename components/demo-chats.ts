@@ -4,8 +4,8 @@ import type { WaMsg } from './WhatsAppChat';
 /**
  * Conversaciones de EJEMPLO que dramatizan cómo vende la IA. Son maquetas
  * (se etiquetan como tal en pantalla) y NO contienen cifras de resultados.
- * Viven aquí para que el hero (LiveSale), la demo por pestañas (DemoTabs) y
- * el showcase largo (ImpulsoresShowcase) compartan el mismo guion.
+ * Viven aquí para que el hero (LiveSale) y la demo por pestañas (DemoTabs)
+ * compartan el mismo guion.
  */
 
 export type DemoChat = {

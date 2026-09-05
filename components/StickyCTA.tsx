@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import CtaButton from './CtaButton';
 
 /**
@@ -36,9 +36,20 @@ export default function StickyCTA() {
   }, []);
 
   const show = pastHero && !footerVisible;
+  const barRef = useRef<HTMLDivElement>(null);
+
+  // Barra oculta = fuera del orden de tabulación y del árbol accesible.
+  // `inert` se fija como propiedad (React 18 no lo serializa como atributo).
+  useEffect(() => {
+    const el = barRef.current;
+    if (!el) return;
+    if (show) el.removeAttribute('inert');
+    else el.setAttribute('inert', '');
+  }, [show]);
 
   return (
     <div
+      ref={barRef}
       aria-hidden={!show}
       className={`fixed inset-x-0 bottom-0 z-50 transition-transform duration-[400ms] ease-drawer lg:hidden ${
         show ? 'translate-y-0' : 'translate-y-full'
@@ -48,8 +59,8 @@ export default function StickyCTA() {
         className="border-t border-line bg-surface/95 px-4 py-3 backdrop-blur-xl"
         style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
       >
-        <CtaButton className="w-full py-3.5 text-[15px]" />
-        <p className="mt-1.5 text-center text-[12px] text-ink-faint">Sin tarjeta · Cancela cuando quieras</p>
+        <CtaButton className="w-full py-3.5 text-[15px]" tabIndex={show ? 0 : -1} />
+        <p className="mt-1.5 text-center text-[12px] text-ink-mute">Sin tarjeta · Cancela cuando quieras</p>
       </div>
     </div>
   );

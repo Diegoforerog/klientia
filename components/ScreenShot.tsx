@@ -11,7 +11,7 @@ type Props = {
 };
 
 /**
- * Captura real del panel dentro de un marco de navegador. Extraído de Pillars
+ * Captura real del panel dentro de un marco de navegador. Extraído de la antigua sección de pilares
  * para reutilizarlo en DemoTabs sin duplicar el marco.
  */
 export default function ScreenShot({ src, alt, screen, sizes, aspect = 'aspect-[16/10]', className = '' }: Props) {

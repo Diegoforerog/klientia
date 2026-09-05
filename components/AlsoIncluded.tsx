@@ -65,14 +65,24 @@ export default function AlsoIncluded() {
           })}
         </div>
 
-        {/* 5 grupos de funciones (el detalle vive en /funciones). En 2 columnas la
-            última tarjeta ocupa la fila entera para no dejar un hueco. */}
+        {/* 5 grupos de funciones (el detalle vive en /funciones). Retícula sin
+            huecos en cada tamaño: 1 col (móvil) · 2 cols con la última a lo ancho
+            (sm) · 3 + 2 (lg: retícula de 6, las dos últimas ocupan 3 cada una)
+            · 5 en fila (xl). */}
         <Reveal delay={120}>
-          <div className="mt-6 grid gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-2 sm:[&>*:last-child]:col-span-2 lg:grid-cols-5 lg:[&>*:last-child]:col-span-1">
-            {FEATURE_GROUPS.map((g) => {
+          <div className="mt-6 grid gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-5">
+            {FEATURE_GROUPS.map((g, i, arr) => {
               const Icon = g.icon;
+              const last = i === arr.length - 1;
+              const lastRowLg = i >= arr.length - 2;
               return (
-                <Link key={g.title} href={g.href} className="group relative flex flex-col bg-surface p-6 lg:p-5 xl:p-6">
+                <Link
+                  key={g.title}
+                  href={g.href}
+                  className={`group relative flex flex-col bg-surface p-6 xl:p-5 2xl:p-6 ${last ? 'sm:col-span-2' : ''} ${
+                    lastRowLg ? 'lg:col-span-3' : 'lg:col-span-2'
+                  } xl:col-span-1`}
+                >
                   <span className="relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line2 bg-subtle text-ink transition-[color,background-color,border-color,transform] duration-300 ease-out group-hover:scale-[1.06] group-hover:border-brand-200 group-hover:bg-brand-50 group-hover:text-brand-600">
                     <Icon className="h-5 w-5" strokeWidth={2} />
                   </span>

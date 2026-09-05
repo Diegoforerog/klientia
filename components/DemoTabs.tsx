@@ -11,9 +11,10 @@ import CtaButton from './CtaButton';
 import Reveal from './Reveal';
 
 /**
- * Etiqueta corta de cada pestaña para móvil (≤ 2 palabras): el kicker completo
- * de `PILLARS` se parte en 3 líneas en 375px. El texto de Marca no se toca;
- * en pantallas ≥ sm se muestra el kicker tal cual.
+ * Etiqueta corta de cada pestaña hasta `lg` (≤ 2 palabras): el kicker completo
+ * de `PILLARS` se parte en varias líneas en móvil y tablet. El texto de Marca
+ * no se toca; en pantallas ≥ lg se muestra el kicker tal cual. El nombre
+ * accesible del botón es siempre el kicker completo (aria-label).
  */
 const SHORT_TAB: Record<string, string> = {
   responde: 'Responde',
@@ -25,7 +26,7 @@ const SHORT_TAB: Record<string, string> = {
  * UNA sola demo: los tres pilares (responde · sube el ticket · recupera) en
  * pestañas. Cada pestaña = el texto del pilar + su captura real del panel +
  * la conversación de ejemplo que lo dramatiza. Fusiona lo que antes eran dos
- * secciones (Pillars + ImpulsoresShowcase) y deja un solo CTA.
+ * secciones (pilares + showcase de impulsores) y deja un solo CTA.
  *
  * Accesibilidad: patrón tabs de WAI-ARIA con activación automática —
  * flechas ←/→ mueven foco y selección, Inicio/Fin saltan a los extremos.
@@ -74,7 +75,7 @@ export default function DemoTabs() {
               role="tablist"
               aria-label="Así vende tu IA"
               onKeyDown={onKeyDown}
-              className="mx-auto grid max-w-3xl grid-cols-3 gap-1 rounded-2xl border border-line bg-surface p-1 shadow-sm"
+              className="mx-auto grid max-w-4xl grid-cols-3 gap-1 rounded-2xl border border-line bg-surface p-1 shadow-sm"
             >
               {PILLARS.map((p, i) => {
                 const on = i === active;
@@ -91,12 +92,18 @@ export default function DemoTabs() {
                     aria-controls={`${baseId}-panel-${p.key}`}
                     tabIndex={on ? 0 : -1}
                     onClick={() => select(i)}
-                    className={`rounded-xl px-2 py-2.5 text-center text-[13px] font-semibold leading-tight transition-colors duration-200 sm:px-4 sm:py-3 sm:text-[15px] ${
+                    aria-label={p.eyebrow}
+                    className={`whitespace-nowrap rounded-xl px-2 py-2.5 text-center text-[13px] font-semibold leading-tight transition-colors duration-200 sm:px-4 sm:py-3 sm:text-[15px] lg:px-3 lg:text-[14px] xl:px-4 xl:text-[15px] ${
                       on ? 'bg-ink text-white shadow-sm' : 'text-ink-soft hover:bg-subtle hover:text-ink'
                     }`}
                   >
-                    <span className="sm:hidden">{SHORT_TAB[p.key] ?? p.eyebrow}</span>
-                    <span className="hidden sm:inline">{p.eyebrow}</span>
+                    {/* Dos textos según tamaño; ambos aria-hidden: el nombre accesible lo da aria-label (sin duplicar). */}
+                    <span aria-hidden className="lg:hidden">
+                      {SHORT_TAB[p.key] ?? p.eyebrow}
+                    </span>
+                    <span aria-hidden className="hidden lg:inline">
+                      {p.eyebrow}
+                    </span>
                   </button>
                 );
               })}
@@ -174,7 +181,7 @@ export default function DemoTabs() {
                         <WaPhone key={`${p.key}-${chat.key}`} messages={chat.chat} statusTime={chat.clock} animate className="shadow-phone" />
                       </div>
                     )}
-                    <p className="mt-5 text-center text-[12.5px] leading-snug text-ink-faint lg:absolute lg:bottom-[-1.75rem] lg:left-0 lg:mt-0 lg:w-[300px] lg:origin-bottom-left lg:scale-[0.68]">
+                    <p className="mt-5 text-center text-[12.5px] leading-snug text-ink-mute lg:absolute lg:bottom-[-1.75rem] lg:left-0 lg:mt-0 lg:w-[300px] lg:origin-bottom-left lg:scale-[0.68]">
                       Conversación de ejemplo.
                     </p>
                     <ScreenShot

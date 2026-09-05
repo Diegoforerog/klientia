@@ -1,6 +1,4 @@
-import Reveal from './Reveal';
-import SectionHeading from './SectionHeading';
-import { FEATURES, type Feature } from '@/lib/content';
+import type { Feature } from '@/lib/content';
 
 /** Tarjeta de función (la misma en la home y en /funciones). */
 export function FeatureCard({ f }: { f: Feature }) {
@@ -44,28 +42,5 @@ export function FeatureGrid({ features, cols = 4, className = '' }: { features: 
         <FeatureCard key={f.title} f={f} />
       ))}
     </div>
-  );
-}
-
-/** Sección completa con las 18 funciones (ya no va en la home; la usa /funciones). */
-export default function Features() {
-  return (
-    <section id="todo-incluido" className="hairline-t scroll-mt-24 bg-subtle py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <SectionHeading
-          eyebrow="Y además, todo esto"
-          title={
-            <>
-              Lo demás que necesitas para vender, <span className="text-brand-600">ya incluido</span>
-            </>
-          }
-          subtitle="No son extras: vienen en tu plan. Campañas, redes, CRM, automatizaciones, agenda, cobros e integraciones — sin pagar cinco herramientas distintas."
-        />
-
-        <Reveal delay={120}>
-          <FeatureGrid features={FEATURES} className="mt-14" />
-        </Reveal>
-      </div>
-    </section>
   );
 }
