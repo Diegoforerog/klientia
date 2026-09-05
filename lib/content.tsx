@@ -26,6 +26,10 @@ export const LOGIN_URL = 'https://app.klientia.app/login';
 export const registerWithPlan = (plan: 'BRONCE' | 'PLATA' | 'ORO') =>
   `${REGISTER_URL}?plan=${plan}`;
 
+/** Texto único del botón de acción principal (un solo CTA repetido en toda la landing,
+    para no saturar con variantes). Lo consume Ingeniería en los componentes. */
+export const CTA_LABEL = 'Empieza gratis 7 días';
+
 export const NAV_LINKS = [
   { label: 'Características', href: '#caracteristicas' },
   { label: 'Ver la IA vendiendo', href: '#impulsores' },
@@ -134,6 +138,44 @@ export const FEATURES: Feature[] = [
     icon: SearchCheck,
     title: 'Auditor de ventas perdidas',
     desc: 'Cada noche la IA revisa los chats con interés real que no compraron y te dice por qué (precio, dudas, se enfrió…). Sabes exactamente qué arreglar para vender más.',
+  },
+];
+
+/* ── Versión AGRUPADA de las features (para aligerar la sección "Lo demás que necesitas":
+   18 tarjetas → 5 grupos temáticos, cada uno enlaza a su página /soluciones. Sin perder valor
+   ni keywords (el detalle vive en las subpáginas). */
+export type FeatureGroup = { icon: LucideIcon; title: string; desc: string; href: string };
+
+export const FEATURE_GROUPS: FeatureGroup[] = [
+  {
+    icon: TrendingUp,
+    title: 'Vende más, sin sonar insistente',
+    desc: 'Sube el ticket con impulsores (upsell, cross-sell, downsell) y trae de vuelta a tus clientes con recompra automática.',
+    href: '/soluciones/ventas-por-whatsapp-con-ia/',
+  },
+  {
+    icon: RotateCcw,
+    title: 'No pierdas ni una venta',
+    desc: 'Recupera carritos, retoma los chats fríos con “¿sigues ahí?” y descubre por qué no te compraron con el auditor de ventas perdidas.',
+    href: '/soluciones/pago-contra-entrega-por-whatsapp/',
+  },
+  {
+    icon: Inbox,
+    title: 'En todos tus canales',
+    desc: 'WhatsApp, Instagram y Messenger en una sola bandeja; publica posts, responde comentarios de IG/FB y crea anuncios de Meta.',
+    href: '/soluciones/redes-sociales-con-ia/',
+  },
+  {
+    icon: Workflow,
+    title: 'Se organiza solo',
+    desc: 'CRM que se llena solo, automatizaciones “cuando pasa X → haz Y”, paso a humano y asistencia IA para tu equipo.',
+    href: '/soluciones/crm-para-whatsapp/',
+  },
+  {
+    icon: CalendarCheck,
+    title: 'Agenda, cobros e integraciones',
+    desc: 'Agenda de citas, cobros y contra entrega, Shopify y campañas por WhatsApp — todo en tu plan.',
+    href: '/soluciones/agendar-citas-por-whatsapp/',
   },
 ];
 
@@ -344,18 +386,6 @@ export const FAQS = [
   {
     q: '¿Necesito saber de tecnología o programar?',
     a: 'Para nada. Todo está en español y es sin código. Conectas tu WhatsApp, eliges un vendedor con IA listo de tu industria y subes tu catálogo: si sabes usar WhatsApp, sabes usar esto.',
-  },
-  {
-    q: '¿Cuánto me toma dejarlo funcionando?',
-    a: 'Entre 10 y 15 minutos: 2 min para conectar tu WhatsApp, unos minutos para subir tu catálogo y ajustar tu vendedor con IA, y ya está vendiendo por ti. La documentación tiene el paso a paso con capturas si te pierdes en algo.',
-  },
-  {
-    q: '¿Y si tengo un problema o dudas por el camino?',
-    a: 'Tienes documentación completa dentro del panel y en klientia.app/doc/es (con capturas de cada pantalla). Y desde el panel puedes escribirnos directo cuando algo no cuadra. No estás solo.',
-  },
-  {
-    q: '¿Puedo enviar promociones o campañas a mis clientes?',
-    a: 'Sí. Envías campañas por WhatsApp con plantillas oficiales aprobadas (difusión segura, sin arriesgar tu número). Y la IA hace recompra automática: le vuelve a escribir a quien ya te compró para que regrese.',
   },
   {
     q: '¿En qué países funciona?',
