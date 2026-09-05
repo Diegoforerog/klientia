@@ -26,6 +26,10 @@ export const LOGIN_URL = 'https://app.klientia.app/login';
 export const registerWithPlan = (plan: 'BRONCE' | 'PLATA' | 'ORO') =>
   `${REGISTER_URL}?plan=${plan}`;
 
+/** Texto único del botón de acción principal (un solo CTA repetido en toda la landing,
+    para no saturar con variantes). Lo consume Ingeniería en los componentes. */
+export const CTA_LABEL = 'Empieza gratis 7 días';
+
 export const NAV_LINKS = [
   { label: 'Características', href: '#caracteristicas' },
   { label: 'Ver la IA vendiendo', href: '#impulsores' },
@@ -137,6 +141,44 @@ export const FEATURES: Feature[] = [
   },
 ];
 
+/* ── Versión AGRUPADA de las features (para aligerar la sección "Lo demás que necesitas":
+   18 tarjetas → 5 grupos temáticos, cada uno enlaza a su página /soluciones. Sin perder valor
+   ni keywords (el detalle vive en las subpáginas). */
+export type FeatureGroup = { icon: LucideIcon; title: string; desc: string; href: string };
+
+export const FEATURE_GROUPS: FeatureGroup[] = [
+  {
+    icon: TrendingUp,
+    title: 'Vende más, sin sonar insistente',
+    desc: 'Sube el ticket con impulsores (upsell, cross-sell, downsell) y trae de vuelta a tus clientes con recompra automática.',
+    href: '/soluciones/ventas-por-whatsapp-con-ia/',
+  },
+  {
+    icon: RotateCcw,
+    title: 'No pierdas ni una venta',
+    desc: 'Recupera carritos, retoma los chats fríos con “¿sigues ahí?” y descubre por qué no te compraron con el auditor de ventas perdidas.',
+    href: '/soluciones/pago-contra-entrega-por-whatsapp/',
+  },
+  {
+    icon: Inbox,
+    title: 'En todos tus canales',
+    desc: 'WhatsApp, Instagram y Messenger en una sola bandeja; publica posts, responde comentarios de IG/FB y crea anuncios de Meta.',
+    href: '/soluciones/redes-sociales-con-ia/',
+  },
+  {
+    icon: Workflow,
+    title: 'Se organiza solo',
+    desc: 'CRM que se llena solo, automatizaciones “cuando pasa X → haz Y”, paso a humano y asistencia IA para tu equipo.',
+    href: '/soluciones/crm-para-whatsapp/',
+  },
+  {
+    icon: CalendarCheck,
+    title: 'Agenda, cobros e integraciones',
+    desc: 'Agenda de citas, cobros y contra entrega, Shopify y campañas por WhatsApp — todo en tu plan.',
+    href: '/soluciones/agendar-citas-por-whatsapp/',
+  },
+];
+
 /* ─────────────────────────  BOTS LISTOS  ───────────────────────── */
 
 export const BOT_TYPES = [
@@ -160,19 +202,19 @@ export const STEPS = [
     n: '01',
     title: 'Conecta tu WhatsApp',
     time: '2 min',
-    desc: 'Enlazas tu número desde el panel. No cambias de chip ni de app: la IA vive dentro de tu mismo WhatsApp.',
+    desc: 'Enlazas tu número desde el panel. La IA vive en tu mismo WhatsApp: sin cambiar de chip ni de app.',
   },
   {
     n: '02',
     title: 'Elige tu vendedor con IA y sube tu catálogo',
     time: '10 min',
-    desc: 'Activa un vendedor con IA experto en tu industria en 1 clic (moda, tech, belleza…), sube productos e impulsores y ajusta cómo quieres que venda. Sin código.',
+    desc: 'Activa en 1 clic un vendedor con IA de tu industria, sube tu catálogo e impulsores y ajústalo. Sin código.',
   },
   {
     n: '03',
     title: 'La IA atiende, vende y cobra',
     time: '24/7',
-    desc: 'Desde ese momento responde sola, cierra ventas, manda el link de pago y recupera carritos. Tú solo ves entrar los pedidos.',
+    desc: 'Responde sola, cierra ventas, manda el link de pago y recupera carritos. Tú solo ves entrar los pedidos.',
   },
 ];
 
@@ -261,7 +303,7 @@ export const DIFFERENTIATORS = [
   },
   {
     title: 'Empieza en minutos, no en semanas',
-    desc: 'Vendedores con IA expertos listos por industria en 1 clic. Ya saben vender en tu rubro; tú solo los ajustas a tu gusto.',
+    desc: 'Vendedores con IA expertos por industria, listos en 1 clic. Ya saben vender en tu rubro; tú los ajustas.',
   },
   {
     title: 'Hecho para LATAM y contra entrega',
@@ -269,7 +311,7 @@ export const DIFFERENTIATORS = [
   },
   {
     title: 'Todos tus chats en un solo lugar',
-    desc: 'WhatsApp, Instagram y Messenger en una sola bandeja: vende, recupera, hace campañas, agenda y organiza tu CRM — sin saltar entre cinco herramientas distintas.',
+    desc: 'WhatsApp, Instagram y Messenger en una sola bandeja: vende, agenda, recupera y organiza tu CRM sin saltar entre apps.',
   },
   {
     title: 'Cada negocio configura lo suyo',
@@ -346,18 +388,6 @@ export const FAQS = [
     a: 'Para nada. Todo está en español y es sin código. Conectas tu WhatsApp, eliges un vendedor con IA listo de tu industria y subes tu catálogo: si sabes usar WhatsApp, sabes usar esto.',
   },
   {
-    q: '¿Cuánto me toma dejarlo funcionando?',
-    a: 'Entre 10 y 15 minutos: 2 min para conectar tu WhatsApp, unos minutos para subir tu catálogo y ajustar tu vendedor con IA, y ya está vendiendo por ti. La documentación tiene el paso a paso con capturas si te pierdes en algo.',
-  },
-  {
-    q: '¿Y si tengo un problema o dudas por el camino?',
-    a: 'Tienes documentación completa dentro del panel y en klientia.app/doc/es (con capturas de cada pantalla). Y desde el panel puedes escribirnos directo cuando algo no cuadra. No estás solo.',
-  },
-  {
-    q: '¿Puedo enviar promociones o campañas a mis clientes?',
-    a: 'Sí. Envías campañas por WhatsApp con plantillas oficiales aprobadas (difusión segura, sin arriesgar tu número). Y la IA hace recompra automática: le vuelve a escribir a quien ya te compró para que regrese.',
-  },
-  {
     q: '¿En qué países funciona?',
     a: 'En toda LATAM: Colombia, México, Chile, Perú, Ecuador, Argentina y más. Está pensado para la forma de vender de la región, incluyendo contra entrega.',
   },
@@ -419,7 +449,7 @@ export const PILLARS = [
     key: 'responde',
     eyebrow: 'Responde y cierra',
     title: 'Contesta en segundos, a cualquier hora, y lleva la charla hasta el pago',
-    desc: 'La IA responde con tu catálogo y tu información — nunca se inventa nada. Entiende qué quiere el cliente, resuelve dudas, arma el pedido y manda el link de pago o confirma la contra entrega.',
+    desc: 'Responde con tu catálogo, sin inventar: resuelve dudas, arma el pedido y cierra con link de pago o contra entrega.',
     bullets: [
       'Responde con TU información: precios, envíos, tallas, políticas',
       'Toma el pedido y confirma datos de contra entrega',
@@ -434,7 +464,7 @@ export const PILLARS = [
     key: 'vende-mas',
     eyebrow: 'Vende más a cada cliente',
     title: 'Sube el ticket de cada pedido sin sonar insistente',
-    desc: 'Tú defines reglas simples — “si pide X, ofrece Y” — y la IA las aplica con naturalidad: la versión grande cuando ya va a comprar, el complemento que combina, un descuento si duda por precio.',
+    desc: 'Defines reglas simples —“si pide X, ofrece Y”— y ofrece la versión grande, el complemento o un descuento, sin presionar.',
     bullets: [
       'Versión mejor (upsell), complemento (cross-sell) y rescate por precio (downsell)',
       'Reglas por producto, con tu propio mensaje si quieres',
@@ -449,7 +479,7 @@ export const PILLARS = [
     key: 'recupera',
     eyebrow: 'Recupera lo que dabas por perdido',
     title: 'Persigue carritos y trae clientes de vuelta, solo',
-    desc: 'Si el cliente se queda en visto, la IA le escribe más tarde con tu mensaje y rescata la venta. Y días después de una compra, lo invita a volver. Sin que muevas un dedo.',
+    desc: 'En visto, la IA escribe y rescata la venta; tras comprar, lo invita a volver. Sin mover un dedo.',
     bullets: [
       'Recuperación de carritos a la 1h, 6h y 24h, con descuento opcional',
       'Recompra automática con plantillas oficiales aprobadas',
