@@ -202,19 +202,19 @@ export const STEPS = [
     n: '01',
     title: 'Conecta tu WhatsApp',
     time: '2 min',
-    desc: 'Enlazas tu número desde el panel. No cambias de chip ni de app: la IA vive dentro de tu mismo WhatsApp.',
+    desc: 'Enlazas tu número desde el panel. La IA vive en tu mismo WhatsApp: sin cambiar de chip ni de app.',
   },
   {
     n: '02',
     title: 'Elige tu vendedor con IA y sube tu catálogo',
     time: '10 min',
-    desc: 'Activa un vendedor con IA experto en tu industria en 1 clic (moda, tech, belleza…), sube productos e impulsores y ajusta cómo quieres que venda. Sin código.',
+    desc: 'Activa en 1 clic un vendedor con IA de tu industria, sube tu catálogo e impulsores y ajústalo. Sin código.',
   },
   {
     n: '03',
     title: 'La IA atiende, vende y cobra',
     time: '24/7',
-    desc: 'Desde ese momento responde sola, cierra ventas, manda el link de pago y recupera carritos. Tú solo ves entrar los pedidos.',
+    desc: 'Responde sola, cierra ventas, manda el link de pago y recupera carritos. Tú solo ves entrar los pedidos.',
   },
 ];
 
@@ -303,7 +303,7 @@ export const DIFFERENTIATORS = [
   },
   {
     title: 'Empieza en minutos, no en semanas',
-    desc: 'Vendedores con IA expertos listos por industria en 1 clic. Ya saben vender en tu rubro; tú solo los ajustas a tu gusto.',
+    desc: 'Vendedores con IA expertos por industria, listos en 1 clic. Ya saben vender en tu rubro; tú los ajustas.',
   },
   {
     title: 'Hecho para LATAM y contra entrega',
@@ -311,7 +311,7 @@ export const DIFFERENTIATORS = [
   },
   {
     title: 'Todos tus chats en un solo lugar',
-    desc: 'WhatsApp, Instagram y Messenger en una sola bandeja: vende, recupera, hace campañas, agenda y organiza tu CRM — sin saltar entre cinco herramientas distintas.',
+    desc: 'WhatsApp, Instagram y Messenger en una sola bandeja: vende, agenda, recupera y organiza tu CRM sin saltar entre apps.',
   },
   {
     title: 'Cada negocio configura lo suyo',
@@ -449,7 +449,7 @@ export const PILLARS = [
     key: 'responde',
     eyebrow: 'Responde y cierra',
     title: 'Contesta en segundos, a cualquier hora, y lleva la charla hasta el pago',
-    desc: 'La IA responde con tu catálogo y tu información — nunca se inventa nada. Entiende qué quiere el cliente, resuelve dudas, arma el pedido y manda el link de pago o confirma la contra entrega.',
+    desc: 'Responde con tu catálogo, sin inventar: resuelve dudas, arma el pedido y cierra con link de pago o contra entrega.',
     bullets: [
       'Responde con TU información: precios, envíos, tallas, políticas',
       'Toma el pedido y confirma datos de contra entrega',
@@ -464,7 +464,7 @@ export const PILLARS = [
     key: 'vende-mas',
     eyebrow: 'Vende más a cada cliente',
     title: 'Sube el ticket de cada pedido sin sonar insistente',
-    desc: 'Tú defines reglas simples — “si pide X, ofrece Y” — y la IA las aplica con naturalidad: la versión grande cuando ya va a comprar, el complemento que combina, un descuento si duda por precio.',
+    desc: 'Defines reglas simples —“si pide X, ofrece Y”— y ofrece la versión grande, el complemento o un descuento, sin presionar.',
     bullets: [
       'Versión mejor (upsell), complemento (cross-sell) y rescate por precio (downsell)',
       'Reglas por producto, con tu propio mensaje si quieres',
@@ -479,7 +479,7 @@ export const PILLARS = [
     key: 'recupera',
     eyebrow: 'Recupera lo que dabas por perdido',
     title: 'Persigue carritos y trae clientes de vuelta, solo',
-    desc: 'Si el cliente se queda en visto, la IA le escribe más tarde con tu mensaje y rescata la venta. Y días después de una compra, lo invita a volver. Sin que muevas un dedo.',
+    desc: 'En visto, la IA escribe y rescata la venta; tras comprar, lo invita a volver. Sin mover un dedo.',
     bullets: [
       'Recuperación de carritos a la 1h, 6h y 24h, con descuento opcional',
       'Recompra automática con plantillas oficiales aprobadas',
