@@ -1,0 +1,4 @@
+# ESLint (eslint-config-next) trae unrs-resolver, cuyo binario llega por optionalDependencies;
+# su script de build es solo un fallback: no hace falta ejecutarlo.
+allowBuilds:
+  unrs-resolver: false
