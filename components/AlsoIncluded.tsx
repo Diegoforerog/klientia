@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, CalendarCheck, Rss, type LucideIcon } from 'lucide-react';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
-import { FeatureGrid, featuredFeatures } from './Features';
+import { FEATURE_GROUPS } from '@/lib/content';
 import { INTEGRATIONS } from './Integrations';
 import { AGENDA_INTRO } from './AgendaShowcase';
 import { REDES_INTRO } from './RedesSection';
@@ -10,8 +10,9 @@ import { REDES_INTRO } from './RedesSection';
 /**
  * "También incluido": lo que antes eran cuatro secciones (Agenda, Redes,
  * Lo demás, Integraciones) en una sola, corta. Agenda y Redes son dos
- * tarjetas con enlace a su subpágina; las funciones destacadas van en la
- * misma tarjeta de siempre; las integraciones, como logos con nombre.
+ * tarjetas con enlace a su subpágina; el resto de funciones va resumido en
+ * 5 grupos (FEATURE_GROUPS, de Marca), cada uno con enlace a su solución;
+ * el detalle de las 18 funciones vive en /funciones. Integraciones: logos.
  */
 type Product = { id: string; icon: LucideIcon; eyebrow: string; title: string; desc: string; href: string };
 
@@ -64,9 +65,27 @@ export default function AlsoIncluded() {
           })}
         </div>
 
-        {/* Funciones destacadas (las demás viven en /funciones) */}
+        {/* 5 grupos de funciones (el detalle vive en /funciones). En 2 columnas la
+            última tarjeta ocupa la fila entera para no dejar un hueco. */}
         <Reveal delay={120}>
-          <FeatureGrid features={featuredFeatures()} cols={3} className="mt-6" />
+          <div className="mt-6 grid gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-2 sm:[&>*:last-child]:col-span-2 lg:grid-cols-5 lg:[&>*:last-child]:col-span-1">
+            {FEATURE_GROUPS.map((g) => {
+              const Icon = g.icon;
+              return (
+                <Link key={g.title} href={g.href} className="group relative flex flex-col bg-surface p-6 lg:p-5 xl:p-6">
+                  <span className="relative z-10 inline-flex h-10 w-10 items-center justify-center rounded-xl border border-line2 bg-subtle text-ink transition-[color,background-color,border-color,transform] duration-300 ease-out group-hover:scale-[1.06] group-hover:border-brand-200 group-hover:bg-brand-50 group-hover:text-brand-600">
+                    <Icon className="h-5 w-5" strokeWidth={2} />
+                  </span>
+                  <h3 className="relative z-10 mt-5 text-balance text-[16px] font-semibold leading-snug tracking-tight text-ink">{g.title}</h3>
+                  <p className="relative z-10 mt-2 flex-1 text-[14px] leading-relaxed text-ink-mute">{g.desc}</p>
+                  <span className="relative z-10 mt-4 inline-flex items-center gap-1.5 text-[14px] font-semibold text-brand-600">
+                    Ver más <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                  <span aria-hidden className="pointer-events-none absolute inset-0 bg-brand-50/70 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100" />
+                </Link>
+              );
+            })}
+          </div>
         </Reveal>
 
         {/* Integraciones: logo + nombre, sin frase */}

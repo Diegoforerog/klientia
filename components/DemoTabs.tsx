@@ -11,6 +11,17 @@ import CtaButton from './CtaButton';
 import Reveal from './Reveal';
 
 /**
+ * Etiqueta corta de cada pestaña para móvil (≤ 2 palabras): el kicker completo
+ * de `PILLARS` se parte en 3 líneas en 375px. El texto de Marca no se toca;
+ * en pantallas ≥ sm se muestra el kicker tal cual.
+ */
+const SHORT_TAB: Record<string, string> = {
+  responde: 'Responde',
+  'vende-mas': 'Vende más',
+  recupera: 'Recupera',
+};
+
+/**
  * UNA sola demo: los tres pilares (responde · sube el ticket · recupera) en
  * pestañas. Cada pestaña = el texto del pilar + su captura real del panel +
  * la conversación de ejemplo que lo dramatiza. Fusiona lo que antes eran dos
@@ -84,7 +95,8 @@ export default function DemoTabs() {
                       on ? 'bg-ink text-white shadow-sm' : 'text-ink-soft hover:bg-subtle hover:text-ink'
                     }`}
                   >
-                    {p.eyebrow}
+                    <span className="sm:hidden">{SHORT_TAB[p.key] ?? p.eyebrow}</span>
+                    <span className="hidden sm:inline">{p.eyebrow}</span>
                   </button>
                 );
               })}

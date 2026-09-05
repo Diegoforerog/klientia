@@ -6,16 +6,14 @@ import { FeatureGrid } from '@/components/Features';
 import { FEATURES } from '@/lib/content';
 
 /**
- * Catálogo completo de funciones. La home solo destaca algunas; aquí están
- * las 18 con la misma tarjeta. Página estática (export), canónica propia.
- *
- * TODO(Marca): revisar título/descripción SEO de esta página; el H1 reutiliza
- * el título de la antigua sección "Lo demás que necesitas…" tal cual.
+ * Catálogo completo de funciones. La home resume en 5 grupos (FEATURE_GROUPS);
+ * aquí está el detalle, una tarjeta por función. Página estática (export),
+ * canónica propia.
  */
 export const metadata: Metadata = {
-  title: { absolute: 'Todo lo incluido en Klientia — funciones del vendedor con IA' },
+  title: { absolute: 'Todo lo que incluye Klientia — funciones del vendedor con IA para WhatsApp' },
   description:
-    'Todas las funciones que vienen en tu plan de Klientia: vendedor con IA, impulsores de venta, recuperación de carritos, campañas, CRM, automatizaciones, agenda, cobros, Shopify y más.',
+    'Todas las funciones que vienen en tu plan de Klientia: vendedor con IA para WhatsApp, impulsores de venta, recuperación de carritos, campañas, CRM, automatizaciones, agenda de citas, cobros, Shopify e integraciones.',
   alternates: { canonical: '/funciones/' },
 };
 
@@ -26,13 +24,13 @@ export default function FuncionesPage() {
       <main className="bg-subtle">
         <section className="mx-auto max-w-7xl px-5 pb-24 pt-28 sm:px-8 sm:pt-36">
           <div className="max-w-3xl">
-            <p className="eyebrow">Y además, todo esto</p>
+            <p className="eyebrow">Funciones</p>
             <h1 className="mt-3 text-balance text-[2rem] font-bold leading-[1.1] tracking-tighter text-ink sm:text-[2.6rem]">
-              Lo demás que necesitas para vender, <span className="text-brand-600">ya incluido</span>
+              Todo lo que incluye <span className="text-brand-600">Klientia</span>
             </h1>
             <p className="mt-4 text-[17px] leading-relaxed text-ink-mute">
-              No son extras: vienen en tu plan. Campañas, redes, CRM, automatizaciones, agenda, cobros e integraciones — sin
-              pagar cinco herramientas distintas.
+              Nada es un extra: cada función viene en tu plan. Vendedor con IA, impulsores, recuperación, campañas, CRM,
+              automatizaciones, agenda, cobros e integraciones, en un solo lugar.
             </p>
           </div>
 

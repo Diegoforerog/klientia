@@ -1,11 +1,7 @@
 import { Plus } from 'lucide-react';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
-import ShowMore from './ShowMore';
 import { FAQS } from '@/lib/content';
-
-/** Cuántas preguntas se ven de entrada; el resto, tras "Ver más preguntas". */
-const VISIBLE = 6;
 
 function Item({ q, a }: { q: string; a: string }) {
   return (
@@ -19,9 +15,12 @@ function Item({ q, a }: { q: string; a: string }) {
   );
 }
 
+/**
+ * Preguntas frecuentes. Marca dejó la lista en 7 preguntas cortas, así que se
+ * muestran todas (cerradas): un "Ver más" para esconder una sola pregunta
+ * estorbaría más de lo que ahorra.
+ */
 export default function FAQ() {
-  const first = FAQS.slice(0, VISIBLE);
-  const rest = FAQS.slice(VISIBLE);
   return (
     <section id="faq" className="hairline-t scroll-mt-24 bg-subtle py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-5 sm:px-8">
@@ -35,19 +34,10 @@ export default function FAQ() {
         />
 
         <Reveal delay={120}>
-          <div className="mt-10">
-            <div className="divide-y divide-line border-y border-line">
-              {first.map((item) => (
-                <Item key={item.q} q={item.q} a={item.a} />
-              ))}
-            </div>
-            {rest.length > 0 && (
-              <ShowMore label="Ver más preguntas" className="divide-y divide-line border-b border-line">
-                {rest.map((item) => (
-                  <Item key={item.q} q={item.q} a={item.a} />
-                ))}
-              </ShowMore>
-            )}
+          <div className="mt-10 divide-y divide-line border-y border-line">
+            {FAQS.map((item) => (
+              <Item key={item.q} q={item.q} a={item.a} />
+            ))}
           </div>
         </Reveal>
       </div>

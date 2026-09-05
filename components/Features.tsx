@@ -47,17 +47,6 @@ export function FeatureGrid({ features, cols = 4, className = '' }: { features: 
   );
 }
 
-/**
- * Las funciones que la home destaca. Si Marca marca `featured: true` en
- * lib/content.tsx se pintan esas; mientras no exista el campo, las 6 primeras.
- *
- * TODO(Marca): añadir `featured?: boolean` al tipo Feature y marcar 6-8.
- */
-export function featuredFeatures(): Feature[] {
-  const featured = FEATURES.filter((f) => (f as Feature & { featured?: boolean }).featured);
-  return featured.length ? featured : FEATURES.slice(0, 6);
-}
-
 /** Sección completa con las 18 funciones (ya no va en la home; la usa /funciones). */
 export default function Features() {
   return (
