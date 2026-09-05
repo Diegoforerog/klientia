@@ -19,7 +19,7 @@ const COLS = [
       { label: 'Soluciones', href: '/soluciones/' },
       { label: 'Industrias', href: '/industrias/' },
       { label: 'Blog', href: '/blog/' },
-      { label: 'Documentación', href: 'doc/es/' },
+      { label: 'Documentación', href: '/doc/es/' },
       { label: CTA_LABEL, href: REGISTER_URL },
       { label: 'Iniciar sesión', href: LOGIN_URL },
       { label: 'Soporte', href: 'mailto:info@klientia.app' },

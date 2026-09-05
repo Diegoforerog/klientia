@@ -66,7 +66,7 @@ export default function Header() {
               </NavLink>
             ))}
             <a
-              href="doc/es/"
+              href="/doc/es/"
               className="group/nav relative whitespace-nowrap text-[14px] font-medium text-ink-mute transition-colors hover:text-ink [&::after]:pointer-events-none [&::after]:absolute [&::after]:-bottom-1 [&::after]:left-1/2 [&::after]:h-[1.5px] [&::after]:w-0 [&::after]:-translate-x-1/2 [&::after]:rounded-full [&::after]:bg-brand-600 [&::after]:transition-[width] [&::after]:duration-300 [&::after]:ease-out [&::after]:content-[''] hover:[&::after]:w-full"
             >
               Documentación
@@ -104,7 +104,7 @@ export default function Header() {
                 </NavLink>
               ))}
               <a
-                href="doc/es/"
+                href="/doc/es/"
                 onClick={() => setOpen(false)}
                 className="rounded-xl px-3 py-2.5 text-[15px] font-medium text-ink-soft hover:bg-subtle"
               >
