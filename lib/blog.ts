@@ -35,7 +35,7 @@ Esto es clave: **Klientia no cobra tus mensajes de WhatsApp.** Esas tarifas las 
 1. **Responde eficiente.** Ahora cada mensaje cuenta: cerrar la venta en pocos mensajes cuesta menos que dar mil vueltas. Una IA que va al grano te cuida el bolsillo.
 2. **Aprovecha la cuota gratuita mensual** que Meta establece antes de empezar a cobrarte.
 3. **Separa atender de promocionar.** Las campañas de marketing son aparte (y más caras): úsalas cuando de verdad valgan la pena.
-4. **Antes del 30 de septiembre**, ten un **método de pago válido** en tu cuenta de Meta Business. Sin él, no podrás seguir enviando mensajes cuando arranque el cobro.
+4. **Ten listo un método de pago** en tu cuenta de Meta Business antes de que arranque el cobro (se ha señalado el 30 de septiembre como fecha límite; confírmalo en el aviso oficial de Meta). Sin él, no podrás seguir enviando mensajes.
 
 ## Cómo te ayuda Klientia
 
@@ -52,7 +52,7 @@ No. Los cobra Meta directamente a tu cuenta de WhatsApp Business según su tarif
 Depende del país y del tipo de mensaje; en LATAM son fracciones de centavo. La referencia oficial siempre es la lista de precios vigente de Meta.
 
 **¿Qué debo hacer antes del 1 de octubre?**
-Asegúrate de tener un método de pago válido en tu cuenta de Meta Business antes del 30 de septiembre, para no quedarte sin poder responder.
+Conviene tener un método de pago válido en tu cuenta de Meta Business con antelación (se ha mencionado el 30 de septiembre como fecha límite; confírmalo en el aviso oficial de Meta), para no quedarte sin poder responder.
 
 **¿Necesito tarjeta para probar Klientia?**
 No. La prueba gratuita de 7 días no pide tarjeta.
