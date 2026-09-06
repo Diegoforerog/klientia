@@ -19,7 +19,7 @@ export const INDUSTRIAS: Solucion[] = [
       },
       {
         h2: 'Un vendedor con IA que no duerme',
-        body: 'La IA responde en segundos 24/7, resuelve dudas de precio, talla y envío, ofrece el combo o el upsell y cierra la venta. Las ventas de la madrugada y los fines de semana dejan de perderse.',
+        body: 'La IA responde en segundos a toda hora, resuelve dudas de precio, talla y envío, ofrece el combo o el upsell y cierra la venta. Las ventas de la madrugada y los fines de semana dejan de perderse.',
       },
       {
         h2: 'Contra entrega bajo control',

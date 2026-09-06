@@ -179,10 +179,10 @@ export const SOLUCIONES: Solucion[] = [
   },
   {
     slug: 'ventas-por-whatsapp-con-ia',
-    metaTitle: 'Ventas por WhatsApp con IA: vende y cobra 24/7 | Klientia',
+    metaTitle: 'Ventas por WhatsApp con IA: vende y cobra a toda hora | Klientia',
     metaDescription:
-      'Automatiza tus ventas por WhatsApp con un vendedor con IA que atiende, ofrece, cierra la venta, cobra y recupera carritos 24/7. Prueba gratis 7 días, sin tarjeta.',
-    h1: 'Ventas por WhatsApp con IA: un vendedor que atiende, vende y cobra 24/7',
+      'Automatiza tus ventas por WhatsApp con un vendedor con IA que atiende, ofrece, cierra la venta, cobra y recupera carritos a toda hora. Prueba gratis 7 días, sin tarjeta.',
+    h1: 'Ventas por WhatsApp con IA: un vendedor que atiende, vende y cobra a toda hora',
     subtitle:
       'Convierte tu WhatsApp en un vendedor con inteligencia artificial que responde al instante, sube el ticket, cierra la venta y pasa el link de pago — de día, de noche y en fines de semana, incluso contra entrega.',
     sections: [
@@ -191,7 +191,7 @@ export const SOLUCIONES: Solucion[] = [
         body: 'Vender por WhatsApp con IA es dejar que un asistente con inteligencia artificial atienda cada chat de tu negocio como lo haría tu mejor vendedor: entiende qué quiere el cliente, le muestra el producto, resuelve dudas de precio y envío, y lo lleva hasta el pago. Todo dentro de WhatsApp, con la información y el tono de tu marca, sin que tengas que estar pegado al celular.',
       },
       {
-        h2: 'Atiende al instante, 24/7 (aunque tú estés dormido)',
+        h2: 'Atiende al instante, a toda hora (aunque tú estés dormido)',
         body: 'La mayoría de las ventas se pierden por responder tarde. El vendedor con IA de Klientia contesta en segundos a cualquier hora, así no pierdes las ventas de la madrugada, los festivos ni las horas pico en las que no alcanzas a responder.',
       },
       {
@@ -214,7 +214,7 @@ export const SOLUCIONES: Solucion[] = [
     steps: [
       { title: 'Conecta tu WhatsApp', body: 'Enlazas tu número en minutos, sin cambiar de chip ni de app.' },
       { title: 'Sube tu catálogo y ajusta tu vendedor', body: 'Eliges un vendedor con IA por industria y defines cómo ofrece y cierra.' },
-      { title: 'La IA vende y cobra por ti', body: 'Responde 24/7, sube el ticket, pasa el link de pago y recupera carritos. Tú ves entrar los pedidos.' },
+      { title: 'La IA vende y cobra por ti', body: 'Responde a toda hora, sube el ticket, pasa el link de pago y recupera carritos. Tú ves entrar los pedidos.' },
     ],
     faqs: [
       { q: '¿En qué se diferencia de un chatbot normal de WhatsApp?', a: 'Un chatbot responde preguntas; el vendedor con IA de Klientia ofrece, sube el ticket, cierra la venta y pasa el link de pago, con tu catálogo y tu tono. Vende, no solo contesta.' },
@@ -271,17 +271,17 @@ export const SOLUCIONES: Solucion[] = [
     slug: 'chatbot-para-whatsapp',
     metaTitle: 'Chatbot para WhatsApp con IA que vende (no solo responde) | Klientia',
     metaDescription:
-      'Un chatbot para WhatsApp con IA que no solo responde: ofrece, cierra la venta y cobra 24/7, con tu catálogo y tu tono. Prueba gratis 7 días, sin tarjeta.',
+      'Un chatbot para WhatsApp con IA que no solo responde: ofrece, cierra la venta y cobra a toda hora, con tu catálogo y tu tono. Prueba gratis 7 días, sin tarjeta.',
     h1: 'Chatbot para WhatsApp con IA: no solo responde, vende y cobra',
     subtitle:
-      'Un chatbot común contesta preguntas. El de Klientia es un vendedor con inteligencia artificial: entiende al cliente, le ofrece, cierra la venta y le pasa el link de pago — 24/7 y con la información de tu negocio.',
+      'Un chatbot común contesta preguntas. El de Klientia es un vendedor con inteligencia artificial: entiende al cliente, le ofrece, cierra la venta y le pasa el link de pago — a toda hora y con la información de tu negocio.',
     sections: [
       {
         h2: 'Más que un chatbot de preguntas frecuentes',
         body: 'Los chatbots tradicionales siguen un guion rígido de botones y respuestas fijas. El chatbot con IA de Klientia entiende lo que el cliente escribe en sus palabras, responde con tu catálogo y lo lleva hasta la compra. Vender deja de depender de un menú de opciones.',
       },
       {
-        h2: 'Atiende al instante, 24/7',
+        h2: 'Atiende al instante, a toda hora',
         body: 'Responde en segundos a cualquier hora, así no pierdes las ventas de la madrugada ni los fines de semana. Y cuando hace falta una persona, pasa el chat a tu equipo sin dejar a nadie esperando.',
       },
       {
@@ -300,7 +300,7 @@ export const SOLUCIONES: Solucion[] = [
     steps: [
       { title: 'Conecta tu WhatsApp', body: 'En minutos, sin cambiar de número ni de app.' },
       { title: 'Sube tu catálogo y configura al bot', body: 'Eliges un vendedor con IA por industria y ajustas cómo responde y vende.' },
-      { title: 'El chatbot atiende y vende', body: 'Responde 24/7, ofrece, cierra y pasa el link de pago. Tú ves entrar los pedidos.' },
+      { title: 'El chatbot atiende y vende', body: 'Responde a toda hora, ofrece, cierra y pasa el link de pago. Tú ves entrar los pedidos.' },
     ],
     faqs: [
       { q: '¿Es un chatbot de botones o entiende lenguaje natural?', a: 'Entiende lenguaje natural con IA: el cliente escribe como habla y el bot responde en contexto de tu catálogo, no con menús rígidos.' },

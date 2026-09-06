@@ -29,7 +29,7 @@ export default function Hero() {
           <Reveal delay={140}>
             <p className="mt-7 max-w-xl text-pretty text-[18px] leading-relaxed text-ink-mute sm:text-[19px]">
               Klientia es el <span className="font-semibold text-ink">vendedor con IA</span> que responde en segundos,
-              ofrece la versión mejor, cierra y cobra por ti — 24/7, incluso contra entrega.{' '}
+              ofrece la versión mejor, cierra y cobra por ti —a cualquier hora, incluso contra entrega.{' '}
               <span className="font-medium text-ink-soft">Tú solo ves entrar los pedidos.</span>
             </p>
           </Reveal>
