@@ -134,6 +134,12 @@ export default function Pricing() {
           adicional cuesta ${EXTRA_CONVERSATION_USD}. El precio de lanzamiento aplica por tiempo limitado ·
           7 días de prueba gratis · sin tarjeta · cancela cuando quieras.
         </p>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-[13.5px] leading-relaxed text-ink-faint">
+          Aparte de tu plan, los mensajes de WhatsApp los cobra <strong>Meta</strong> directamente a tu cuenta de
+          WhatsApp Business, según su tarifa por país. A partir del <strong>1 de octubre de 2026</strong>, Meta cobra
+          por mensaje las respuestas dentro de la ventana de 24 horas y publicará sus tarifas oficiales por país (en
+          LATAM son muy bajas). Klientia no les añade ningún margen.
+        </p>
       </div>
     </section>
   );
