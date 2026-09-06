@@ -217,6 +217,19 @@ export default function TerminosDeServicioPage() {
         WhatsApp y está sujeta a sus políticas de aprobación, ajenas al control de Klientia.
       </p>
 
+      <h3>5.1 Costos de mensajería de WhatsApp (los cobra Meta)</h3>
+      <p>
+        Klientia no cobra por los mensajes que envías o recibes en WhatsApp. Esos costos los fija y cobra Meta
+        Platforms, Inc. directamente a tu cuenta de WhatsApp Business (WABA), según su lista de precios por país y tipo
+        de mensaje. A partir del 1 de octubre de 2026, Meta cobra por mensaje las respuestas de texto enviadas dentro
+        de la ventana de servicio de 24 horas, incluidas las que envía el asistente con inteligencia artificial de
+        Klientia en tu nombre, más allá de la cuota gratuita que Meta establezca. Para seguir enviando mensajes debes
+        mantener un método de pago válido en tu cuenta de Meta Business. Klientia cobra únicamente tu plan y, si usas
+        plantillas de marketing o utilidad enviadas desde Klientia, el saldo del monedero conforme a la tarifa
+        publicada en el panel. Los precios de Meta pueden cambiar sin intervención de Klientia; consulta la lista
+        vigente en la documentación oficial de Meta.
+      </p>
+
       <h2 id="uso-aceptable">6. Uso aceptable</h2>
       <p>Al usar Klientia, te comprometes a NO:</p>
       <ul>

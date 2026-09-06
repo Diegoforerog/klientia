@@ -7,62 +7,61 @@ export const POSTS: BlogPost[] = [
     metaTitle: "¿Cuánto cuesta vender por WhatsApp en 2026?",
     title: "¿Cuánto cuesta vender por WhatsApp en 2026? (y cómo pagar menos)",
     description:
-      "Meta cambió cómo cobra los mensajes de WhatsApp Business. Te explicamos qué pagas, qué es gratis y 4 formas de gastar menos vendiendo por WhatsApp.",
+      "Desde el 1 de octubre de 2026 Meta cobra por mensaje las respuestas dentro de la ventana de 24 h, incluidas las de la IA. Te explicamos qué pagas, quién cobra y cómo gastar menos.",
     date: "2026-09-05",
-    body: `Si vendes por WhatsApp, hay un cambio que te conviene entender: **desde el 1 de julio de 2025, Meta cambió la forma de cobrar los mensajes de negocio**, y en 2026 esas reglas ya están en firme. La buena noticia es que, bien usado, puedes atender a más clientes pagando menos. Te lo explicamos sin tecnicismos.
+    body: `Si vendes por WhatsApp, hay un cambio que te conviene entender: **desde el 1 de octubre de 2026, Meta cobra por cada mensaje de respuesta que tu negocio envía dentro de la ventana de 24 horas** —incluidas las que manda un asistente con inteligencia artificial en tu nombre—. Antes, esas respuestas eran gratis. Suena a mala noticia, pero en LATAM el costo por mensaje es muy bajo y hay una cuota gratuita mensual: con la estrategia correcta, pagas muy poco. Te lo explicamos sin tecnicismos.
 
-## Qué cambió: de "por conversación" a "por mensaje"
+## Qué cambió
 
-Antes, cuando tu negocio enviaba una plantilla, se abría una "ventana" de 24 horas y dentro de ella podías escribir varias veces sin pagar de más. **Ahora Meta cobra por mensaje**, y el precio depende de dos cosas: el **tipo** de mensaje y el **país** del cliente.
+Desde julio de 2025, Meta cobra **por mensaje** (ya no por conversación) las plantillas de marketing y de utilidad. Y **desde el 1 de octubre de 2026**, cobra también las **respuestas de texto dentro de la ventana de servicio de 24 horas** —las que antes eran gratis—, incluidas las que envía un asistente con IA.
 
-Los mensajes se agrupan en categorías, y cada una cuesta distinto:
+En corto, hoy hay tres tipos de mensaje, cada uno con su tarifa por país:
 
-- **Marketing** (promociones, novedades, "vuelve a comprar"): se pagan, y son los más caros.
-- **Utilidad** (confirmar un pedido, avisar que va en camino, un recordatorio): son más baratos y, en muchos casos, **gratis** si respondes dentro de la ventana de servicio.
+- **Marketing** (promociones, "vuelve a comprar"): los más caros.
+- **Utilidad** (confirmar un pedido, "va en camino", recordatorios): más baratos.
+- **Servicio** (tus respuestas y las del asistente dentro de las 24 h): antes gratis; **desde el 1 de octubre de 2026 se cobran por mensaje**.
 - **Autenticación** (códigos de verificación): tarifa aparte.
 
-Para que tengas una idea del rango: las tarifas de marketing van desde alrededor de US$0,01 en mercados como India hasta más de US$0,12 en algunos países de Europa, con Estados Unidos cerca de US$0,025 por mensaje. Las cifras exactas de cada país cambian con el tiempo, así que la referencia oficial siempre es la tabla de tarifas de Meta.
+## La buena noticia: en LATAM cuesta muy poco
 
-## La parte que te ahorra plata: la ventana de 24 horas
+Las tarifas por mensaje en la región son **fracciones de centavo de dólar** (varían por país según la lista de Meta), y Meta mantiene una **cuota gratuita mensual** por número antes de empezar a cobrar. Para un negocio que atiende bien, el costo real suele ser pequeño.
 
-Aquí está el truco que muchos comercios no aprovechan. **Cuando un cliente te escribe primero, se abre una ventana de servicio de 24 horas.** Dentro de esa ventana puedes responderle **gratis** —con mensajes normales y con plantillas de utilidad— sin que Meta te cobre por conversación de atención.
+## Quién cobra qué (para que no haya sorpresas)
 
-¿La consecuencia práctica? Mientras más rápido y mejor atiendas a quien te escribe, **más ventas cierras dentro de la parte gratis** y menos dependes de las plantillas de pago para volver a contactarlo.
+Esto es clave: **Klientia no cobra tus mensajes de WhatsApp.** Esas tarifas las fija y las cobra **Meta directamente a tu cuenta de WhatsApp Business**, según su lista por país. Klientia solo cobra tu plan (y, si envías campañas con plantillas desde Klientia, el saldo de tu monedero según la tarifa del panel). Ni Klientia ni el proveedor de mensajería le suman margen a lo de Meta.
 
-## Qué significa esto para tu negocio
+## Cómo pagar menos (4 claves)
 
-Traducido a decisiones del día a día:
-
-1. **Responder rápido no es solo cortesía: es ahorro.** Si contestas dentro de las 24 horas, esa conversación de atención no te cuesta. Si dejas enfriar el chat y luego tienes que reabrirlo con una plantilla de marketing, sí pagas.
-2. **Separa "atender" de "promocionar".** Atender dudas, tomar el pedido y confirmar el envío casi siempre cae en la parte barata o gratis. Guarda las plantillas de marketing (las caras) para cuando de verdad valgan la pena.
-3. **Las plantillas de utilidad son tus amigas.** Confirmaciones de pedido, "tu paquete va en camino" o recordatorios entran en la categoría barata. Además, Meta se volvió más estricto para aprobar qué cuenta como "utilidad", así que conviene redactarlas bien.
-4. **A más volumen, mejor tarifa.** Meta introdujo descuentos por volumen en mensajes de utilidad y autenticación: mientras más envías, menos pagas por cada uno.
+1. **Responde eficiente.** Ahora cada mensaje cuenta: cerrar la venta en pocos mensajes cuesta menos que dar mil vueltas. Una IA que va al grano te cuida el bolsillo.
+2. **Aprovecha la cuota gratuita mensual** que Meta establece antes de empezar a cobrarte.
+3. **Separa atender de promocionar.** Las campañas de marketing son aparte (y más caras): úsalas cuando de verdad valgan la pena.
+4. **Antes del 30 de septiembre**, ten un **método de pago válido** en tu cuenta de Meta Business. Sin él, no podrás seguir enviando mensajes cuando arranque el cobro.
 
 ## Cómo te ayuda Klientia
 
-El punto clave del ahorro es **atender a tiempo y bien**, y eso es justo lo que un vendedor con IA hace por ti las 24 horas. Cuando un cliente escribe a las 11 de la noche, Klientia responde al instante —resuelve la duda, arma el pedido y cierra— **dentro de la ventana gratis**, en lugar de dejar el chat enfriándose hasta que toque reabrirlo con una plantilla de pago.
+Ahora que cada mensaje cuesta, un vendedor con IA que **resuelve y cierra en pocos mensajes vale más que nunca**. Cuando un cliente escribe a las 11 de la noche, Klientia responde al instante —resuelve la duda, arma el pedido y manda el link de pago, sin rodeos— y confirma la contra entrega. Menos mensajes de relleno, más ventas cerradas.
 
-Si quieres ver cómo funciona, mira nuestro [chatbot de WhatsApp que sí vende](https://www.klientia.app/soluciones/chatbot-para-whatsapp/) y cómo hacemos [ventas por WhatsApp con IA](https://www.klientia.app/soluciones/ventas-por-whatsapp-con-ia/) de punta a punta: atender, cobrar y recuperar.
+Míralo en nuestro [chatbot de WhatsApp que sí vende](https://www.klientia.app/soluciones/chatbot-para-whatsapp/) y en cómo hacemos [ventas por WhatsApp con IA](https://www.klientia.app/soluciones/ventas-por-whatsapp-con-ia/) de punta a punta: atender, cobrar y recuperar.
 
 ## Preguntas frecuentes
 
-**¿WhatsApp subió el precio de vender?**
-No exactamente. Meta no subió "el precio de vender": cambió *cómo* se cobra, pasando de cobrar por conversación de 24 horas a cobrar por mensaje, con precios distintos según la categoría y el país.
+**¿Klientia cobra los mensajes de WhatsApp?**
+No. Los cobra Meta directamente a tu cuenta de WhatsApp Business según su tarifa por país. Desde el 1 de octubre de 2026 Meta cobra también las respuestas del asistente dentro de la ventana de 24 horas, después de su cuota gratuita mensual. Klientia solo cobra tu plan.
 
-**¿Qué mensajes puedo enviar gratis?**
-Las respuestas dentro de la ventana de servicio de 24 horas (que se abre cuando el cliente te escribe primero) no tienen costo de conversación de atención. Las plantillas de marketing, en cambio, siempre se pagan.
+**¿Cuánto cuesta cada mensaje?**
+Depende del país y del tipo de mensaje; en LATAM son fracciones de centavo. La referencia oficial siempre es la lista de precios vigente de Meta.
 
-**¿Cómo pago menos por vender en WhatsApp?**
-Atendiendo rápido para cerrar dentro de la ventana gratis, usando plantillas de utilidad (más baratas) en lugar de marketing cuando sea posible, y aprovechando los descuentos por volumen.
+**¿Qué debo hacer antes del 1 de octubre?**
+Asegúrate de tener un método de pago válido en tu cuenta de Meta Business antes del 30 de septiembre, para no quedarte sin poder responder.
 
 **¿Necesito tarjeta para probar Klientia?**
 No. La prueba gratuita de 7 días no pide tarjeta.
 
-## Atiende a tiempo y paga menos por vender en WhatsApp
+## En resumen
 
-WhatsApp no encareció vender: premia a quien atiende rápido y separa la atención de la promoción. Esa velocidad es justo lo que puedes automatizar. [Prueba Klientia gratis 7 días](https://app.klientia.app/register), sin tarjeta, y véndelo dentro de la ventana gratis.
+WhatsApp no encareció "vender": cambió cómo se cobra, y ahora premia a quien atiende **rápido y sin rodeos**. Esa eficiencia es justo lo que puedes automatizar. [Prueba Klientia gratis 7 días](https://app.klientia.app/register), sin tarjeta.
 
-*Las tarifas y categorías de WhatsApp Business las define Meta y pueden cambiar; revisa siempre la tabla oficial vigente antes de calcular tus costos.*`,
+*Las tarifas y categorías de WhatsApp las define y cobra Meta, y pueden cambiar; revisa la lista oficial vigente antes de calcular tus costos.*`,
   },
   {
     "slug": "contra-entrega-por-whatsapp-automatizar-cod",
