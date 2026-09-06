@@ -3,7 +3,7 @@ import Reveal from './Reveal';
 
 // Hechos reales del producto (sin cifras de resultados inventadas).
 const STATS = [
-  { v: 'A toda hora', k: 'responde al instante' },
+  { v: '24/7', k: 'atiende sin parar' },
   { v: 'Al instante', k: 'responde a tus clientes' },
   { v: 'Sin código', k: 'listo en minutos' },
 ];

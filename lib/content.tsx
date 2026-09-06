@@ -51,7 +51,7 @@ export const FEATURES: Feature[] = [
   {
     icon: Bot,
     title: 'Vendedor con IA, no un bot de FAQ',
-    desc: 'Atiende al instante, entiende qué quiere el cliente, ofrece, cierra la venta y pasa el link de pago. A cualquier hora y con TU información: nunca se inventa nada.',
+    desc: 'Atiende al instante, entiende qué quiere el cliente, ofrece, cierra la venta y pasa el link de pago. 24/7 y con TU información: nunca se inventa nada.',
     accent: true,
   },
   {
@@ -182,7 +182,7 @@ export const FEATURE_GROUPS: FeatureGroup[] = [
 /* ─────────────────────────  BOTS LISTOS  ───────────────────────── */
 
 export const BOT_TYPES = [
-  { icon: MessageCircle, name: 'Responde', desc: 'Atiende dudas y responde con tu información, a cualquier hora.' },
+  { icon: MessageCircle, name: 'Responde', desc: 'Atiende dudas y responde con tu información, 24/7.' },
   { icon: CalendarCheck, name: 'Agenda', desc: 'Reserva citas en el chat: servicios, asesores y sincronía con tu calendario.' },
   { icon: TrendingUp, name: 'Vende', desc: 'Ofrece, sube el ticket, cierra la venta y cobra.' },
 ];
@@ -213,7 +213,7 @@ export const STEPS = [
   {
     n: '03',
     title: 'La IA atiende, vende y cobra',
-    time: 'A toda hora',
+    time: '24/7',
     desc: 'Responde sola, cierra ventas, manda el link de pago y recupera carritos. Tú solo ves entrar los pedidos.',
   },
 ];
@@ -247,9 +247,9 @@ export const PLANS: Plan[] = [
     priceList: '29',
     priceYearly: '290',
     conversations: '1.000',
-    tagline: 'El vendedor con IA que atiende y responde por ti, a cualquier hora.',
+    tagline: 'El vendedor con IA que atiende y responde por ti, 24/7.',
     features: [
-      'Agente de IA que responde con tu información, a cualquier hora',
+      'Agente de IA que responde con tu información, 24/7',
       'Vendedores con IA listos por industria, en 1 clic',
       'CRM que se llena solo: fichas, etiquetas y tareas de cada cliente',
       'Automatizaciones “cuando pasa X → haz Y”',

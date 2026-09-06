@@ -134,11 +134,15 @@ export default function Pricing() {
           tiempo limitado · 7 días de prueba gratis · sin tarjeta · cancela cuando quieras.
         </p>
         <p className="mx-auto mt-3 max-w-2xl text-center text-[13.5px] leading-relaxed text-ink-faint">
-          Aparte de tu plan, los mensajes de WhatsApp los cobra <strong>Meta</strong> directamente a tu cuenta de
-          WhatsApp Business, según su tarifa por país. Desde el <strong>1 de octubre de 2026</strong>, Meta cobra por
-          mensaje las respuestas dentro de la ventana de 24 horas y publicará sus tarifas oficiales por país (en LATAM
-          son muy bajas); <strong>Klientia no cobra por esas respuestas</strong>. Solo las campañas con plantillas que
-          envíes desde Klientia se cobran aparte, desde tu monedero, a costo de Meta más un 10%.
+          <strong>Nota:</strong> tu plan no incluye el costo de los mensajes de WhatsApp. Esos los cobra{' '}
+          <strong>Meta</strong> directamente a tu cuenta de WhatsApp Business, según su tarifa por país —no es un cobro
+          de Klientia—. Desde el <strong>1 de octubre de 2026</strong>, Meta cobra por mensaje también las respuestas
+          del asistente dentro de la ventana de 24 horas. Te recomendamos tener un método de pago activo en tu Meta
+          Business Suite. Más detalles en las{' '}
+          <a href="#faq" className="underline hover:text-ink">
+            Preguntas frecuentes
+          </a>
+          .
         </p>
       </div>
     </section>

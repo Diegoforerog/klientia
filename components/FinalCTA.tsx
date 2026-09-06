@@ -24,7 +24,7 @@ export default function FinalCTA() {
 
           <div className="relative max-w-xl px-7 py-14 text-white sm:px-14 sm:py-24">
             <h2 className="text-balance text-[2rem] font-bold leading-[1.08] tracking-tighter sm:text-[2.5rem]">
-              Tu próximo vendedor estrella no pide sueldo y atiende a cualquier hora
+              Tu próximo vendedor estrella no pide sueldo, no se cansa y trabaja 24/7
             </h2>
             <p className="mt-5 max-w-md text-pretty text-[17px] leading-relaxed text-white/75">
               Conéctalo a tu WhatsApp hoy y míralo vender, cobrar y recuperar carritos esta misma semana.

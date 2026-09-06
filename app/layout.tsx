@@ -33,11 +33,11 @@ const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.klientia.app';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: 'Klientia — Deja de perder ventas en WhatsApp: tu vendedor con IA a toda hora',
+    default: 'Klientia — Deja de perder ventas en WhatsApp: tu vendedor con IA 24/7',
     template: '%s · Klientia',
   },
   description:
-    'El vendedor con IA que responde en segundos, ofrece la versión mejor, cierra y cobra en tu WhatsApp — a toda hora, incluso contra entrega. También Instagram y Messenger. Sin código, para LATAM. Prueba gratis 7 días, sin tarjeta.',
+    'El vendedor con IA que responde en segundos, ofrece la versión mejor, cierra y cobra en tu WhatsApp — 24/7, incluso contra entrega. También Instagram y Messenger. Sin código, para LATAM. Prueba gratis 7 días, sin tarjeta.',
   applicationName: 'Klientia',
   keywords: [
     'ventas por WhatsApp con IA',
@@ -62,14 +62,14 @@ export const metadata: Metadata = {
     locale: 'es_CO',
     url: SITE,
     siteName: 'Klientia',
-    title: 'Deja de perder ventas en WhatsApp — Klientia, tu vendedor con IA a toda hora',
+    title: 'Deja de perder ventas en WhatsApp — Klientia, tu vendedor con IA 24/7',
     description:
       'Responde en segundos, ofrece la versión mejor, cierra y cobra por ti — incluso contra entrega. WhatsApp, Instagram y Messenger en un panel. Para LATAM. 7 días gratis, sin tarjeta.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Deja de perder ventas en WhatsApp — Klientia',
-    description: 'El vendedor con IA que responde, cierra y cobra en tu WhatsApp a toda hora, incluso contra entrega. 7 días gratis, sin tarjeta.',
+    description: 'El vendedor con IA que responde, cierra y cobra en tu WhatsApp 24/7, incluso contra entrega. 7 días gratis, sin tarjeta.',
   },
   robots: {
     index: true,

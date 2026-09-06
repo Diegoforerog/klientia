@@ -23,7 +23,7 @@ type Answer = 'si' | 'no';
 const PLAN_META: Record<Plan['id'], { icon: typeof MessageCircle; blurb: string }> = {
   BRONCE: {
     icon: MessageCircle,
-    blurb: 'Perfecto: solo necesitas que responda por ti a cualquier hora. Empieza por lo esencial.',
+    blurb: 'Perfecto: solo necesitas que responda por ti 24/7. Empieza por lo esencial.',
   },
   PLATA: {
     icon: CalendarCheck,
