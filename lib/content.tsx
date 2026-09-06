@@ -407,10 +407,6 @@ export const FAQS = [
     q: '¿La IA se inventa cosas o responde con mi información?',
     a: 'Responde solo con tu catálogo y tu base de conocimiento. Tú defines los precios, los mensajes de venta y las reglas: la IA vende como tu marca, sin inventar. Y si no sabe algo, pasa el chat a tu equipo.',
   },
-  {
-    q: '¿Klientia cobra los mensajes de WhatsApp?',
-    a: 'No. Los cobra Meta directamente a tu cuenta de WhatsApp Business según su tarifa por país. Desde el 1 de octubre de 2026 Meta cobra también las respuestas del asistente dentro de la ventana de 24 horas, después de su cuota gratuita mensual. Klientia solo cobra tu plan.',
-  },
 ];
 
 export const COUNTRIES = [
