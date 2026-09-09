@@ -150,8 +150,9 @@ export default function TerminosDeServicioPage() {
         que la canceles.
       </p>
       <p>
-        También puedes elegir pago anual: $209, $319 y $539 USD/año para Responde, Agenda y Vende respectivamente
-        (equivale a 11 meses: 1 mes gratis frente al pago mensual).
+        También puedes elegir pago anual: $209, $319 y $539 USD/año para Responde, Agenda y Vende
+        respectivamente, equivalente a 11 meses (1 mes gratis frente al pago mensual). Estos
+        también son precios de lanzamiento, sujetos a cambio con aviso previo.
       </p>
 
       <h3>4.2 Creem como Merchant of Record</h3>
