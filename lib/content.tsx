@@ -400,10 +400,6 @@ export const FAQS = [
     a: 'Sí. No hay contratos ni permanencia. Cancelas cuando quieras desde tu cuenta, sin llamadas ni trámites.',
   },
   {
-    q: '¿Klientia cobra los mensajes de WhatsApp?',
-    a: 'No. Los cobra Meta directamente a tu cuenta de WhatsApp Business según su tarifa por país. Desde el 1 de octubre de 2026 Meta cobra también las respuestas dentro de la ventana de 24 horas, después de su cuota gratuita mensual. Klientia cobra únicamente tu suscripción; no intermedia ni le añade margen al pago de tus mensajes.',
-  },
-  {
     q: '¿Sirve para contra entrega (COD)?',
     a: 'Sí, está diseñado para contra entrega. La IA toma el pedido y confirma los datos; y si prefieres pago anticipado, conecta MercadoPago en un clic o Stripe.',
   },
