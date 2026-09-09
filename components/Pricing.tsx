@@ -65,7 +65,7 @@ export default function Pricing() {
                   <p className={`mt-3 text-[13px] leading-snug ${pop ? 'text-white/70' : 'text-ink-soft'}`}>
                     o <span className="font-semibold">${plan.priceYearly}/año</span>
                     <span className={`ml-1.5 rounded-full px-2 py-0.5 text-[11.5px] font-semibold ${pop ? 'bg-white/15 text-white' : 'bg-emerald-50 text-emerald-700'}`}>
-                      2 meses gratis
+                      1 mes gratis
                     </span>
                   </p>
                   <p className={`mt-2 text-[12.5px] leading-snug ${pop ? 'text-white/65' : 'text-ink-mute'}`}>

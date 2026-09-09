@@ -224,7 +224,7 @@ export type Plan = {
   id: 'BRONCE' | 'PLATA' | 'ORO';
   name: string;
   /** Precios en USD. launch = precio de lanzamiento (actual); list = precio normal (tachado);
-   *  yearly = pago anual con 2 meses gratis (sobre precio de lista). */
+   *  yearly = pago anual = 11× el precio mensual de lanzamiento (1 mes gratis). */
   priceLaunch: string;
   priceList: string;
   priceYearly: string;
@@ -245,7 +245,7 @@ export const PLANS: Plan[] = [
     name: 'Responde',
     priceLaunch: '19',
     priceList: '29',
-    priceYearly: '290',
+    priceYearly: '209',
     conversations: '1.000',
     tagline: 'El vendedor con IA que atiende y responde por ti, 24/7.',
     features: [
@@ -262,7 +262,7 @@ export const PLANS: Plan[] = [
     name: 'Agenda',
     priceLaunch: '29',
     priceList: '49',
-    priceYearly: '490',
+    priceYearly: '319',
     conversations: '2.000',
     tagline: 'Suma citas: el vendedor con IA que agenda por ti.',
     features: [
@@ -279,7 +279,7 @@ export const PLANS: Plan[] = [
     name: 'Vende',
     priceLaunch: '49',
     priceList: '89',
-    priceYearly: '890',
+    priceYearly: '539',
     conversations: '3.000',
     tagline: 'El completo: el vendedor con IA que vende, cobra y recupera.',
     popular: true,
