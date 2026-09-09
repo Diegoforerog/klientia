@@ -27,7 +27,7 @@ export default function AvisoDePrivacidadPage() {
   return (
     <LegalPage
       title="Aviso de Privacidad de Klientia"
-      updated="19 de agosto de 2026"
+      updated="9 de septiembre de 2026"
       toc={TOC}
       summary={
         <>
@@ -78,7 +78,7 @@ export default function AvisoDePrivacidadPage() {
         <li>Datos de registro: nombre, correo electrónico, contraseña (cifrada), nombre de tu negocio, país.</li>
         <li>
           Datos de facturación: los procesa <strong>Creem</strong> como Merchant of Record; Klientia recibe solo
-          una referencia de pago, el plan o pack contratado y el estado —{' '}
+          una referencia de pago, el plan contratado y el estado —{' '}
           <strong>no recibimos ni almacenamos los datos completos de tu tarjeta</strong>.
         </li>
         <li>
@@ -127,15 +127,14 @@ export default function AvisoDePrivacidadPage() {
 
       <h2 id="para-que-usamos-los-datos">3. Para qué usamos los datos</h2>
       <ul>
-        <li>Prestar el Servicio: responder mensajes, agendar citas, procesar pedidos, gestionar el monedero y las suscripciones.</li>
+        <li>Prestar el Servicio: responder mensajes, agendar citas, procesar pedidos, gestionar las suscripciones.</li>
         <li>
           Generar respuestas automáticas mediante inteligencia artificial (los mensajes de la conversación se envían
           a nuestro proveedor de IA para generar la respuesta; ver sección 4).
         </li>
-        <li>Facturar y cobrar las suscripciones y las recargas del monedero (a través de Creem, como Merchant of Record).</li>
+        <li>Facturar y cobrar las suscripciones (a través de Creem, como Merchant of Record).</li>
         <li>
-          Enviar notificaciones operativas por correo (por ejemplo, confirmaciones, alertas de saldo bajo, avisos de
-          facturación).
+          Enviar notificaciones operativas por correo (por ejemplo, confirmaciones, avisos de facturación).
         </li>
         <li>Dar soporte técnico y atender solicitudes.</li>
         <li>
@@ -164,7 +163,7 @@ export default function AvisoDePrivacidadPage() {
               <td>
                 <strong>Creem</strong>
               </td>
-              <td>Procesar los pagos de las suscripciones y las recargas del monedero; factura, cobra y remite impuestos como Merchant of Record</td>
+              <td>Procesar los pagos de las suscripciones; factura, cobra y remite impuestos como Merchant of Record</td>
               <td>
                 Datos de facturación y pago del comerciante (Creem captura los datos de tarjeta directamente;
                 Klientia no los recibe)

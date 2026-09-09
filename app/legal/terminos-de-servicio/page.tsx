@@ -4,7 +4,7 @@ import LegalPage, { type LegalTocItem } from '@/components/LegalPage';
 export const metadata: Metadata = {
   title: 'Términos de Servicio',
   description:
-    'Términos de Servicio de Klientia: qué es el servicio, planes y facturación, monedero prepago, uso aceptable, propiedad intelectual y más.',
+    'Términos de Servicio de Klientia: qué es el servicio, planes y facturación, costos de mensajería de WhatsApp (los cobra Meta), uso aceptable, propiedad intelectual y más.',
   alternates: { canonical: '/legal/terminos-de-servicio/' },
 };
 
@@ -13,7 +13,7 @@ const TOC: LegalTocItem[] = [
   { id: 'que-es-klientia', label: '2. Qué es Klientia' },
   { id: 'cuenta-y-elegibilidad', label: '3. Cuenta y elegibilidad' },
   { id: 'planes-precios-y-facturacion', label: '4. Planes, precios y facturación' },
-  { id: 'monedero-prepago', label: '5. Monedero prepago y plantillas de WhatsApp' },
+  { id: 'costos-de-mensajeria-de-whatsapp', label: '5. Costos de mensajería de WhatsApp (los cobra Meta)' },
   { id: 'uso-aceptable', label: '6. Uso aceptable' },
   { id: 'propiedad-intelectual', label: '7. Propiedad intelectual' },
   { id: 'disponibilidad-del-servicio', label: '8. Disponibilidad del servicio' },
@@ -28,7 +28,7 @@ export default function TerminosDeServicioPage() {
   return (
     <LegalPage
       title="Términos de Servicio de Klientia"
-      updated="19 de agosto de 2026"
+      updated="9 de septiembre de 2026"
       toc={TOC}
       summary={
         <>
@@ -90,7 +90,7 @@ export default function TerminosDeServicioPage() {
       <p>
         <strong>Lo que Klientia no es:</strong> Klientia no crea ni administra las plantillas de mensajes de WhatsApp
         — eso se gestiona en la plataforma de WhatsApp, sujeto a sus políticas de aprobación. Klientia tampoco es una
-        entidad financiera ni procesa ni almacena los datos de tu tarjeta de crédito o débito (ver sección 5).
+        entidad financiera ni procesa ni almacena los datos de tu tarjeta de crédito o débito (ver sección 4.2).
       </p>
 
       <h2 id="cuenta-y-elegibilidad">3. Cuenta y elegibilidad</h2>
@@ -113,7 +113,7 @@ export default function TerminosDeServicioPage() {
       <h2 id="planes-precios-y-facturacion">4. Planes, precios y facturación</h2>
       <h3>4.1 Planes de suscripción</h3>
       <p>
-        Klientia ofrece planes de suscripción mensual, entre ellos (precios de lanzamiento en USD, sujetos a cambio
+        Klientia ofrece planes de suscripción mensual o anual, entre ellos (precios de lanzamiento en USD, sujetos a cambio
         con aviso previo):
       </p>
       <div className="table-wrap">
@@ -149,12 +149,16 @@ export default function TerminosDeServicioPage() {
         período de gracia informado en la plataforma), la suscripción se activa y se cobra de forma recurrente hasta
         que la canceles.
       </p>
+      <p>
+        También puedes elegir pago anual: $209, $319 y $539 USD/año para Responde, Agenda y Vende respectivamente
+        (equivale a 11 meses: 1 mes gratis frente al pago mensual).
+      </p>
 
       <h3>4.2 Creem como Merchant of Record</h3>
       <p>
         <strong>Creem</strong> es nuestro procesador de pagos y actúa como{' '}
-        <strong>Merchant of Record (comerciante registrado)</strong> de las{' '}
-        <strong>suscripciones y de las recargas del monedero prepago</strong> de Klientia. Esto significa que:
+        <strong>Merchant of Record (comerciante registrado)</strong> de las <strong>suscripciones</strong> de
+        Klientia. Esto significa que:
       </p>
       <ul>
         <li>Creem es quien te factura, cobra el pago y remite los impuestos aplicables (IVA, impuesto a las ventas u otros según tu país).</li>
@@ -168,12 +172,19 @@ export default function TerminosDeServicioPage() {
           Los precios mostrados pueden incluir o excluir impuestos según tu ubicación; Creem calcula el impuesto
           correspondiente en el checkout.
         </li>
+        <li>
+          Al contratar o renovar una suscripción aceptas también los{' '}
+          <a href="https://www.creem.io/buyer-terms" target="_blank" rel="noopener noreferrer">
+            Términos para Compradores de Creem
+          </a>
+          .
+        </li>
       </ul>
 
       <h3>4.3 Renovación y cancelación</h3>
       <ul>
         <li>
-          Las suscripciones se renuevan automáticamente al final de cada período (mensual) salvo que las canceles
+          Las suscripciones se renuevan automáticamente al final de cada período (mensual o anual, según lo contratado) salvo que las canceles
           antes de la fecha de renovación.
         </li>
         <li>
@@ -187,31 +198,19 @@ export default function TerminosDeServicioPage() {
         </li>
       </ul>
 
-      <h2 id="monedero-prepago">5. Monedero prepago y envío de plantillas de WhatsApp</h2>
+      <h2 id="costos-de-mensajeria-de-whatsapp">5. Costos de mensajería de WhatsApp (los cobra Meta)</h2>
       <p>
-        Además de la suscripción, el envío de mensajes de plantilla de WhatsApp (por ejemplo, notificaciones,
-        recordatorios o campañas de recompra) se cobra por separado mediante un <strong>monedero prepago</strong>:
+        Klientia no cobra por los mensajes que envías o recibes en WhatsApp. Esos costos los fija y
+        cobra Meta Platforms, Inc. directamente a tu cuenta de WhatsApp Business (WABA), según su
+        lista de precios por país y tipo de mensaje. A partir del 1 de octubre de 2026, Meta cobra
+        por mensaje las respuestas de texto enviadas dentro de la ventana de servicio de 24 horas
+        —incluidas las que envía el asistente con inteligencia artificial de Klientia en tu
+        nombre—, más allá de la cuota gratuita que Meta establezca. Para seguir enviando mensajes
+        debes mantener un método de pago válido en tu cuenta de Meta Business. <strong>Klientia
+        cobra únicamente tu suscripción; no intermedia, recarga ni le añade margen al pago de tus
+        mensajes de WhatsApp.</strong> Los precios de Meta pueden cambiar sin intervención de
+        Klientia; consulta la lista vigente en la documentación oficial de Meta.
       </p>
-      <ul>
-        <li>Recargas tu saldo en packs predefinidos (por ejemplo $20 / $50 / $100 USD), con una recarga mínima de $20 USD.</li>
-        <li>Cada envío de plantilla descuenta el costo correspondiente de tu saldo disponible.</li>
-        <li>
-          Las recargas del monedero las procesa <strong>Creem</strong> como <strong>Merchant of Record</strong>: Creem
-          es el vendedor registrado de la recarga, aparece en tu extracto bancario, emite la factura y calcula y remite
-          los impuestos aplicables. Klientia no almacena los datos de tu tarjeta en este proceso (los captura el
-          checkout alojado de Creem). Al recargar aceptas también los{' '}
-          <a href="https://www.creem.io/buyer-terms" target="_blank" rel="noopener noreferrer">
-            Términos para Compradores de Creem
-          </a>
-          .
-        </li>
-        <li>El saldo del monedero no genera intereses ni es transferible a otra organización.</li>
-        <li>
-          Ver la sección de monedero en la{' '}
-          <a href="/legal/politica-de-reembolsos/">Política de reembolsos</a> para condiciones sobre saldo no
-          utilizado.
-        </li>
-      </ul>
       <p>
         Klientia no crea, redacta ni aprueba las plantillas de WhatsApp: esa gestión ocurre en la plataforma de
         WhatsApp y está sujeta a sus políticas de aprobación, ajenas al control de Klientia.
