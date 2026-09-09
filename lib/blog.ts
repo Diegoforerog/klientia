@@ -41,6 +41,14 @@ El cambio no encarece "vender por WhatsApp": cambia *cómo* se cobra, y premia a
 
 Aquí una IA bien configurada ayuda: en lugar de conversaciones largas y repetitivas, [un chatbot de WhatsApp orientado a vender](https://www.klientia.app/soluciones/chatbot-para-whatsapp/) entiende al cliente, resuelve y lleva la conversación hasta el pago sin relleno. Menos ida y vuelta, más [ventas por conversación](https://www.klientia.app/soluciones/ventas-por-whatsapp-con-ia/).
 
+## El truco que pocos aprovechan: la ventana gratis de 72 horas
+
+Hay una excepción que vale oro. Cuando una conversación **arranca desde un anuncio Click‑to‑WhatsApp** (o desde el botón de acción de tu página de Facebook) y respondes dentro de las primeras 24 horas, se abre una **ventana de entrada gratuita de 72 horas**. Mientras esa ventana está abierta, **todos los mensajes que le envías a ese cliente son gratis** —incluidas las plantillas—.
+
+En la práctica: si ya inviertes en anuncios que llevan a WhatsApp, cada conversación que entra por ahí te da **72 horas de mensajería sin costo** para cerrar la venta. Sigues pagando el clic del anuncio (la subasta de Meta), pero no los mensajes dentro de esa ventana.
+
+Ahora que responder cuesta, esto convierte a los anuncios Click‑to‑WhatsApp en una de las formas más eficientes de generar conversaciones: pagas por traer al cliente, no por atenderlo durante esos tres días. Y ojo — la clave es responder rápido (dentro de esas primeras 24 h), justo donde una IA que contesta al instante marca la diferencia.
+
 ## Preguntas frecuentes
 
 **¿Klientia cobra los mensajes de WhatsApp?**
