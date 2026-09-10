@@ -12,3 +12,5 @@ npm-debug.log*
 skills-lock.json
 *.tsbuildinfo
 next-env.d.ts
+site/
+.claude/
