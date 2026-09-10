@@ -29,19 +29,31 @@ export function SiteTracking() {
     // Reintento por si algún enlace se monta un poco después.
     const t = setTimeout(forwardTrackingToAppLinks, 800);
 
-    // 2) Cargar pixeles solo con consentimiento.
-    const load = () => {
-      if (pixelsLoaded || getConsent() !== 'granted') return;
-      pixelsLoaded = true;
-      if (META) injectMeta(META);
-      if (TIKTOK) injectTikTok(TIKTOK);
-      if (GA4) injectGa4(GA4);
+    // 2) GA4 con MODO DE CONSENTIMIENTO (v2): carga SIEMPRE con el consentimiento en
+    //    'denied' por defecto → Google envía mediciones SIN cookies (datos modelados) antes
+    //    de aceptar, y completas al aceptar. Así GA4 recibe datos y deja de avisar "sin datos"
+    //    sin fijar cookies sin permiso. Meta/TikTok (que sí fijan cookies) siguen SOLO con granted.
+    if (GA4) initGa4ConsentMode(GA4);
+
+    const onConsent = () => {
+      const c = getConsent();
+      const w = window as unknown as AnyWin;
+      // Actualiza la señal de consentimiento de GA4 (granted = cookies completas).
+      if (GA4 && typeof w.gtag === 'function') {
+        w.gtag('consent', 'update', consentSignals(c === 'granted'));
+      }
+      // Meta/TikTok solo tras aceptar.
+      if (c === 'granted' && !pixelsLoaded) {
+        pixelsLoaded = true;
+        if (META) injectMeta(META);
+        if (TIKTOK) injectTikTok(TIKTOK);
+      }
     };
-    load();
-    window.addEventListener(CONSENT_EVENT, load);
+    onConsent(); // aplica el estado inicial (si ya había elección guardada)
+    window.addEventListener(CONSENT_EVENT, onConsent);
     return () => {
       clearTimeout(t);
-      window.removeEventListener(CONSENT_EVENT, load);
+      window.removeEventListener(CONSENT_EVENT, onConsent);
     };
   }, []);
 
@@ -69,18 +81,39 @@ function injectMeta(id: string) {
   w.fbq('track', 'PageView');
 }
 
-function injectGa4(id: string) {
+/** Señales de consentimiento de GA4 (Consent Mode v2). granted = cookies completas. */
+function consentSignals(granted: boolean) {
+  const v = granted ? 'granted' : 'denied';
+  return {
+    ad_storage: v,
+    analytics_storage: v,
+    ad_user_data: v,
+    ad_personalization: v,
+  } as const;
+}
+
+/**
+ * Inicializa GA4 con Modo de Consentimiento v2: default 'denied' ANTES de cargar gtag.js →
+ * mediciones sin cookies hasta que el usuario acepte (luego se hace `consent update`).
+ * cookie_domain 'auto' → la cookie _ga (cuando haya consentimiento) se comparte con app.
+ */
+function initGa4ConsentMode(id: string) {
   const w = window as unknown as AnyWin;
+  if (w.__ga4ConsentInit) return;
+  w.__ga4ConsentInit = true;
+  w.dataLayer = w.dataLayer || [];
+  // gtag canónico: empuja el objeto `arguments` (no un array) — GA lo procesa así.
+  w.gtag = function () {
+    // eslint-disable-next-line prefer-rest-params
+    w.dataLayer.push(arguments);
+  };
+  // Default DENEGADO antes de cargar la librería (clave del Consent Mode).
+  w.gtag('consent', 'default', { ...consentSignals(false), wait_for_update: 500 });
   const s = document.createElement('script');
   s.async = true;
   s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
   document.head.appendChild(s);
-  w.dataLayer = w.dataLayer || [];
-  w.gtag = function (...args: unknown[]) {
-    w.dataLayer.push(args);
-  };
   w.gtag('js', new Date());
-  // cookie_domain 'auto' → _ga en .klientia.app, compartido con app. (coser el clic).
   w.gtag('config', id, { cookie_domain: 'auto' });
 }
 
