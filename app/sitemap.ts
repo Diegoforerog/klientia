@@ -70,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.6,
     },
-    ...POSTS.map((p) => ({
+    ...POSTS.filter((p) => !p.hidden).map((p) => ({
       url: `${SITE}/blog/${p.slug}/`,
       lastModified: new Date(p.date),
       changeFrequency: 'monthly' as const,

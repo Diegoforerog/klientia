@@ -28,7 +28,7 @@ export default function BlogIndexPage() {
           </p>
 
           <ul className="mt-10 space-y-4">
-            {POSTS.map((p) => (
+            {POSTS.filter((p) => !p.hidden).map((p) => (
               <li key={p.slug}>
                 <Link
                   href={`/blog/${p.slug}/`}

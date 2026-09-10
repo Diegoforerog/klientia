@@ -1,7 +1,109 @@
 // Posts del blog de Klientia. Generado desde docs/marca/blog-*.md (borradores Marca, baranda de integridad).
-export type BlogPost = { slug: string; metaTitle: string; title: string; description: string; date: string; body: string };
+export type BlogPost = { slug: string; metaTitle: string; title: string; description: string; date: string; body: string; hidden?: boolean };
 
 export const POSTS: BlogPost[] = [
+  {
+    slug: "de-chatbot-a-agente-de-ia-2026",
+    metaTitle: "De chatbot a agente de IA: el cambio de 2026 que sí vende",
+    title: "De chatbot a agente de IA: el cambio de 2026 que sí vende",
+    description:
+      "En 2026 el salto no es tener un bot, sino un agente de IA que actúa: consulta inventario, recomienda, agenda y cierra la venta en el chat. Qué cambia y por qué importa.",
+    date: "2026-09-10",
+    hidden: false,
+    body: `En 2026 hay un cambio que los reportes del sector repiten una y otra vez: pasamos de **chatbots que responden** a **agentes de IA que actúan**. No es un matiz de marketing; cambia lo que tu negocio puede esperar de su WhatsApp.
+
+## Qué diferencia a un agente de un chatbot
+
+Un chatbot clásico contesta preguntas frecuentes y, cuando la conversación se sale del guion, se traba o te pasa con un humano. Un **agente de IA** hace cosas: consulta el inventario, busca un pedido, arma el carrito, aplica un descuento, agenda una cita y cierra la venta — todo dentro del mismo chat.
+
+Los análisis de tendencias de 2026 (Salesforce, commercetools, BigCommerce) coinciden en que este es *el* salto del año: la IA deja de "asistir" para **ejecutar tareas y mover transacciones** por su cuenta.
+
+## Por qué importa para tu negocio
+
+Porque el cliente ya no quiere que lo atiendan "en horario de oficina": quiere resolver **ahora**. Un agente que entiende, recomienda y cierra en pocos mensajes convierte más y cuesta menos que una fila de chats que nadie responde. La diferencia entre "te respondo mañana" y "listo, te lo aparto y te paso el link de pago" es una venta ganada o perdida.
+
+## Cómo lo hace Klientia
+
+Klientia es justamente eso: **un agente de IA para tu WhatsApp**, no un bot de respuestas. Atiende al instante, recomienda la versión mejor o el complemento, agenda citas, recupera carritos abandonados y cobra — 24/7, incluso contra entrega — con la información real de tu negocio: tu catálogo, tus precios, tus políticas.
+
+- [Chatbot para WhatsApp](https://www.klientia.app/soluciones/chatbot-para-whatsapp/)
+- [Ventas por WhatsApp con IA](https://www.klientia.app/soluciones/ventas-por-whatsapp-con-ia/)
+
+## En resumen
+
+2026 es el año en que "tener un bot" dejó de ser suficiente. La pregunta ya no es *si responde*, sino *si resuelve y cierra*. Si tu WhatsApp todavía solo contesta, estás dejando ventas sobre la mesa.
+
+¿Quieres ver a un agente de IA vendiendo por ti? [Empieza gratis 7 días](https://www.klientia.app/#precios).`,
+  },
+  {
+    slug: "whatsapp-ventas-latam-datos-2026",
+    metaTitle: "WhatsApp y las ventas en LATAM: los datos de 2026",
+    title: "Por qué WhatsApp domina las ventas en Latinoamérica: los datos de 2026",
+    description:
+      "Los análisis de 2026 son claros: en LATAM se vende por WhatsApp. Los datos del canal, por qué pasa y cómo aprovecharlo con un vendedor con IA.",
+    date: "2026-09-15",
+    hidden: true,
+    body: `Si vendes en Latinoamérica, los datos de 2026 dicen algo claro: **WhatsApp es el canal donde se vende**. No es intuición; es a dónde apuntan los análisis del sector este año.
+
+## Lo que muestran los datos de 2026
+
+- Según el **Reporte de Tendencias de Mensajería 2026 de Infobip**, cerca del **91%** de las interacciones de IA conversacional en su plataforma (a nivel global) ya ocurren por WhatsApp: es, por lejos, el canal donde la gente conversa con las marcas.
+- En Latinoamérica ese patrón se siente aún más fuerte, porque WhatsApp es la app de mensajería por defecto para hablarle a un negocio.
+- Y conversar vende: los análisis del sector coinciden en que el chat convierte **varias veces más** que el email marketing, porque responde en el momento justo de la duda.
+
+*(Cifra de Infobip citada como referencia del sector, no como resultado propio de Klientia.)*
+
+## Por qué pasa esto en LATAM
+
+Porque aquí el cliente **escribe antes de comprar**: pregunta por tallas, por envío, por contra entrega, por garantía. El canal que responde esas dudas al instante es el que cierra. Y ese canal, en la región, es WhatsApp — no el email ni un formulario web.
+
+El problema: responder a mano, rápido y a toda hora, no escala. Ahí es donde la IA cambia el juego.
+
+## Cómo aprovecharlo con Klientia
+
+Klientia pone un **vendedor con IA en tu WhatsApp**: atiende en segundos, recomienda, agenda, recupera carritos y cobra — incluso contra entrega, que es como compra buena parte de LATAM. Multicanal (también Instagram y Messenger), en español y pensado para la región.
+
+- [Ventas por WhatsApp con IA](https://www.klientia.app/soluciones/ventas-por-whatsapp-con-ia/)
+- [Chatbot para WhatsApp](https://www.klientia.app/soluciones/chatbot-para-whatsapp/)
+
+## En resumen
+
+La pregunta no es si tu negocio debería vender por WhatsApp, sino si lo está haciendo con la velocidad que el cliente espera. Los datos de 2026 son contundentes: **el que responde primero, vende**.
+
+[Empieza gratis 7 días](https://www.klientia.app/#precios).`,
+  },
+  {
+    slug: "coexistencia-whatsapp-app-y-api-2026",
+    metaTitle: "Coexistencia en WhatsApp: tu celular y la IA a la vez (2026)",
+    title: "Coexistencia en WhatsApp: usa la app de tu celular y la IA al mismo tiempo",
+    description:
+      "Novedad 2026: ya puedes usar la app de WhatsApp en tu celular y una IA en el mismo número, a la vez. Qué es la coexistencia y por qué te quita la última excusa para automatizar.",
+    date: "2026-09-17",
+    hidden: true,
+    body: `Una de las novedades más útiles de WhatsApp en 2026 pasó algo desapercibida, pero resuelve un miedo muy común: **ya puedes usar la app de WhatsApp en tu celular y una solución con IA al mismo tiempo, en el mismo número**. Se llama **coexistencia**.
+
+## Qué es la coexistencia
+
+Hasta hace poco, conectar tu número a una plataforma de ventas (la API de WhatsApp Business) significaba **dejar de usar** la app normal en el teléfono. Eso frenaba a muchos negocios: "¿y si pierdo mis chats?", "¿y si mi equipo ya usa el celular?".
+
+Con la coexistencia — confirmada como novedad de 2026 (Infobip) — tu número funciona en **los dos mundos a la vez**: tú y tu equipo siguen respondiendo desde la app del celular, y en paralelo un asistente con IA atiende, automatiza y vende. Meta también habilitó **llamadas de voz dentro de WhatsApp**, con el hilo de la conversación visible durante la llamada.
+
+## Por qué es una buena noticia
+
+Porque quita la lógica de "todo o nada". Puedes sumar la IA **sin cambiar tu forma de trabajar** hoy: el bot atiende lo repetitivo y las madrugadas, y tú tomas el chat cuando quieras.
+
+## Cómo lo hace Klientia
+
+En Klientia, conectar tu WhatsApp toma minutos y tienes **dos caminos**: usar el WhatsApp de tu celular por coexistencia (escaneas un QR), o usar un número en la API. Elijas el que elijas, se abre la misma ventana segura de Meta y no copias tokens ni IDs.
+
+- [Chatbot para WhatsApp](https://www.klientia.app/soluciones/chatbot-para-whatsapp/)
+
+## En resumen
+
+La coexistencia derriba la última excusa para no automatizar tu WhatsApp: ya no tienes que elegir entre tu celular y la IA. Puedes tener ambos.
+
+[Empieza gratis 7 días](https://www.klientia.app/#precios).`,
+  },
   {
     slug: "cuanto-cuesta-vender-por-whatsapp",
     metaTitle: "¿Cuánto cuesta vender por WhatsApp? Cambio del 1 de octubre",
