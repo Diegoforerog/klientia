@@ -42,11 +42,15 @@ export function SiteTracking() {
       if (GA4 && typeof w.gtag === 'function') {
         w.gtag('consent', 'update', consentSignals(c === 'granted'));
       }
-      // Meta/TikTok solo tras aceptar.
-      if (c === 'granted' && !pixelsLoaded) {
-        pixelsLoaded = true;
-        if (META) injectMeta(META);
-        if (TIKTOK) injectTikTok(TIKTOK);
+      // Al aceptar: reenvía una vista de página para aparecer en Tiempo real de inmediato,
+      // y carga Meta/TikTok (que sí fijan cookies) solo entonces.
+      if (c === 'granted') {
+        if (GA4 && typeof w.gtag === 'function') w.gtag('event', 'page_view');
+        if (!pixelsLoaded) {
+          pixelsLoaded = true;
+          if (META) injectMeta(META);
+          if (TIKTOK) injectTikTok(TIKTOK);
+        }
       }
     };
     onConsent(); // aplica el estado inicial (si ya había elección guardada)
@@ -114,7 +118,11 @@ function initGa4ConsentMode(id: string) {
   s.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
   document.head.appendChild(s);
   w.gtag('js', new Date());
-  w.gtag('config', id, { cookie_domain: 'auto' });
+  // debug_mode temporal: con ?ga_debug=1 en la URL, los hits aparecen en GA4 → DebugView al
+  // instante (para verificar recepción). Sin el parámetro, no afecta el tráfico normal.
+  const debug =
+    typeof window !== 'undefined' && /[?&]ga_debug=1(?:&|$)/.test(window.location.search);
+  w.gtag('config', id, { cookie_domain: 'auto', ...(debug ? { debug_mode: true } : {}) });
 }
 
 function injectTikTok(id: string) {
