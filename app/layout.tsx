@@ -1,15 +1,23 @@
 import type { Metadata, Viewport } from 'next';
-import { Bricolage_Grotesque, JetBrains_Mono } from 'next/font/google';
+import { DM_Sans, Bricolage_Grotesque, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { SiteTracking } from '@/components/SiteTracking';
 import { CookieConsent } from '@/components/CookieConsent';
 
-// Única familia de marca (identidad Klientia): Bricolage Grotesque para titulares Y cuerpo.
-// Pesos: 400 cuerpo · 500 interfaz/cuerpo destacado · 600 botones/etiquetas · 700 títulos/logo · 800 hero.
-const brand = Bricolage_Grotesque({
+// Identidad Klientia (pairing oficial): DM Sans para el CUERPO (legible en textos largos),
+// Bricolage Grotesque para TITULARES/logo, JetBrains Mono para transaccional.
+const sans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-brand',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+// Display: Bricolage Grotesque — titulares, logo y etiquetas. Pesos 600/700/800.
+const heading = Bricolage_Grotesque({
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
+  variable: '--font-heading',
   display: 'swap',
 });
 
@@ -82,7 +90,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${brand.variable} ${mono.variable}`}>
+    <html lang="es" className={`${sans.variable} ${heading.variable} ${mono.variable}`}>
       <body>
         {children}
         {/* Pixel propio de Klientia (medir nuestra pauta) + consentimiento de cookies. */}

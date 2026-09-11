@@ -52,9 +52,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        // Bricolage Grotesque es la ÚNICA familia de marca: cuerpo Y titulares.
-        sans: ['var(--font-brand)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-brand)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        // Cuerpo: DM Sans (legible en textos largos). Titulares/logo: Bricolage Grotesque.
+        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-heading)', 'var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         // Mono: recibos, precios y sellos de pago (encodifica "transacción")
         mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
