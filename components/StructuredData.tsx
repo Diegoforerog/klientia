@@ -11,7 +11,7 @@ export default function StructuredData() {
         '@id': `${SITE}#organization`,
         name: 'Klientia',
         url: SITE,
-        logo: `${SITE}/brand/klientia-lockup.png`,
+        logo: `${SITE}/icon-512.png`,
         // sameAs: pendiente de perfiles sociales OFICIALES de Klientia (no usar cuentas personales/de prueba).
         description:
           'SaaS de ventas y atención con inteligencia artificial para negocios de LATAM: la IA atiende, vende, cobra y recupera carritos por WhatsApp, Instagram y Messenger; además publica posts en Instagram, Facebook y TikTok, responde comentarios de Instagram y Facebook y gestiona anuncios de Meta.',

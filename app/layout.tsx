@@ -1,26 +1,19 @@
 import type { Metadata, Viewport } from 'next';
-import { DM_Sans, Bricolage_Grotesque, JetBrains_Mono } from 'next/font/google';
+import { Bricolage_Grotesque, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { SiteTracking } from '@/components/SiteTracking';
 import { CookieConsent } from '@/components/CookieConsent';
 
-// Cuerpo: DM Sans — limpia, cálida, muy legible en móvil.
-const sans = DM_Sans({
+// Única familia de marca (identidad Klientia): Bricolage Grotesque para titulares Y cuerpo.
+// Pesos: 400 cuerpo · 500 interfaz/cuerpo destacado · 600 botones/etiquetas · 700 títulos/logo · 800 hero.
+const brand = Bricolage_Grotesque({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-sans',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-brand',
   display: 'swap',
 });
 
-// Display: Bricolage Grotesque — grotesca con carácter para titulares que venden.
-const heading = Bricolage_Grotesque({
-  subsets: ['latin'],
-  weight: ['600', '700', '800'],
-  variable: '--font-heading',
-  display: 'swap',
-});
-
-// Utilidad: JetBrains Mono — recibos, precios y sellos de pago ("transacción").
+// Utilidad transaccional: JetBrains Mono — recibos, precios, códigos y sellos de pago.
 const mono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['500', '600'],
@@ -82,14 +75,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#ffffff',
+  themeColor: '#4375E5',
   width: 'device-width',
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${sans.variable} ${heading.variable} ${mono.variable}`}>
+    <html lang="es" className={`${brand.variable} ${mono.variable}`}>
       <body>
         {children}
         {/* Pixel propio de Klientia (medir nuestra pauta) + consentimiento de cookies. */}

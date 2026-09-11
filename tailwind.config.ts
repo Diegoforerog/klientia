@@ -35,7 +35,9 @@ const config: Config = {
           900: '#1e3a8a',
           950: '#172554',
         },
-        skyx: '#0ea5e9',
+        // Identidad Klientia: el azul es el ÚNICO acento. 'skyx' se mantiene como alias
+        // en la familia azul (= brand-500) para no reintroducir el cian anterior.
+        skyx: '#5b8bf0',
         // Verde WhatsApp (solo dentro de los chats)
         wa: {
           green: '#25d366',
@@ -50,8 +52,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-heading)', 'var(--font-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        // Bricolage Grotesque es la ÚNICA familia de marca: cuerpo Y titulares.
+        sans: ['var(--font-brand)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-brand)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         // Mono: recibos, precios y sellos de pago (encodifica "transacción")
         mono: ['var(--font-mono)', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },

@@ -86,7 +86,7 @@
 
   /* Acento de degradado MUY sutil para títulos clave */
   .text-accent {
-    background: linear-gradient(100deg, #4375e5, #0ea5e9);
+    background: linear-gradient(100deg, #4375e5, #3462c9);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
