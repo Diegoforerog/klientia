@@ -1,45 +1,15 @@
-// Sistema de logo Klientia (guía §1.2). Tres variantes × tres tonos, armado desde el
-// isotipo vectorial (burbuja + doble check) + wordmark "Klientia" en Bricolage Bold.
-//   variant: 'horizontal' (isotipo + wordmark al lado) · 'vertical' (isotipo ARRIBA, apilado)
-//            · 'isotipo' (solo la marca)
-//   tone:    'brand' (azul, fondo claro) · 'white' (fondo oscuro/color) · 'ink' (monocromo)
+// Sistema de logo Klientia (guía §1.2) — usa los ARCHIVOS OFICIALES de marca (isotipo = bolsa
+// con doble check + cola de chat + wordmark). NO se reconstruye el logo; se sirven las piezas
+// entregadas (en /public/brand, reescaladas a peso web sin alterar el diseño).
+//   variant: 'horizontal' (isotipo + wordmark) · 'vertical' (isotipo sobre wordmark) · 'isotipo'
+//   tone:    'brand' (azul, fondo claro) · 'white' (fondo oscuro/color) · 'ink' (monocromo negro)
 // Regla de color: fondo claro → brand · fondo oscuro/color → white · monocromo → ink.
-// Tamaño: horizontal/isotipo se escalan con la ALTURA (className h-*); vertical con el
-// tamaño de fuente (className text-*).
+// Tamaño por ALTURA: className h-* (p. ej. h-11 en header, h-16 en login vertical).
 type Variant = 'horizontal' | 'vertical' | 'isotipo';
 type Tone = 'brand' | 'white' | 'ink';
 
-const TONES: Record<Tone, { iso: string; word: string; k: string }> = {
-  brand: { iso: '#4375E5', word: '#0B1220', k: '#4375E5' },
-  white: { iso: '#FFFFFF', word: '#FFFFFF', k: '#FFFFFF' },
-  ink: { iso: '#0B1220', word: '#0B1220', k: '#0B1220' },
-};
-
-function Iso({ color, className = '' }: { color: string; className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 256 256"
-      className={className}
-      fill="none"
-      stroke={color}
-      strokeWidth="28.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M18.25 18.25H193.5A44 44 0 0 1 237.5 62.25V142.5A44 44 0 0 1 193.5 186.5H84L32.75 237.75V186.5" />
-      <path d="M69.25 105.75L98.25 135.25L157 62" />
-    </svg>
-  );
-}
-
-function Word({ word, k, className = '' }: { word: string; k: string; className?: string }) {
-  return (
-    <span className={`font-heading font-bold leading-none tracking-tight ${className}`} style={{ color: word }}>
-      <span style={{ color: k }}>K</span>lientia
-    </span>
-  );
-}
+const BASE: Record<Variant, string> = { horizontal: 'logo-h', vertical: 'logo-v', isotipo: 'iso' };
+const SUFFIX: Record<Tone, string> = { brand: '', white: '-white', ink: '-ink' };
 
 export default function Logo({
   variant = 'horizontal',
@@ -50,26 +20,7 @@ export default function Logo({
   tone?: Tone;
   className?: string;
 }) {
-  const t = TONES[tone];
-  if (variant === 'isotipo') {
-    return (
-      <span className={`inline-flex ${className}`} role="img" aria-label="Klientia">
-        <Iso color={t.iso} className="h-full w-auto" />
-      </span>
-    );
-  }
-  if (variant === 'vertical') {
-    return (
-      <span className={`inline-flex flex-col items-center gap-3 ${className}`} role="img" aria-label="Klientia">
-        <Iso color={t.iso} className="h-[1.7em] w-auto" />
-        <Word word={t.word} k={t.k} className="text-[1em]" />
-      </span>
-    );
-  }
-  return (
-    <span className={`inline-flex items-center gap-2 ${className}`} role="img" aria-label="Klientia">
-      <Iso color={t.iso} className="h-full w-auto shrink-0" />
-      <Word word={t.word} k={t.k} className="text-[1.55em]" />
-    </span>
-  );
+  const src = `/brand/klientia-${BASE[variant]}${SUFFIX[tone]}.png`;
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src={src} alt="Klientia" className={`w-auto ${className}`} />;
 }
