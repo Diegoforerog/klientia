@@ -66,11 +66,15 @@ export const metadata: Metadata = {
     title: 'Deja de perder ventas en WhatsApp — Klientia, tu vendedor con IA 24/7',
     description:
       'Responde en segundos, ofrece la versión mejor, cierra y cobra por ti — incluso contra entrega. WhatsApp, Instagram y Messenger en un panel. Para LATAM. 7 días gratis, sin tarjeta.',
+    images: [
+      { url: '/og-klientia.png', width: 1200, height: 630, alt: 'Klientia — tu vendedor con IA para WhatsApp' },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Deja de perder ventas en WhatsApp — Klientia',
     description: 'El vendedor con IA que responde, cierra y cobra en tu WhatsApp 24/7, incluso contra entrega. 7 días gratis, sin tarjeta.',
+    images: ['/og-klientia.png'],
   },
   robots: {
     index: true,
