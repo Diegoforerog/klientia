@@ -1,18 +1,14 @@
-// Sistema de logo Klientia (guía §1.2) — usa los ARCHIVOS OFICIALES de marca (isotipo = bolsa
-// con doble check + cola de chat + wordmark). NO se reconstruye el logo; se sirven las piezas
-// entregadas (en /public/brand, reescaladas a peso web sin alterar el diseño).
-//   variant: 'horizontal' (isotipo + wordmark) · 'vertical' (isotipo sobre wordmark) · 'isotipo'
-//   tone:    'brand' (azul, fondo claro) · 'white' (fondo oscuro/color) · 'ink' (monocromo negro)
-// Regla de color: fondo claro → brand · fondo oscuro/color → white · monocromo → ink.
-// Tamaño por ALTURA: className h-* (p. ej. h-11 en header, h-16 en login vertical).
+// Logo Klientia = WORDMARK "Klientia" (sin isotipo, decisión de Diego 2026-09-11). Se sirve el
+// wordmark OFICIAL recortado de los archivos de marca (K en azul + "lientia"); no se reconstruye.
+//   tone: 'brand' (azul/ink, fondo claro) · 'white' (fondo oscuro/color) · 'ink' (monocromo negro)
+// La prop `variant` se mantiene por compatibilidad de API pero ya no cambia el arte (no hay isotipo).
+// Tamaño por ALTURA: className h-* (p. ej. h-11 en header, h-10 en login).
 type Variant = 'horizontal' | 'vertical' | 'isotipo';
 type Tone = 'brand' | 'white' | 'ink';
 
-const BASE: Record<Variant, string> = { horizontal: 'logo-h', vertical: 'logo-v', isotipo: 'iso' };
 const SUFFIX: Record<Tone, string> = { brand: '', white: '-white', ink: '-ink' };
 
 export default function Logo({
-  variant = 'horizontal',
   tone = 'brand',
   className = 'h-9',
 }: {
@@ -20,7 +16,7 @@ export default function Logo({
   tone?: Tone;
   className?: string;
 }) {
-  const src = `/brand/klientia-${BASE[variant]}${SUFFIX[tone]}.png`;
+  const src = `/brand/klientia-word${SUFFIX[tone]}.png`;
   // eslint-disable-next-line @next/next/no-img-element
   return <img src={src} alt="Klientia" className={`w-auto ${className}`} />;
 }
