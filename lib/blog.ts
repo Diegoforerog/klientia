@@ -3,6 +3,74 @@ export type BlogPost = { slug: string; metaTitle: string; title: string; descrip
 
 export const POSTS: BlogPost[] = [
   {
+    slug: "meta-business-agent-que-es-cuanto-cuesta",
+    metaTitle: "Meta Business Agent: el bot de Meta ya cuesta. ¿Te sirve?",
+    title:
+      "Meta ya tiene su propio bot con IA para WhatsApp (y ya cuesta): qué hace, cuánto vale y cuándo te queda corto",
+    description:
+      "Meta ya cobra su bot de IA para WhatsApp e Instagram (~4-5 centavos por respuesta, según Meta). Qué hace, cuánto cuesta y cuándo te queda corto para vender.",
+    date: "2026-09-11",
+    hidden: false,
+    body: `Si vendes por WhatsApp o Instagram, seguramente te apareció la opción de "activar un agente de IA" dentro de tus herramientas de Meta. Es gratis de encender, contesta solo… y desde agosto se cobra por uso. Aquí te explicamos, sin tecnicismos, qué es, cuánto cuesta de verdad y cómo saber si es suficiente para tu negocio.
+
+## Qué pasó
+
+El 3 de junio de 2026 Meta presentó a nivel mundial **Meta Business Agent**, su propio asistente con inteligencia artificial para negocios. Según el anuncio oficial, funciona dentro de WhatsApp, Messenger e Instagram y puede responder preguntas de clientes, recomendar productos de tu catálogo, agendar citas, calificar prospectos y cerrar ventas; cuando la conversación llega a un punto que tú defines, la pasa a una persona de tu equipo. Meta afirma que más de un millón de negocios ya lo usan. ([Meta Newsroom](https://about.fb.com/news/2026/06/meta-business-agent/))
+
+Lo que cambió después es lo importante para tu bolsillo: en su documentación de precios, Meta indica que **desde el 1 de agosto de 2026 cobra el Business Agent por uso**, a **US$2 por cada millón de tokens** (los "tokens" son la unidad con la que se mide el texto que la IA lee y escribe). La propia Meta estima que eso equivale a **unos 4 a 5 centavos de dólar por respuesta**, y aclara que una respuesta más larga o compleja cuesta más. ([Meta for Developers](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages))
+
+La prensa en español lleva días explicándolo ([El Tiempo Latino](https://eltiempolatino.com/2026/08/28/tecnologia/meta-lanza-ia-para-negocios-en-whatsapp-que-hace-y-cuanto-cuesta/)): es la primera vez que Meta le vende directamente un vendedor con IA a los comercios pequeños.
+
+## Qué significa para tu negocio
+
+### 1. Ya no es gratis: haz la cuenta
+
+Cuatro o cinco centavos por respuesta suena poco, pero un bot que vende no responde una vez: conversa. Si tu negocio maneja **2.000 respuestas automáticas al mes**, con la estimación de Meta pagarías **entre US$80 y US$100 mensuales** solo por la IA (la cuenta es nuestra, sobre la cifra oficial), aparte de lo que ya pagas en publicidad.
+
+Para comparar: el mensaje de WhatsApp en sí, que Meta empieza a cobrar el 1 de octubre, cuesta fracciones de centavo en Latinoamérica (te lo explicamos en [¿Cuánto cuesta vender por WhatsApp?](/blog/cuanto-cuesta-vender-por-whatsapp/)). Lo caro no es el mensaje: es la inteligencia que lo escribe.
+
+### 2. Lo cómodo no siempre es lo que vende
+
+El agente de Meta se enciende en minutos y contesta con la información de tu perfil y catálogo. Para responder horarios, ubicación y "¿tienen disponible?", puede bastar.
+
+Pero un **chatbot de WhatsApp que vende** de verdad, en una tienda o un dropshipper de Latinoamérica, tiene que hacer cosas concretas. Antes de confiarle tus chats a cualquier bot, pregúntale:
+
+- **¿Vende contra entrega?** Es decir, ¿pide dirección, ciudad y teléfono, confirma el pedido antes de despacharlo y te ayuda a reducir devoluciones?
+- **¿Se conecta con tu tienda?** Si usas Shopify u otra plataforma, ¿ve tu inventario real y crea el pedido, o solo "recomienda"?
+- **¿Hace seguimiento?** Un cliente que preguntó y se enfrió, ¿recibe un recordatorio o se pierde?
+- **¿Te dice por qué no compraron?** Saber si perdiste ventas por precio, envío o desconfianza vale más que cualquier respuesta automática.
+- **¿Habla como tu marca?** ¿Puedes ajustar su tono, sus objeciones, sus promociones, o es un guion genérico?
+
+Meta no publica hasta dónde llega cada una de estas funciones para un negocio pequeño, así que **pruébalo con tus propios chats** antes de decidir. Lo que sí es claro: el cobro por tokens premia las respuestas cortas; cada palabra de más te cuesta.
+
+### 3. Pagar por respuesta o pagar tarifa fija
+
+Con un cobro por tokens, mientras mejor te vaya (más clientes, más chats), más pagas. Con una suscripción fija, tu costo es el mismo vendas 100 o 1.000 pedidos. Si atiendes pocos chats al mes, el pago por uso puede salir barato; si tus anuncios traen cientos de conversaciones a la semana, una tarifa fija te deja dormir tranquilo.
+
+## Qué hacer esta semana
+
+1. **Revisa si tienes el Business Agent activo** en tus herramientas de Meta y cuánto te ha cobrado desde agosto.
+2. **Multiplica tus respuestas automáticas del mes por 4-5 centavos**: ese es tu costo estimado con el bot de Meta.
+3. **Escribe lo que tu bot debe saber hacer** (contra entrega, catálogo, seguimiento, tono). Si el agente de Meta lo cubre, perfecto; si no, busca uno que sí.
+4. **Deja tu método de pago listo en Meta antes del 30 de septiembre**: el 1 de octubre también empiezan a cobrarse los mensajes de servicio.
+
+## Y dónde entra Klientia
+
+Klientia nació justo para ese "si no": un vendedor con IA que **vende contra entrega, confirma el pedido antes de despacharlo, se conecta a tu Shopify, hace seguimiento a quien se enfrió y te muestra por qué se perdió cada venta**, con una tarifa mensual fija y sin cobro por respuesta. Los mensajes de WhatsApp los sigues pagando directo a Meta, a su precio por país, sin que nosotros les sumemos nada.
+
+Mira cómo funciona el [chatbot para WhatsApp de Klientia](/soluciones/chatbot-para-whatsapp/) o lo que hace para [dropshipping y e-commerce](/industrias/dropshipping-y-ecommerce/), y pruébalo gratis 7 días, sin tarjeta, con tus propios chats.
+
+## En resumen
+
+Meta ya no regala su bot: cobra por cada respuesta. No es ni bueno ni malo; es la señal de que la IA para vender por WhatsApp llegó para quedarse y hay que elegirla como cualquier herramienta del negocio: por lo que hace por tus ventas y por lo que cuesta cuando te va bien.
+
+## Fuentes
+
+- [Meta Newsroom — Meta Business Agent (3 de junio de 2026)](https://about.fb.com/news/2026/06/meta-business-agent/)
+- [Meta for Developers — precios de mensajes no plantilla (cobro por tokens desde el 1 de agosto de 2026)](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages)
+- [El Tiempo Latino — cobertura en español (28 de agosto de 2026)](https://eltiempolatino.com/2026/08/28/tecnologia/meta-lanza-ia-para-negocios-en-whatsapp-que-hace-y-cuanto-cuesta/)`,
+  },
+  {
     slug: "de-chatbot-a-agente-de-ia-2026",
     metaTitle: "De chatbot a agente de IA: el cambio de 2026 que sí vende",
     title: "De chatbot a agente de IA: el cambio de 2026 que sí vende",
