@@ -3,6 +3,7 @@ import { DM_Sans, Bricolage_Grotesque, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { SiteTracking } from '@/components/SiteTracking';
 import { CookieConsent } from '@/components/CookieConsent';
+import { ChatWidget } from '@/components/ChatWidget';
 
 // Identidad Klientia (pairing oficial): DM Sans para el CUERPO (legible en textos largos),
 // Bricolage Grotesque para TITULARES/logo, JetBrains Mono para transaccional.
@@ -99,6 +100,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         {/* Pixel propio de Klientia (medir nuestra pauta) + consentimiento de cookies. */}
         <SiteTracking />
+        {/* Chat web (mismo cerebro que WhatsApp, dogfooding). Sin site key no hace nada. */}
+        <ChatWidget />
         <CookieConsent />
       </body>
     </html>
