@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import CtaButton from './CtaButton';
+import { STICKY_CTA_CHAT_OFFSET_PX, STICKY_CTA_OFFSET_ID, setChatOffsetContributor } from '@/lib/chat-offset';
 
 /**
  * Barra inferior fija SOLO en móvil con el CTA único. Aparece cuando el hero
@@ -46,6 +47,27 @@ export default function StickyCTA() {
     if (show) el.removeAttribute('inert');
     else el.setAttribute('inert', '');
   }, [show]);
+
+  // ¿La barra puede estar en pantalla ahora mismo? Es `lg:hidden` (CSS, sin tocar): en
+  // escritorio `show` igual puede ser true por el scroll aunque la barra sea display:none.
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 1023px)');
+    const update = () => setIsMobileViewport(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+
+  // Le "debe" espacio al chat SOLO mientras está de verdad visible: `show` Y viewport
+  // móvil (hallazgo UX A1: antes subía 112px siempre, incluso oculta o en escritorio,
+  // donde la barra ni se ve). Esta barra solo vive en `app/page.tsx` → al navegar a otra
+  // ruta se desmonta; el cleanup libera el cupo para que no quede huérfano en otras rutas.
+  useEffect(() => {
+    const active = show && isMobileViewport;
+    setChatOffsetContributor(STICKY_CTA_OFFSET_ID, active ? STICKY_CTA_CHAT_OFFSET_PX : null);
+    return () => setChatOffsetContributor(STICKY_CTA_OFFSET_ID, null);
+  }, [show, isMobileViewport]);
 
   return (
     <div

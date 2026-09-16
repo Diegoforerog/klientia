@@ -1,21 +1,13 @@
 'use client';
 
 import { useEffect } from 'react';
+import { STICKY_CTA_CHAT_OFFSET_PX } from '@/lib/chat-offset';
 
 // Origen de la API que sirve el widget. Por defecto, la API de producción de Klientia.
 const API_ORIGIN = process.env.NEXT_PUBLIC_WEB_CHAT_API_ORIGIN || 'https://api.klientia.app';
 // Clave PÚBLICA del sitio (por org, generada en /admin). Sin ella no hay chat que mostrar:
 // el widget nunca se inyecta (ni en builds/preview sin la variable configurada).
 const SITE_KEY = process.env.NEXT_PUBLIC_WEB_CHAT_SITE_KEY || '';
-// La barra `StickyCTA` (móvil, < lg) es fija abajo; el widget se eleva esto en píxeles
-// para no chocar con ella. Mismo número que lee `widget.js` vía `data-offset-mobile`.
-// Medido del CSS compilado (no es un valor a ojo): borde 1px + padding 12px + botón
-// ~51px (padding 14+14 que gana `py-3.5` sobre `py-3`, línea de texto 15px×1.5) +
-// separación 6px + leyenda ~18px (12px×1.5) + padding inferior 12px ≈ 100px reales
-// (StickyCTA.tsx no se tocó). 80px la tapaba parcialmente; sumamos ~12px de aire.
-// OJO: en iPhone con home indicator, `env(safe-area-inset-bottom)` agranda la barra
-// varios px más — pendiente confirmar con Backend si `widget.js` también lo respeta.
-const MOBILE_OFFSET_PX = 112;
 
 let widgetInjected = false;
 
@@ -24,6 +16,14 @@ let widgetInjected = false;
  * feature-canal-web-widget.md §4). Inyecta el script del widget de forma diferida
  * (tras que el navegador esté libre) para no afectar el LCP: el chat no es parte del
  * contenido principal de la página. Mismo patrón imperativo que `SiteTracking`.
+ *
+ * Offset móvil (hallazgo UX A1): `data-offset-mobile` es solo el RESPALDO estático que
+ * lee `widget.js` cuando no encuentra la variable CSS `--klientia-chat-offset` en
+ * `documentElement`. La fuente viva es esa variable: `StickyCTA` y `CookieConsent` la
+ * fijan/liberan en caliente vía `lib/chat-offset.ts` (suman sus aportes mientras estén
+ * realmente visibles), así la burbuja solo sube cuando de verdad hay algo fijo que
+ * taparía — no siempre. `STICKY_CTA_CHAT_OFFSET_PX` (112, medido del CSS compilado de
+ * `StickyCTA`, no a ojo) es el mismo número que usa `StickyCTA.tsx` para su aporte.
  */
 export function ChatWidget() {
   useEffect(() => {
@@ -41,7 +41,7 @@ export function ChatWidget() {
       s.src = `${API_ORIGIN}/web-chat/widget.js`;
       s.defer = true;
       s.setAttribute('data-site-key', SITE_KEY);
-      s.setAttribute('data-offset-mobile', String(MOBILE_OFFSET_PX));
+      s.setAttribute('data-offset-mobile', String(STICKY_CTA_CHAT_OFFSET_PX));
       document.head.appendChild(s);
     };
 
