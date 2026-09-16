@@ -26,12 +26,27 @@ export function CookieConsent() {
     if (HAS_PIXELS && getConsent() === null) setVisible(true);
   }, []);
 
-  // Mientras está visible, le suma al chat su altura REAL (no una constante: cambia entre
-  // móvil a lo ancho y escritorio compacto) + 12px de aire (hallazgo UX A1: la burbuja lo
-  // tapaba). Al ocultarse o desmontar libera el espacio — `ResizeObserver`/`resize` porque
-  // la altura puede cambiar sin que el banner se oculte (p. ej. al rotar el teléfono).
+  // Por debajo de 640px (`sm`) el banner va "a lo ancho" (mismo umbral que su propio
+  // `sm:left-4`): de ahí para arriba ya vive abajo-izquierda, lejos de la burbuja
+  // (abajo-derecha), así que no hace falta empujarla (hallazgo QA #7 — antes sumaba su
+  // altura siempre, incluso en ≥640px donde no hay solape real). Mismo patrón que
+  // `StickyCTA` (matchMedia + `change`).
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
   useEffect(() => {
-    if (!visible) {
+    const mq = window.matchMedia('(max-width: 639px)');
+    const update = () => setIsMobileViewport(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+
+  // Mientras está visible Y en viewport móvil, le suma al chat su altura REAL (no una
+  // constante: cambia con el contenido/ancho) + 12px de aire (hallazgo UX A1: la burbuja
+  // lo tapaba). Al ocultarse, pasar a escritorio o desmontar, libera el espacio —
+  // `ResizeObserver`/`resize` porque la altura puede cambiar sin cruzar el umbral móvil
+  // (p. ej. al rotar el teléfono).
+  useEffect(() => {
+    if (!visible || !isMobileViewport) {
       setChatOffsetContributor(COOKIE_CONSENT_OFFSET_ID, null);
       return;
     }
@@ -52,7 +67,7 @@ export function CookieConsent() {
       window.removeEventListener('resize', measure);
       setChatOffsetContributor(COOKIE_CONSENT_OFFSET_ID, null);
     };
-  }, [visible]);
+  }, [visible, isMobileViewport]);
 
   if (!visible) return null;
 
