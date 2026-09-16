@@ -32,13 +32,16 @@ Definir un middleware `headers` y engancharlo al router de la landing (labels o 
 4. Con `NEXT_PUBLIC_WEB_CHAT_SITE_KEY` activo: confirmar que el chat web abre (carga `https://api.klientia.app/web-chat/widget.js`) y que Cloudflare Turnstile verifica sin bloqueos de consola (usa un iframe de `https://challenges.cloudflare.com`).
 
 ## Chat web (widget, `feature-canal-web-widget`)
-`script-src` y `frame-src` suman `https://api.klientia.app` (sirve `widget.js`) y
-`https://challenges.cloudflare.com` (Cloudflare Turnstile, verificación humana antes de abrir
-sesión; se renderiza en un iframe propio, por eso también entra en `frame-src`). `connect-src`
-no cambió: ya estaba abierto a `https:` y cubre las llamadas del widget a la API.
-`frame-ancestors 'none'` sigue intacto — bloquea que incrusten la landing, no que la landing
-incruste el iframe de Turnstile. El componente `ChatWidget.tsx` no inyecta nada si no hay
-`NEXT_PUBLIC_WEB_CHAT_SITE_KEY` en el build.
+`script-src` suma `https://api.klientia.app/web-chat/widget.js` — fuente con **ruta exacta**
+(CSP nivel 2+; ajuste Ciber, severidad baja) en vez del origen completo: solo habilita ese
+script, no cualquier otro JS que `api.klientia.app` pudiera servir a futuro. `script-src` y
+`frame-src` también suman `https://challenges.cloudflare.com` (Cloudflare Turnstile,
+verificación humana antes de abrir sesión), ahí sin restringir ruta porque el propio widget de
+Turnstile carga más de un recurso bajo ese origen; se renderiza en un iframe propio, por eso
+también entra en `frame-src`. `connect-src` no cambió: ya estaba abierto a `https:` y cubre las
+llamadas del widget a la API. `frame-ancestors 'none'` sigue intacto — bloquea que incrusten la
+landing, no que la landing incruste el iframe de Turnstile. El componente `ChatWidget.tsx` no
+inyecta nada si no hay `NEXT_PUBLIC_WEB_CHAT_SITE_KEY` en el build.
 
 ## Endurecer más adelante (opcional, backlog)
 La CSP es pragmática (img/connect abiertos a `https:` por los pixels). Cuando haya tiempo, enumerar hosts exactos en `img-src`/`connect-src` y evaluar quitar `'unsafe-inline'` de `script-src` (requiere nonces/hashes para los bootstraps de los pixels).
