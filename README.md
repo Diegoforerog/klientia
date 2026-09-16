@@ -18,9 +18,27 @@ npm run dev      # http://localhost:3030
 
 ## Build de producción
 
+El sitio se publica en `www.klientia.app` como **export estático** de Next
+(`output: 'export'` en `next.config.mjs`, solo con `STATIC_EXPORT=true`). El comando real
+usado hoy para el deploy (ver `publicar-landing.sh` en `SaasEcommerce/scripts`, que hace
+`rsync` de `out/`):
+
 ```bash
-npm run build
-npm start        # sirve la versión optimizada
+STATIC_EXPORT=true NEXT_PUBLIC_GA4_MEASUREMENT_ID=G-XXXXXXX NEXT_PUBLIC_WEB_CHAT_SITE_KEY=wk_xxxxxxxx pnpm build
+```
+
+Variables `NEXT_PUBLIC_*` relevantes en build (se hornean en el HTML/JS estático, no son secretas):
+
+| Variable | Para qué | Default si falta |
+|---|---|---|
+| `NEXT_PUBLIC_WEB_CHAT_SITE_KEY` | Clave pública del **chat web** (widget) de la org Klientia, generada en `/admin` (`apps/api`) | No se define → `components/ChatWidget.tsx` no inyecta nada (el chat no aparece) |
+| `NEXT_PUBLIC_WEB_CHAT_API_ORIGIN` | Origen de la API que sirve `widget.js` (solo se cambia para apuntar a otro entorno) | `https://api.klientia.app` |
+
+Build/preview local en modo servidor de Node (sin export estático):
+
+```bash
+pnpm build
+pnpm start        # sirve la versión optimizada
 ```
 
 ## Desplegar
