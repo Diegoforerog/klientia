@@ -3,6 +3,65 @@ export type BlogPost = { slug: string; metaTitle: string; title: string; descrip
 
 export const POSTS: BlogPost[] = [
   {
+    slug: "meta-compra-stilla-cerrar-ventas-en-el-chat",
+    metaTitle: "Meta compra Stilla: la venta se cerrará en el chat",
+    title:
+      "Meta compró una startup para que su bot cierre ventas en WhatsApp: qué significa para tu tienda",
+    description:
+      "Meta compró Stilla.ai para que su bot de WhatsApp e Instagram cierre ventas en el chat. Qué cambia para tu tienda en LATAM y cómo cerrar contra entrega.",
+    date: "2026-09-19",
+    hidden: false,
+    body: `Meta ya no quiere que su bot solo responda preguntas. Quiere que cobre.
+
+## Qué pasó
+
+El 9 de septiembre de 2026, Axios reveló que **Meta compró Stilla.ai**, una startup sueca de apenas ocho meses fundada por dos exejecutivos de Shopify. Stilla construía una "memoria compartida" para agentes de IA: una capa que les permite recordar proyectos, conversaciones y tareas anteriores en vez de arrancar de cero cada vez. Había levantado USD 5 millones de pre-semilla; Meta no reveló cuánto pagó.
+
+¿Para qué la quiere? Para acelerar **Meta Business Agent**, el asistente de IA que Meta lanzó en junio para WhatsApp, Instagram y Messenger y que, según la propia empresa, ya usan más de un millón de negocios para responder preguntas, recomendar productos y agendar citas. Según la cobertura de la compra, el siguiente paso es claro: que el agente **deje de solo recomendar y pase a cerrar la venta dentro del chat**, recordando quién es el cliente, qué preguntó la semana pasada y qué dejó a medias.
+
+(Si quieres saber qué hace hoy ese bot y cuánto cuesta, ya lo contamos aquí: [Meta Business Agent: qué es y cuánto cuesta](/blog/meta-business-agent-que-es-cuanto-cuesta/). Este artículo va de lo que viene después.)
+
+## Qué significa para tu negocio
+
+**1. La confirmación oficial: el chat es la caja registradora.**
+Meta pudo haber invertido en más anuncios o en un botón de "comprar" más grande. Compró memoria para un vendedor de IA. Eso te dice dónde cree Meta que se cierra la compra: en la conversación. En Colombia no es novedad: según el informe NubeCommerce 2026 de Tiendanube, el **84,1 % de las tiendas online usa WhatsApp para vender**, muy por encima de Instagram Shopping (42,9 %) o los marketplaces (36,2 %). Lo nuevo es que el dueño de WhatsApp lo está construyendo como negocio propio.
+
+**2. El problema que Meta quiere resolver es el mismo que tienes tú: el bot que no se acuerda.**
+Fíjate en qué compró Meta: no compró un catálogo ni una pasarela, compró **memoria**. Porque el cliente que escribe "hola, ¿sigue disponible?" un jueves es el mismo que preguntó por la talla M el lunes, y un bot que no lo recuerda lo hace repetir todo… y el cliente se va. Si hoy tu WhatsApp lo atiende alguien de tu equipo con 40 chats abiertos, ese "no me acuerdo" también pasa. La lección no es "espera a Meta": es que la memoria del cliente (qué preguntó, qué pidió, si ya compró antes) es lo que separa un chat que atiende de un chat que vende.
+
+**3. "Cerrar la venta en el chat" en Latinoamérica tiene nombre: contra entrega.**
+Aquí está la parte que ninguna nota de Silicon Valley te va a contar. En Colombia, México, Perú o Ecuador, cerrar una venta por WhatsApp rara vez es "pagar con tarjeta dentro del chat". Es que el cliente confirme nombre, dirección, ciudad y teléfono, elija **pago contra entrega**, y el pedido salga con una transportadora que cobra en la puerta. Meta no ha detallado cómo funcionará su cierre de ventas ni en qué países; lo que sí sabemos es que el cierre real en nuestra región pasa por confirmar datos de envío y coordinar la entrega, no por una pasarela. Un bot que **vende contra entrega por WhatsApp** tiene que hacer exactamente eso: tomar la dirección sin errores, confirmar el pedido y avisarte para despachar. Así lo hacemos en [pago contra entrega por WhatsApp](/soluciones/pago-contra-entrega-por-whatsapp/).
+
+**4. Un bot genérico de Meta responde por todos; el tuyo tiene que responder por ti.**
+Meta Business Agent está pensado para un millón de negocios a la vez. Tu tienda tiene sus propias reglas: qué ciudades cubres, cuánto cobras de envío, qué tallas se agotan, cuándo ofreces descuento y cuándo no, qué producto es el que de verdad te deja margen. Un vendedor de IA sirve cuando conoce **tu** catálogo y **tus** políticas, no un promedio del mercado. Mira cómo se entrena uno con tus productos en [chatbot para WhatsApp](/soluciones/chatbot-para-whatsapp/).
+
+**5. Qué hacer esta semana (sin esperar a Meta).**
+- Revisa cuántos chats de la última semana terminaron sin pedido y por qué (no respondiste a tiempo, faltó una talla, el cliente no confirmó la dirección).
+- Escribe tus reglas de cierre en una hoja: ciudades, costo de envío, formas de pago, qué datos necesitas para despachar. Eso es lo que un bot necesita para vender por ti.
+- Si ya usas un bot, pruébalo como cliente: escríbele hoy, vuelve mañana y mira si se acuerda de ti.
+
+## En resumen: lo que Meta quiere construir vs. lo que ya puedes tener
+
+- **Meta:** un agente que recuerda al cliente entre conversaciones. **Tú, hoy:** historial por contacto: qué preguntó, qué pidió, si ya compró.
+- **Meta:** pasar de recomendar productos a cerrar la venta. **Tú, hoy:** tomar el pedido completo: producto, talla, dirección, forma de pago.
+- **Meta:** un bot para un millón de negocios. **Tú, hoy:** un vendedor entrenado con TU catálogo y TUS reglas de envío.
+- **Meta:** cierre "en el chat", sin detalles ni fecha para Latinoamérica. **Tú, hoy:** cierre contra entrega con confirmación de datos y aviso para despachar.
+
+## Para cerrar
+
+La compra de Stilla es una señal, no un producto: Meta apuesta a que la venta se cierra conversando y a que un bot solo sirve si recuerda al cliente. Los comerciantes de Latinoamérica llevan años cerrando así, por WhatsApp y contra entrega. La diferencia está en quién atiende ese chat a las 10 de la noche y si se acuerda de que ese cliente ya preguntó por la talla M.
+
+Eso es lo que hace Klientia: un vendedor de IA con tu catálogo, tus reglas de envío y memoria de cada cliente, que confirma pedidos contra entrega por WhatsApp mientras tú despachas. Cuando el bot de Meta aprenda a cerrar ventas, el tuyo ya lo llevará meses haciendo.
+
+## Fuentes
+
+- [Axios — Meta acquires Swedish AI startup Stilla.ai (9 de septiembre de 2026)](https://www.axios.com/2026/09/09/meta-acquires-swedish-ai-startup-stillaai)
+- [Startup Fortune — Meta buys eight-month-old startup Stilla to power its AI messaging agent](https://startupfortune.com/meta-buys-eight-month-old-startup-stilla-to-power-its-ai-messaging-agent/)
+- [El Ecosistema Startup — Meta compra Stilla.ai y acelera el comercio en WhatsApp (18 de septiembre de 2026)](https://ecosistemastartup.com/meta-compra-stilla-ai-y-acelera-el-comercio-en-whatsapp/)
+- [TechCrunch — Meta's AI agent for WhatsApp Business is now available globally (3 de junio de 2026)](https://techcrunch.com/2026/06/03/metas-ai-agent-for-whatsapp-business-is-now-available-globally/)
+- [Portafolio — WhatsApp se consolida como aliado clave del comercio electrónico en Colombia (informe NubeCommerce 2026, Tiendanube)](https://www.portafolio.co/tecnologia/whatsapp-se-consolida-como-aliado-clave-del-comercio-electronico-en-colombia-segun-informe-de-e-commerce-489757)`,
+  },
+  {
     slug: "meta-business-agent-que-es-cuanto-cuesta",
     metaTitle: "Meta Business Agent: el bot de Meta ya cuesta. ¿Te sirve?",
     title:
