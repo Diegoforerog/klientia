@@ -3,6 +3,112 @@ export type BlogPost = { slug: string; metaTitle: string; title: string; descrip
 
 export const POSTS: BlogPost[] = [
   {
+    slug: "ia-configura-whatsapp-business-mcp-meta",
+    metaTitle: "La IA ya configura tu WhatsApp Business (MCP de Meta)",
+    title:
+      "Ahora la IA puede montar tu WhatsApp Business: qué significa (y qué no te resuelve todavía)",
+    description:
+      "Meta dejó que la IA arme tu WhatsApp Business: cuenta, número, plantillas. Útil, pero configurar no es vender. Qué te resuelve y qué no para tu tienda.",
+    date: "2026-09-26",
+    hidden: false,
+    body: `Poner un negocio en WhatsApp siempre tuvo una parte fea: la técnica. Meta acaba de decir "que la haga la IA".
+
+## Qué pasó
+
+El 15 de septiembre de 2026, Meta lanzó una herramienta llamada **WhatsApp Business Tools MCP**. Detrás del nombre técnico hay una idea simple: ahora un agente de inteligencia artificial —como Claude, ChatGPT, Codex o Cursor— puede encargarse del **papeleo técnico** de dejar tu WhatsApp Business listo, en lugar de que un desarrollador ande saltando entre pantallas.
+
+Según [TechCrunch](https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup/), la IA puede: crear la cuenta de WhatsApp Business, agregar y verificar el número, registrarlo en la API de WhatsApp, escribir y editar las plantillas de mensajes, probar que todo funcione y **avisar de errores** de Términos de servicio, método de pago o verificación del negocio que antes fallaban en silencio. Todo eso que hasta ahora obligaba a moverse entre el panel de desarrolladores, el Business Manager y la documentación, ahora se le puede pedir "conversando".
+
+## Qué significa para tu negocio
+
+**1. La barrera de entrada baja.** Durante años, "conectar mi WhatsApp a un sistema de verdad" fue justo lo que frenaba a muchos comerciantes: verificar el número, aprobar plantillas, no entender por qué algo fallaba. Que la IA se encargue de ese enredo significa que montar un WhatsApp Business profesional deja de ser un proyecto de semanas y pasa a ser cuestión de horas. Menos fricción para empezar a vender bien.
+
+**2. Pero configurar no es vender.** Aquí está la letra chica que ninguna nota técnica te subraya: el MCP de Meta arma la **plomería** —la cuenta, el número, las plantillas—, no atiende a tus clientes ni cierra pedidos. Es como tener el local montado, con luz y estantería: te falta el vendedor. Que tu WhatsApp exista y esté verificado no hace que alguien responda "¿tienes talla M?" a las 10 de la noche, ni que confirme una dirección para el envío contra entrega. Eso sigue siendo trabajo de atención y de venta.
+
+**3. La pregunta correcta cambió.** Antes te preguntabas "¿cómo conecto mi WhatsApp?". Con esto resuelto, la pregunta pasa a ser "**¿quién responde y cómo vende** por ese WhatsApp?". Y ahí es donde se juega el negocio: un número conectado que nadie atiende bien vende igual de mal que no tener número.
+
+**4. Cuidado con confundir herramienta técnica con solución de negocio.** El MCP está pensado para desarrolladores y equipos técnicos que arman integraciones. Si no tienes un equipo técnico, no es algo que "actives" tú desde el celular; es infraestructura. Lo que a ti como comerciante te importa no es esa tubería, sino el resultado: que cuando un cliente escriba, reciba respuesta útil al instante y termine comprando.
+
+## Cómo lo vemos en Klientia
+
+Que Meta facilite la parte técnica nos parece buenísimo: cuanto más fácil sea montar WhatsApp Business, mejor para todos. Pero nuestra apuesta es la otra mitad, la que la tubería no resuelve: un **vendedor de IA** que ya viene conectado, entrenado con tu catálogo y tus reglas de envío, que responde dudas, cotiza, toma el pedido y lo cierra —incluido el contra entrega— sin que tú tengas que tocar una sola pantalla de configuración.
+
+En otras palabras: Meta te da el local montado más rápido; nosotros ponemos al vendedor adentro. Así funcionan nuestro [chatbot para WhatsApp](/soluciones/chatbot-para-whatsapp/) y las [ventas por WhatsApp con IA](/soluciones/ventas-por-whatsapp-con-ia/).
+
+## Para cerrar
+
+La noticia real detrás del anuncio no es "la IA configura WhatsApp". Es que la parte técnica dejó de ser la excusa: ya no hay barrera para estar en WhatsApp Business como toca. Lo que separa a la tienda que vende de la que no, a partir de ahora, no es la conexión —eso lo resuelve la IA en minutos—, sino quién atiende ese chat y qué tan bien cierra. Ahí es donde de verdad se decide el mes.
+
+---
+
+## Fuentes
+
+- [TechCrunch — Meta now lets AI agents handle the boring parts of WhatsApp Business setup (15 de septiembre de 2026)](https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup/)
+- [Marketing4eCommerce — Meta introduces WhatsApp Business to the agentic era with a new MCP server](https://marketing4ecommerce.net/en/meta-brings-whatsapp-business-into-the-agentic-era-with-a-new-mcp-server/)
+- [Dataconomy — WhatsApp Business Can Now Be Configured By AI Agents (16 de septiembre de 2026)](https://dataconomy.com/2026/09/16/whatsapp-business-can-now-be-configured-by-ai-agents/)`,
+  },
+  {
+    slug: "metodo-de-pago-meta-whatsapp-30-septiembre",
+    metaTitle: "WhatsApp Business: pon método de pago antes del 30-sep",
+    title:
+      "El 30 de septiembre es la fecha límite: pon método de pago en Meta o tu WhatsApp deja de responder",
+    description:
+      "Antes del 30 de septiembre pon un método de pago en Meta o tu WhatsApp Business deja de responder el 1 de octubre. Qué hacer y a quién afecta de verdad.",
+    date: "2026-09-23",
+    hidden: false,
+    body: `Faltan pocos días para un cambio que puede dejar mudo tu WhatsApp de un día para otro. La buena noticia: arreglarlo toma cinco minutos.
+
+## Qué pasa
+
+Desde el **1 de octubre de 2026**, Meta empieza a cobrar los mensajes de servicio que las empresas responden por la **plataforma de WhatsApp Business** (la que usan los CRM, los chatbots y las herramientas de automatización). No es el fin del mundo —hay una cuota gratis mensual y en Latinoamérica el costo por mensaje es de fracciones de centavo—, pero hay un detalle que sí es urgente:
+
+**Meta pide tener un método de pago cargado en la cuenta antes del 30 de septiembre.** Si llega esa fecha y tu cuenta no tiene una tarjeta o forma de pago válida, desde el 1 de octubre Meta **deja de entregar tus mensajes de servicio**. Traducido: un cliente te escribe y tu negocio no le puede responder por el bot ni por el sistema. En plena temporada de ventas, eso son pedidos que se caen sin que te enteres.
+
+Lo confirmó la prensa que viene siguiendo el cambio ([Infobae](https://www.infobae.com/tecno/2026/09/06/whatsapp-business-cobrara-por-responder-mensajes-en-2026-a-quienes-afecta-y-a-quienes-no/)) y está en la documentación de precios de Meta.
+
+## ¿Esto te afecta a ti?
+
+Depende de cómo uses WhatsApp:
+
+- **Si respondes a mano desde la app de WhatsApp Business en tu celular** (la gratis, la del ícono verde): **no te afecta**. Sigues igual.
+- **Si usas la plataforma/API** —o sea, un bot, un CRM, un sistema que responde o automatiza por ti, o un proveedor como Klientia—: **sí te toca**. Tu número está conectado a la plataforma y necesita el método de pago cargado.
+
+La mayoría de las tiendas que ya venden en serio por WhatsApp están en el segundo grupo, aunque no siempre lo tengan presente. Por eso conviene revisarlo esta semana, no el 30.
+
+## Lo que sí y lo que no
+
+Para que no te vendan miedo con esto, tres precisiones importantes:
+
+1. **Sigue habiendo una cuota gratis todos los meses.** Meta mantiene un tope de mensajes de servicio gratuitos por número al mes (se ha mencionado alrededor de 1.000); solo pagas por lo que pase de ahí.
+2. **En Latinoamérica el mensaje cuesta fracciones de centavo.** No es un gasto que te vaya a doler; el problema no es el precio, es quedarte sin método de pago y que se corte el servicio. Los números finos los desglosamos en [¿Cuánto cuesta vender por WhatsApp?](/blog/cuanto-cuesta-vender-por-whatsapp/).
+3. **El cobro lo hace Meta directo a tu cuenta**, según su tarifa por país. No es un intermediario cobrándote de más: es Meta a la tienda.
+
+## Qué hacer antes del 30 de septiembre (5 minutos)
+
+- **Entra a tu cuenta de Meta Business** (business.facebook.com) y ve a la sección de **facturación / métodos de pago** de WhatsApp.
+- **Agrega una tarjeta o método de pago válido** y déjalo como predeterminado.
+- **Confirma que tu número de WhatsApp Business esté asociado** a esa cuenta y a ese método de pago.
+- Si tu WhatsApp lo gestiona un proveedor o una agencia, **escríbeles hoy** y pregunta directamente: *"¿mi cuenta ya tiene método de pago cargado para el cambio del 1 de octubre?"*. Que te lo confirmen por escrito.
+
+Eso es todo. No tienes que cambiar de plan ni firmar nada nuevo; solo asegurarte de que Meta tenga cómo cobrarte los centavos que correspondan para no cortar el servicio.
+
+## Y de paso, aprovecha para revisar cómo estás respondiendo
+
+Ya que entras a mirar tu WhatsApp de negocio, vale la pena hacerse la pregunta de fondo: cuando un cliente escribe, ¿le responde alguien al instante o el mensaje espera horas? Porque el 1 de octubre no cambia solo cómo se paga; es un buen recordatorio de que WhatsApp dejó de ser un canal "de a ratos" y hoy es donde se gana o se pierde la venta. Si hoy contestas a mano y se te quedan chats sin responder, un [chatbot para WhatsApp](/soluciones/chatbot-para-whatsapp/) entrenado con tu catálogo atiende al instante mientras tú despachas.
+
+## Para cerrar
+
+Marca el **30 de septiembre** en rojo: es el día para tener el método de pago listo en Meta. Cinco minutos hoy te ahorran quedarte sin responder justo cuando más te escriben. Y si vas a dejar tu WhatsApp en manos de la automatización, que sea una que venda por ti, no una que solo evite el corte.
+
+---
+
+## Fuentes
+
+- [Infobae — WhatsApp Business cobrará por responder mensajes en 2026: a quiénes afecta y a quiénes no (6 de septiembre de 2026)](https://www.infobae.com/tecno/2026/09/06/whatsapp-business-cobrara-por-responder-mensajes-en-2026-a-quienes-afecta-y-a-quienes-no/)
+- [Meta for Developers — WhatsApp Business Platform, precios](https://developers.facebook.com/docs/whatsapp/pricing/)
+- [Klientia — ¿Cuánto cuesta vender por WhatsApp? Lo que cambia el 1 de octubre de 2026](https://www.klientia.app/blog/cuanto-cuesta-vender-por-whatsapp/)`,
+  },
+  {
     slug: "meta-compra-stilla-cerrar-ventas-en-el-chat",
     metaTitle: "Meta compra Stilla: la venta se cerrará en el chat",
     title:
