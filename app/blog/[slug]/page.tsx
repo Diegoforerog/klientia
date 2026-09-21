@@ -22,8 +22,19 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: { absolute: post.metaTitle },
     description: post.description,
     alternates: { canonical: path },
-    openGraph: { type: 'article', url: path, title: post.metaTitle, description: post.description },
-    twitter: { card: 'summary_large_image', title: post.metaTitle, description: post.description },
+    openGraph: {
+      type: 'article',
+      url: path,
+      title: post.metaTitle,
+      description: post.description,
+      images: [{ url: `${SITE}/og-klientia.png`, width: 1200, height: 630, alt: post.metaTitle }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.metaTitle,
+      description: post.description,
+      images: [`${SITE}/og-klientia.png`],
+    },
   };
 }
 
@@ -40,6 +51,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         description: post.description,
         datePublished: post.date,
         dateModified: post.date,
+        image: `${SITE}/og-klientia.png`,
         inLanguage: 'es',
         author: { '@type': 'Organization', name: 'Klientia' },
         publisher: { '@id': `${SITE}#organization` },
