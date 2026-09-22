@@ -7,7 +7,12 @@ import { STICKY_CTA_CHAT_OFFSET_PX } from '@/lib/chat-offset';
 const API_ORIGIN = process.env.NEXT_PUBLIC_WEB_CHAT_API_ORIGIN || 'https://api.klientia.app';
 // Clave PÚBLICA del sitio (por org, generada en /admin). Sin ella no hay chat que mostrar:
 // el widget nunca se inyecta (ni en builds/preview sin la variable configurada).
-const SITE_KEY = process.env.NEXT_PUBLIC_WEB_CHAT_SITE_KEY || '';
+// Fallback DURABLE al siteKey PÚBLICO de la org Klientia (no es secreto: se hornea en el
+// bundle del cliente de todas formas). Evita que un rebuild SIN la variable de entorno
+// tumbe el widget en silencio (pasó 2026-09-21). La env var, si está, tiene prioridad;
+// si el siteKey se rota en /admin, actualizar este fallback y la env. Mismo patrón que API_ORIGIN.
+const SITE_KEY =
+  process.env.NEXT_PUBLIC_WEB_CHAT_SITE_KEY || 'wk_b6a0a6ac23c3131622444756fa0a8ac7';
 
 let widgetInjected = false;
 
