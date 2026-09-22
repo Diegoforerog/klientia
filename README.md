@@ -31,7 +31,7 @@ Variables `NEXT_PUBLIC_*` relevantes en build (se hornean en el HTML/JS estátic
 
 | Variable | Para qué | Default si falta |
 |---|---|---|
-| `NEXT_PUBLIC_WEB_CHAT_SITE_KEY` | Clave pública del **chat web** (widget) de la org Klientia, generada en `/admin` (`apps/api`) | No se define → `components/ChatWidget.tsx` no inyecta nada (el chat no aparece) |
+| `NEXT_PUBLIC_WEB_CHAT_SITE_KEY` | Clave pública del **chat web** (widget) de la org Klientia, generada en `/admin` (`apps/api`). Si está, tiene prioridad; se usa para rotar la llave o apuntar a otra org. | No se define → **fallback DURABLE** al siteKey público hardcoded en `components/ChatWidget.tsx` (el widget SÍ aparece). Antes (pre-2026-09-21) un rebuild sin esta env tumbaba el widget en silencio; el fallback lo evita. |
 | `NEXT_PUBLIC_WEB_CHAT_API_ORIGIN` | Origen de la API que sirve `widget.js` (solo se cambia para apuntar a otro entorno) | `https://api.klientia.app` |
 
 Build/preview local en modo servidor de Node (sin export estático):
